@@ -8,6 +8,7 @@
 <meta property="og:title" content="История государства и права России">
 <meta property="og:description" content="Материалы курса «История государства и права России» для студентов Института права УУНиТ: учебники, тексты памятников права, Русская Правда, глоссарий, планы семинаров и задачи.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ad2f1b'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='white' font-family='Georgia,serif'%3E%D0%98%3C/text%3E%3C/svg%3E">
+<script src="config.js"></script>
 <style>
 @font-face {
   font-family: 'PT Sans';
@@ -335,6 +336,61 @@ details ol{margin:.5rem 0 .3rem;padding-left:6.2rem;font-size:.94rem}
 details li{margin:.15rem 0}
 
 footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
+/* тест */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#test .intro{max-width:70ch}
+.res-head{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:space-between;margin-bottom:.6rem}
+.res-head h3{margin:0}
+.res-tools{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.res-tools select,.res-tools input,.qz-form input[type=text]{font:inherit;font-size:.92rem;padding:.38rem .6rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);min-width:0}
+.res-tools button.btn,.qz-wrap button.btn{cursor:pointer;font-family:var(--f-mono)}
+.res-state{color:var(--muted);margin:.4rem 0}
+.res-state.bad,.qz-msg.bad{color:var(--cinnabar)}
+.res-sum{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--f-mono);font-size:.85rem;color:var(--muted);margin:.2rem 0 .7rem}
+.res-sum b{color:var(--ink);font-weight:400}
+.res td small{display:block;color:var(--muted);font-size:.78rem}
+.res td.best{font-weight:700}
+.res .pct{font-variant-numeric:tabular-nums}
+.res .lo{color:var(--cinnabar)}
+.bank-h{margin-top:1.8rem}
+.bank-t{border-bottom:1px solid var(--line)}
+.bank-t>summary{font-family:var(--f-display);font-size:1.1rem}
+.bank-list{margin:.5rem 0 .8rem;padding-left:1.6rem}
+.bank-list>li{margin:.7rem 0}
+.bank-list .bq{margin:0 0 .25rem;font-weight:700}
+.bank-list ul{list-style:none;margin:0;padding:0}
+.bank-list ul li{padding:.1rem 0 .1rem 1.4rem;position:relative;color:var(--muted)}
+.bank-list ul li.ok{color:var(--ink);font-weight:700}
+.bank-list ul li.ok::before{content:"✓";position:absolute;left:0;color:var(--cinnabar)}
+.bank-list .basis{font-size:.84rem;color:var(--muted);margin:.2rem 0 0}
+.qz-wrap{max-width:52rem}
+.qz-form{display:grid;grid-template-columns:minmax(0,1fr);gap:.35rem;max-width:30rem}
+.qz-form label{font-size:.88rem;color:var(--muted);margin-top:.35rem}
+.qz-form .qz-check{display:flex;gap:.5rem;align-items:flex-start;color:var(--ink);margin-top:.6rem}
+.qz-main{justify-self:start;margin-top:.7rem;padding:.45rem 1rem;font-size:.86rem}
+.qz-msg{margin:.6rem 0 0;font-size:.92rem}
+.qz-bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--barh,3.2rem));z-index:4;display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center;background:var(--paper);padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.qz-timer{font-family:var(--f-mono);font-size:1.05rem;font-variant-numeric:tabular-nums;color:var(--ink)}
+.qz-timer.low{color:var(--cinnabar);font-weight:700}
+#qz-prog{color:var(--muted);font-family:var(--f-mono);font-size:.82rem}
+.qz-bar .btn{margin-left:auto}
+.qz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(2.3rem,1fr));gap:.3rem;margin:.8rem 0}
+.qz-n{font:inherit;font-family:var(--f-mono);font-size:.78rem;padding:.3rem 0;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--muted);cursor:pointer}
+.qz-n.done{background:var(--cinnabar-soft);color:var(--ink);border-color:var(--cinnabar)}
+.qz-n.cur{outline:2px solid var(--ink);outline-offset:1px}
+.qz-q{user-select:none;-webkit-user-select:none}
+.qz-meta{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cinnabar)}
+.qz-text{font-size:1.05rem;margin:.5rem 0 .8rem;max-width:68ch}
+.qz-opts{display:grid;gap:.45rem}
+.qz-opt{display:flex;gap:.6rem;align-items:flex-start;padding:.55rem .7rem;border:1px solid var(--line);border-radius:4px;background:var(--paper);cursor:pointer}
+.qz-opt:has(input:checked){border-color:var(--cinnabar);background:var(--cinnabar-soft)}
+.qz-opt input{margin-top:.2rem;flex:none}
+.qz-nav{display:flex;justify-content:space-between;gap:.6rem;margin:.8rem 0}
+.qz-confirm{margin:.6rem 0;display:grid;gap:.6rem;justify-items:start}
+.qz-confirm p{margin:0}
+.qz-score{font-family:var(--f-display);font-size:2rem;margin:.2rem 0}
+.qz-score b{color:var(--cinnabar)}
+
 
 /* набор к занятию */
 .kit{padding:0 0 .8rem 5rem;font-size:.95rem}
@@ -371,6 +427,7 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <a href="#sources">Источники по темам</a>
 <a href="#glossary">Глоссарий</a>
 <a href="#seminars">Семинары</a>
+<a href="#test">Тест</a>
 <a href="#libs">Библиотеки</a>
 </nav>
 <label class="search" for="q">
@@ -633,6 +690,48 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <h2>Семинары</h2>
 <p class="intro">Планы занятий, статьи памятников к каждому вопросу и задачи. Решения задач разбираем на семинаре.</p>
 <div id="sem"></div>
+</section>
+<!-- ТЕСТ -->
+<section id="test">
+<h2>Тест</h2>
+
+<div class="s-only qz-wrap" id="quiz">
+<p class="intro">Итоговый тест по всему курсу: 75 вопросов, на попытку отводится 75 минут, всего две попытки. Начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов и результат по разделам; правильные ответы не показываются. Результат автоматически попадает к преподавателю.</p>
+<div class="panel" id="qz-start">
+<div class="qz-form">
+<label for="qz-fio">Фамилия, имя, отчество</label>
+<input autocomplete="name" id="qz-fio" placeholder="Иванов Иван Иванович" type="text"/>
+<label for="qz-group">Группа</label>
+<input autocomplete="off" id="qz-group" placeholder="Номер группы" type="text"/>
+<label class="qz-check" for="qz-agree"><input id="qz-agree" type="checkbox"/> Понимаю, что начатая попытка засчитывается</label>
+<button class="btn dl qz-main" id="qz-go" type="button">Начать попытку</button>
+</div>
+<p class="qz-msg" id="qz-msg" role="status"></p>
+</div>
+<p class="qz-msg" hidden="" id="qz-off"></p>
+<div hidden="" id="qz-run">
+<div class="qz-bar">
+<span id="qz-who"></span>
+<span aria-label="Осталось времени" class="qz-timer" id="qz-timer">75:00</span>
+<span id="qz-prog"></span>
+<button class="btn dl" id="qz-finish" type="button">Завершить</button>
+</div>
+<div aria-label="Номера вопросов" class="qz-grid" id="qz-grid"></div>
+<div class="panel qz-q" id="qz-q"></div>
+<div class="qz-nav">
+<button class="btn" id="qz-prev" type="button">Назад</button>
+<button class="btn" id="qz-next" type="button">Далее</button>
+</div>
+<div class="panel qz-confirm" hidden="" id="qz-confirm">
+<p id="qz-confirm-text"></p>
+<div class="qz-nav">
+<button class="btn dl" id="qz-send" type="button">Отправить ответы</button>
+<button class="btn" id="qz-cancel" type="button">Вернуться к вопросам</button>
+</div>
+</div>
+</div>
+<div class="panel" hidden="" id="qz-done"></div>
+</div>
 </section>
 <!-- БИБЛИОТЕКИ -->
 <section id="libs">
@@ -1120,5 +1219,170 @@ document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () =
 }));
 apply();
 </script>
+<!--QUIZ-JS-->
+<script>
+(function () {
+  var root = document.getElementById('quiz');
+  if (!root) return;
+  var URL_ = String(window.IGPR_TEST_URL || '').trim();
+  var SITE = 'https://xajdahax.github.io/igpr/';
+  var LS = 'igpr-test-v1';
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var st = { attemptId: null, questions: [], answers: {}, i: 0, deadline: 0, skew: 0, timer: null, sending: false, fio: '', group: '', no: 1, max: 2 };
+
+  var bar = document.querySelector('.bar');
+  var setBar = function () { if (bar) document.documentElement.style.setProperty('--barh', bar.offsetHeight + 'px'); };
+  setBar(); window.addEventListener('resize', setBar);
+
+  function save() { try { localStorage.setItem(LS, JSON.stringify({ attemptId: st.attemptId, answers: st.answers, fio: st.fio, group: st.group })); } catch (e) {} }
+  function load() { try { return JSON.parse(localStorage.getItem(LS) || 'null'); } catch (e) { return null; } }
+  function forget() { try { var o = load() || {}; localStorage.setItem(LS, JSON.stringify({ fio: o.fio, group: o.group })); } catch (e) {} }
+  function msg(t, bad) { var m = $('qz-msg'); m.textContent = t; m.classList.toggle('bad', !!bad); }
+
+  if (!URL_) {
+    $('qz-start').hidden = true;
+    var off = $('qz-off'); off.hidden = false;
+    off.innerHTML = 'Тест проходится на сайте курса: <a href="' + SITE + '#test" target="_blank" rel="noopener">' + SITE + '</a>. Если вы уже там и видите это сообщение, тест ещё не открыт.';
+    return;
+  }
+
+  function call(payload) {
+    return fetch(URL_, { method: 'POST', body: JSON.stringify(payload) }).then(function (r) {
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json();
+    });
+  }
+  var ERR = {
+    need_name: 'Укажите фамилию, имя и группу.',
+    busy: 'Сервер теста занят, попробуйте через минуту.',
+    not_found: 'Попытка не найдена. Обновите страницу.',
+    server_error: 'Ошибка на сервере теста. Сообщите преподавателю.'
+  };
+
+  var saved = load();
+  if (saved) {
+    $('qz-fio').value = saved.fio || '';
+    $('qz-group').value = saved.group || '';
+    if (saved.attemptId) { $('qz-go').textContent = 'Продолжить попытку'; $('qz-agree').checked = true; }
+  }
+
+  $('qz-go').addEventListener('click', function () {
+    var fio = $('qz-fio').value.replace(/\s+/g, ' ').trim();
+    var group = $('qz-group').value.replace(/\s+/g, ' ').trim();
+    if (fio.split(' ').length < 2) return msg('Введите фамилию и имя полностью, лучше с отчеством.', true);
+    if (!group) return msg('Укажите группу.', true);
+    if (!$('qz-agree').checked) return msg('Отметьте, что понимаете правила попыток.', true);
+    $('qz-go').disabled = true; msg('Загружаю вопросы…');
+    call({ action: 'start', fio: fio, group: group }).then(function (res) {
+      if (!res.ok) {
+        if (res.error === 'no_attempts') {
+          var list = (res.results || []).map(function (r) {
+            return 'попытка ' + r.attemptNo + ': ' + (r.correct === '' ? r.status : r.correct + ' из ' + r.total + ' (' + r.percent + '%)');
+          }).join('; ');
+          msg('Обе попытки уже использованы' + (list ? '. Ваши результаты: ' + list + '.' : '.'), true);
+        } else msg(ERR[res.error] || 'Не удалось начать попытку.', true);
+        return;
+      }
+      st.fio = fio; st.group = group; st.attemptId = res.attemptId; st.questions = res.questions || [];
+      st.deadline = res.deadline; st.skew = res.now - Date.now(); st.no = res.attemptNo; st.max = res.maxAttempts;
+      var prev = load();
+      st.answers = (prev && prev.attemptId === res.attemptId && prev.answers) ? prev.answers : {};
+      save(); msg(''); run(res.resumed);
+    }).catch(function () {
+      msg('Нет связи с сервером теста. Проверьте интернет и попробуйте ещё раз.', true);
+    }).then(function () { $('qz-go').disabled = false; });
+  });
+
+  function run(resumed) {
+    $('qz-start').hidden = true; $('qz-done').hidden = true; $('qz-run').hidden = false;
+    $('qz-who').textContent = st.fio + ', ' + st.group + ' · попытка ' + st.no + ' из ' + st.max + (resumed ? ' (продолжение)' : '');
+    $('qz-grid').innerHTML = st.questions.map(function (q, k) { return '<button type="button" class="qz-n" data-k="' + k + '">' + (k + 1) + '</button>'; }).join('');
+    show(0); tick(); st.timer = setInterval(tick, 1000);
+    setBar(); root.scrollIntoView({ block: 'start' });
+  }
+
+  function remaining() { return st.deadline - (Date.now() + st.skew); }
+  function tick() {
+    var ms = remaining();
+    if (ms <= 0) { $('qz-timer').textContent = '00:00'; clearInterval(st.timer); send(true); return; }
+    var s = Math.ceil(ms / 1000);
+    $('qz-timer').textContent = String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+    $('qz-timer').classList.toggle('low', s < 300);
+  }
+
+  function marks() {
+    var n = Object.keys(st.answers).length;
+    $('qz-prog').textContent = 'отвечено ' + n + ' из ' + st.questions.length;
+    var bs = $('qz-grid').children;
+    for (var k = 0; k < bs.length; k++) {
+      bs[k].classList.toggle('done', !!st.answers[st.questions[k].id]);
+      bs[k].classList.toggle('cur', k === st.i);
+    }
+  }
+
+  function show(k) {
+    st.i = Math.max(0, Math.min(st.questions.length - 1, k));
+    var q = st.questions[st.i];
+    $('qz-q').innerHTML = '<div class="qz-meta">Вопрос ' + (st.i + 1) + ' из ' + st.questions.length + ' · ' + esc(q.topic) + '</div>' +
+      '<p class="qz-text">' + esc(q.text) + '</p><div class="qz-opts" role="radiogroup">' +
+      q.options.map(function (o) {
+        return '<label class="qz-opt"><input type="radio" name="qz-a" value="' + esc(o.id) + '"' + (st.answers[q.id] === o.id ? ' checked' : '') + '><span>' + esc(o.text) + '</span></label>';
+      }).join('') + '</div>';
+    $('qz-prev').disabled = st.i === 0;
+    $('qz-next').textContent = st.i === st.questions.length - 1 ? 'К завершению' : 'Далее';
+    $('qz-confirm').hidden = true;
+    marks();
+  }
+
+  $('qz-grid').addEventListener('click', function (e) { var b = e.target.closest('.qz-n'); if (b) show(+b.dataset.k); });
+  $('qz-q').addEventListener('change', function (e) {
+    if (e.target.name !== 'qz-a') return;
+    st.answers[st.questions[st.i].id] = e.target.value; save(); marks();
+  });
+  ['copy', 'cut', 'contextmenu'].forEach(function (ev) { $('qz-q').addEventListener(ev, function (e) { e.preventDefault(); }); });
+  $('qz-prev').addEventListener('click', function () { show(st.i - 1); });
+  $('qz-next').addEventListener('click', function () { if (st.i === st.questions.length - 1) ask(); else show(st.i + 1); });
+  $('qz-finish').addEventListener('click', ask);
+  $('qz-cancel').addEventListener('click', function () { $('qz-confirm').hidden = true; });
+  $('qz-send').addEventListener('click', function () { send(false); });
+
+  function ask() {
+    var miss = st.questions.length - Object.keys(st.answers).length;
+    $('qz-confirm-text').textContent = miss
+      ? 'Без ответа осталось вопросов: ' + miss + '. Они будут засчитаны как неверные. Отправить ответы?'
+      : 'Все вопросы отвечены. Отправить ответы? Изменить их после отправки будет нельзя.';
+    $('qz-confirm').hidden = false;
+    $('qz-confirm').scrollIntoView({ block: 'nearest' });
+  }
+
+  function send(auto) {
+    if (st.sending) return;
+    st.sending = true; $('qz-send').disabled = true;
+    call({ action: 'submit', attemptId: st.attemptId, answers: st.answers }).then(function (res) {
+      if (!res.ok) throw new Error(res.error || 'fail');
+      clearInterval(st.timer); forget(); done(res, auto);
+    }).catch(function () {
+      $('qz-confirm-text').textContent = 'Не удалось отправить ответы: нет связи с сервером. Ответы сохранены в этом браузере, нажмите «Отправить ответы» ещё раз.';
+      $('qz-confirm').hidden = false;
+    }).then(function () { st.sending = false; $('qz-send').disabled = false; });
+  }
+
+  function done(res, auto) {
+    $('qz-run').hidden = true;
+    var d = $('qz-done'); d.hidden = false;
+    var rows = (res.byTopic || []).map(function (t) { return '<tr><td>' + esc(t.topic) + '</td><td>' + t.correct + ' из ' + t.total + '</td></tr>'; }).join('');
+    d.innerHTML = '<h3>' + (auto ? 'Время вышло, ответы отправлены' : 'Ответы отправлены') + '</h3>' +
+      '<p class="qz-score"><b>' + res.correct + '</b> из ' + res.total + ' · ' + res.percent + '%</p>' +
+      (res.late ? '<p class="qz-msg bad">Ответы пришли после окончания времени, преподаватель увидит эту отметку.</p>' : '') +
+      '<p>Попытка ' + res.attemptNo + '. ' + (res.attemptsLeft > 0 ? 'Осталось попыток: ' + res.attemptsLeft + '.' : 'Попытки исчерпаны.') + ' Результат уже у преподавателя.</p>' +
+      (rows ? '<div class="tbl"><table class="cmp"><thead><tr><th>Раздел</th><th>Верно</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '');
+    $('qz-go').textContent = 'Начать попытку';
+    d.scrollIntoView({ block: 'start' });
+  }
+})();
+</script>
+
+<!--/QUIZ-JS-->
 </body>
 </html>
