@@ -342,6 +342,12 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 .res-head{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:space-between;margin-bottom:.6rem}
 .res-head h3{margin:0}
 .res-tools{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.qz-form select{font:inherit;font-size:.95rem;padding:.42rem .6rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);min-width:0;max-width:100%}
+.qz-tinfo{margin:.1rem 0 0;font-size:.84rem;color:var(--muted)}
+.secs summary{cursor:pointer;font-variant-numeric:tabular-nums}
+.secs ul{margin:.3rem 0 0;padding-left:1.1rem;font-size:.82rem;color:var(--muted)}
+.secs b{color:var(--ink)}
+.qtype.ct{color:var(--muted);border-color:var(--line)}
 .res-tools select,.res-tools input,.qz-form input[type=text]{font:inherit;font-size:.92rem;padding:.38rem .6rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);min-width:0}
 .res-tools button.btn,.qz-wrap button.btn{cursor:pointer;font-family:var(--f-mono)}
 .res-state{color:var(--muted);margin:.4rem 0}
@@ -432,7 +438,7 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <a href="#sources">Источники по темам</a>
 <a href="#glossary">Глоссарий</a>
 <a href="#seminars">Семинары</a>
-<a href="#test">Тест</a>
+<a href="#test">Тесты</a>
 <a href="#libs">Библиотеки</a>
 </nav>
 <label class="search" for="q">
@@ -698,12 +704,15 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 </section>
 <!-- ТЕСТ -->
 <section id="test">
-<h2>Тест</h2>
+<h2>Тесты</h2>
 
 <div class="s-only qz-wrap" id="quiz">
-<p class="intro">Итоговый тест по всему курсу: 75 вопросов, из них 50 закрытых (нужно выбрать один ответ) и 25 открытых (нужно вписать слово, термин или число). На попытку отводится 75 минут, всего две попытки. Начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов и результат по разделам; правильные ответы не показываются. Результат автоматически попадает к преподавателю.</p>
+<p class="intro">Тесты по каждому из 10 разделов курса и итоговый тест. В закрытых вопросах нужно выбрать один ответ, в открытых вписать слово, термин или число. Итоговый тест состоит из 25 вопросов всех разделов, у каждого студента свой набор. На каждый тест даётся две попытки; начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов, правильные ответы не показываются. Результаты автоматически попадают к преподавателю.</p>
 <div class="panel" id="qz-start">
 <div class="qz-form">
+<label for="qz-test">Тест</label>
+<select id="qz-test"><option value="">Загружаю список тестов…</option></select>
+<p class="qz-tinfo" id="qz-tinfo"></p>
 <label for="qz-fio">Фамилия, имя, отчество</label>
 <input autocomplete="name" id="qz-fio" placeholder="Иванов Иван Иванович" type="text"/>
 <label for="qz-group">Группа</label>
@@ -1231,79 +1240,110 @@ apply();
   if (!root) return;
   var URL_ = String(window.IGPR_TEST_URL || '').trim();
   var SITE = 'https://xajdahax.github.io/igpr/';
-  var LS = 'igpr-test-v1';
+  var LS = 'igpr-test-v2';
   var $ = function (id) { return document.getElementById(id); };
-  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var st = { attemptId: null, questions: [], answers: {}, i: 0, deadline: 0, skew: 0, timer: null, sending: false, fio: '', group: '', no: 1, max: 2 };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var st = { tests: [], test: null, attemptId: null, questions: [], answers: {}, i: 0, deadline: 0, skew: 0, timer: null, sending: false, fio: '', group: '', no: 1, max: 2 };
 
   var bar = document.querySelector('.bar');
   var setBar = function () { if (bar) document.documentElement.style.setProperty('--barh', bar.offsetHeight + 'px'); };
   setBar(); window.addEventListener('resize', setBar);
 
-  function save() { try { localStorage.setItem(LS, JSON.stringify({ attemptId: st.attemptId, answers: st.answers, fio: st.fio, group: st.group })); } catch (e) {} }
-  function load() { try { return JSON.parse(localStorage.getItem(LS) || 'null'); } catch (e) { return null; } }
-  function forget() { try { var o = load() || {}; localStorage.setItem(LS, JSON.stringify({ fio: o.fio, group: o.group })); } catch (e) {} }
+  function load() { try { return JSON.parse(localStorage.getItem(LS) || 'null') || {}; } catch (e) { return {}; } }
+  function save() { try { localStorage.setItem(LS, JSON.stringify({ fio: st.fio, group: st.group, test: st.test && st.test.id, attemptId: st.attemptId, answers: st.answers })); } catch (e) {} }
+  function forget() { try { var o = load(); localStorage.setItem(LS, JSON.stringify({ fio: o.fio, group: o.group, test: o.test })); } catch (e) {} }
   function msg(t, bad) { var m = $('qz-msg'); m.textContent = t; m.classList.toggle('bad', !!bad); }
+  function plural(n, a, b, c) { var m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c); }
 
   if (!URL_) {
     $('qz-start').hidden = true;
     var off = $('qz-off'); off.hidden = false;
-    off.innerHTML = 'Тест проходится на сайте курса: <a href="' + SITE + '#test" target="_blank" rel="noopener">' + SITE + '</a>. Если вы уже там и видите это сообщение, тест ещё не открыт.';
+    off.innerHTML = 'Тесты проходятся на сайте курса: <a href="' + SITE + '#test" target="_blank" rel="noopener">' + SITE + '</a>. Если вы уже там и видите это сообщение, тесты ещё не открыты.';
     return;
   }
 
   function call(payload) {
-    return fetch(URL_, { method: 'POST', body: JSON.stringify(payload) }).then(function (r) {
-      if (!r.ok) throw new Error('http ' + r.status);
-      return r.json();
-    });
+    var opt = payload ? { method: 'POST', body: JSON.stringify(payload) } : { method: 'GET' };
+    return fetch(URL_, opt).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); });
   }
   var ERR = {
     need_name: 'Укажите фамилию, имя и группу.',
-    busy: 'Сервер теста занят, попробуйте через минуту.',
+    bad_test: 'Выберите тест из списка.',
+    busy: 'Сервер тестов занят, попробуйте через минуту.',
     not_found: 'Попытка не найдена. Обновите страницу.',
-    server_error: 'Ошибка на сервере теста. Сообщите преподавателю.'
+    server_error: 'Ошибка на сервере тестов. Сообщите преподавателю.'
   };
 
   var saved = load();
-  if (saved) {
-    $('qz-fio').value = saved.fio || '';
-    $('qz-group').value = saved.group || '';
-    if (saved.attemptId) { $('qz-go').textContent = 'Продолжить попытку'; $('qz-agree').checked = true; }
+  $('qz-fio').value = saved.fio || '';
+  $('qz-group').value = saved.group || '';
+
+  function describe(t) {
+    if (!t) return '';
+    return t.questions + ' ' + plural(t.questions, 'вопрос', 'вопроса', 'вопросов') + ': ' + t.closed + ' закр., ' + t.open + ' откр. · ' +
+      t.minutes + ' мин · попыток: ' + t.attempts + (t.id === 'final' ? ' · вопросы из всех разделов, у каждого свой набор' : '');
+  }
+  function pick() {
+    var id = $('qz-test').value;
+    st.test = st.tests.filter(function (t) { return t.id === id; })[0] || null;
+    $('qz-tinfo').textContent = describe(st.test);
+    var cur = load();
+    var resume = cur.attemptId && cur.test === id;
+    $('qz-go').textContent = resume ? 'Продолжить попытку' : 'Начать попытку';
+    if (resume) $('qz-agree').checked = true;
   }
 
+  function loadTests() {
+    $('qz-go').disabled = true;
+    return call(null).then(function (res) {
+      st.tests = res.tests || [];
+      $('qz-test').innerHTML = st.tests.map(function (t) { return '<option value="' + esc(t.id) + '">' + esc(t.name) + '</option>'; }).join('');
+      var want = load().test;
+      if (want && st.tests.some(function (t) { return t.id === want; })) $('qz-test').value = want;
+      pick(); msg('');
+    }).catch(function () {
+      $('qz-test').innerHTML = '<option value="">Список тестов не загрузился</option>';
+      msg('Нет связи с сервером тестов. Проверьте интернет и обновите страницу.', true);
+    }).then(function () { $('qz-go').disabled = false; });
+  }
+  $('qz-test').addEventListener('change', pick);
+  loadTests();
+
   $('qz-go').addEventListener('click', function () {
+    if (!st.tests.length) { loadTests(); return; }
     var fio = $('qz-fio').value.replace(/\s+/g, ' ').trim();
     var group = $('qz-group').value.replace(/\s+/g, ' ').trim();
+    if (!st.test) return msg('Выберите тест.', true);
     if (fio.split(' ').length < 2) return msg('Введите фамилию и имя полностью, лучше с отчеством.', true);
     if (!group) return msg('Укажите группу.', true);
     if (!$('qz-agree').checked) return msg('Отметьте, что понимаете правила попыток.', true);
     $('qz-go').disabled = true; msg('Загружаю вопросы…');
-    call({ action: 'start', fio: fio, group: group }).then(function (res) {
+    call({ action: 'start', test: st.test.id, fio: fio, group: group }).then(function (res) {
       if (!res.ok) {
         if (res.error === 'no_attempts') {
           var list = (res.results || []).map(function (r) {
             return 'попытка ' + r.attemptNo + ': ' + (r.correct === '' ? r.status : r.correct + ' из ' + r.total + ' (' + r.percent + '%)');
           }).join('; ');
-          msg('Обе попытки уже использованы' + (list ? '. Ваши результаты: ' + list + '.' : '.'), true);
+          msg('По тесту «' + st.test.name + '» обе попытки уже использованы' + (list ? '. Ваши результаты: ' + list + '.' : '.'), true);
         } else msg(ERR[res.error] || 'Не удалось начать попытку.', true);
         return;
       }
       st.fio = fio; st.group = group; st.attemptId = res.attemptId; st.questions = res.questions || [];
       st.deadline = res.deadline; st.skew = res.now - Date.now(); st.no = res.attemptNo; st.max = res.maxAttempts;
+      if (res.test) st.test = res.test;
       var prev = load();
-      st.answers = (prev && prev.attemptId === res.attemptId && prev.answers) ? prev.answers : {};
+      st.answers = (prev.attemptId === res.attemptId && prev.answers) ? prev.answers : {};
       save(); msg(''); run(res.resumed);
     }).catch(function () {
-      msg('Нет связи с сервером теста. Проверьте интернет и попробуйте ещё раз.', true);
+      msg('Нет связи с сервером тестов. Проверьте интернет и попробуйте ещё раз.', true);
     }).then(function () { $('qz-go').disabled = false; });
   });
 
   function run(resumed) {
     $('qz-start').hidden = true; $('qz-done').hidden = true; $('qz-run').hidden = false;
-    $('qz-who').textContent = st.fio + ', ' + st.group + ' · попытка ' + st.no + ' из ' + st.max + (resumed ? ' (продолжение)' : '');
+    $('qz-who').textContent = st.fio + ', ' + st.group + ' · ' + st.test.name + ' · попытка ' + st.no + ' из ' + st.max + (resumed ? ' (продолжение)' : '');
     $('qz-grid').innerHTML = st.questions.map(function (q, k) { return '<button type="button" class="qz-n" data-k="' + k + '">' + (k + 1) + '</button>'; }).join('');
-    show(0); tick(); st.timer = setInterval(tick, 1000);
+    show(0); tick(); clearInterval(st.timer); st.timer = setInterval(tick, 1000);
     setBar(); root.scrollIntoView({ block: 'start' });
   }
 
@@ -1335,7 +1375,7 @@ apply();
       $('qz-q').innerHTML = head + '<p class="qz-hint">Открытый вопрос: впишите ответ (слово, термин или число)</p>' +
         '<input class="qz-in" id="qz-in" type="text" maxlength="200" autocomplete="off" spellcheck="false" aria-label="Ваш ответ" value="' + esc(st.answers[q.id] || '') + '">';
     } else {
-      $('qz-q').innerHTML = head + '<p class="qz-hint">Выберите один ответ</p><div class="qz-opts" role="radiogroup">' +
+      $('qz-q').innerHTML = head + '<p class="qz-hint">Закрытый вопрос: выберите один ответ</p><div class="qz-opts" role="radiogroup">' +
         q.options.map(function (o) {
           return '<label class="qz-opt"><input type="radio" name="qz-a" value="' + esc(o.id) + '"' + (st.answers[q.id] === o.id ? ' checked' : '') + '><span>' + esc(o.text) + '</span></label>';
         }).join('') + '</div>';
@@ -1381,7 +1421,7 @@ apply();
     st.sending = true; $('qz-send').disabled = true;
     call({ action: 'submit', attemptId: st.attemptId, answers: st.answers }).then(function (res) {
       if (!res.ok) throw new Error(res.error || 'fail');
-      clearInterval(st.timer); forget(); done(res, auto);
+      clearInterval(st.timer); st.attemptId = null; forget(); done(res, auto);
     }).catch(function () {
       $('qz-confirm-text').textContent = 'Не удалось отправить ответы: нет связи с сервером. Ответы сохранены в этом браузере, нажмите «Отправить ответы» ещё раз.';
       $('qz-confirm').hidden = false;
@@ -1391,14 +1431,16 @@ apply();
   function done(res, auto) {
     $('qz-run').hidden = true;
     var d = $('qz-done'); d.hidden = false;
-    var rows = (res.byTopic || []).map(function (t) { return '<tr><td>' + esc(t.topic) + '</td><td>' + t.correct + ' из ' + t.total + '</td></tr>'; }).join('');
-    d.innerHTML = '<h3>' + (auto ? 'Время вышло, ответы отправлены' : 'Ответы отправлены') + '</h3>' +
+    var topics = res.byTopic || [];
+    var rows = topics.length > 1 ? topics.map(function (t) { return '<tr><td>' + esc(t.topic) + '</td><td>' + t.correct + ' из ' + t.total + '</td></tr>'; }).join('') : '';
+    d.innerHTML = '<h3>' + esc(st.test.name) + ': ' + (auto ? 'время вышло, ответы отправлены' : 'ответы отправлены') + '</h3>' +
       '<p class="qz-score"><b>' + res.correct + '</b> из ' + res.total + ' · ' + res.percent + '%</p>' +
       (res.byType ? '<p>Закрытые вопросы: ' + res.byType.choice.correct + ' из ' + res.byType.choice.total + ' · открытые: ' + res.byType.open.correct + ' из ' + res.byType.open.total + '</p>' : '') +
       (res.late ? '<p class="qz-msg bad">Ответы пришли после окончания времени, преподаватель увидит эту отметку.</p>' : '') +
-      '<p>Попытка ' + res.attemptNo + '. ' + (res.attemptsLeft > 0 ? 'Осталось попыток: ' + res.attemptsLeft + '.' : 'Попытки исчерпаны.') + ' Результат уже у преподавателя.</p>' +
-      (rows ? '<div class="tbl"><table class="cmp"><thead><tr><th>Раздел</th><th>Верно</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '');
-    $('qz-go').textContent = 'Начать попытку';
+      '<p>Попытка ' + res.attemptNo + '. ' + (res.attemptsLeft > 0 ? 'По этому тесту осталось попыток: ' + res.attemptsLeft + '.' : 'Попытки по этому тесту исчерпаны.') + ' Результат уже у преподавателя.</p>' +
+      (rows ? '<div class="tbl"><table class="cmp"><thead><tr><th>Раздел</th><th>Верно</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '') +
+      '<p><button type="button" class="btn" id="qz-back">К выбору теста</button></p>';
+    $('qz-back').addEventListener('click', function () { d.hidden = true; $('qz-start').hidden = false; $('qz-agree').checked = false; pick(); root.scrollIntoView({ block: 'start' }); });
     d.scrollIntoView({ block: 'start' });
   }
 })();
