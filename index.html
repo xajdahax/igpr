@@ -382,6 +382,11 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 .qz-meta{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cinnabar)}
 .qz-text{font-size:1.05rem;margin:.5rem 0 .8rem;max-width:68ch}
 .qz-opts{display:grid;gap:.45rem}
+.qz-hint{font-size:.85rem;color:var(--muted);margin:0 0 .5rem}
+.qz-in{width:100%;font:inherit;font-size:1rem;padding:.6rem .75rem;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}
+.qz-in:focus{border-color:var(--cinnabar);outline:none}
+.qtype{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--cinnabar);border:1px solid var(--cinnabar);border-radius:3px;padding:0 .3rem;margin-right:.3rem;vertical-align:2px}
+.bank-list .open-a{margin:.15rem 0 0;font-size:.92rem}
 .qz-opt{display:flex;gap:.6rem;align-items:flex-start;padding:.55rem .7rem;border:1px solid var(--line);border-radius:4px;background:var(--paper);cursor:pointer}
 .qz-opt:has(input:checked){border-color:var(--cinnabar);background:var(--cinnabar-soft)}
 .qz-opt input{margin-top:.2rem;flex:none}
@@ -696,7 +701,7 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <h2>Тест</h2>
 
 <div class="s-only qz-wrap" id="quiz">
-<p class="intro">Итоговый тест по всему курсу: 75 вопросов, на попытку отводится 75 минут, всего две попытки. Начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов и результат по разделам; правильные ответы не показываются. Результат автоматически попадает к преподавателю.</p>
+<p class="intro">Итоговый тест по всему курсу: 75 вопросов, из них 50 закрытых (нужно выбрать один ответ) и 25 открытых (нужно вписать слово, термин или число). На попытку отводится 75 минут, всего две попытки. Начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов и результат по разделам; правильные ответы не показываются. Результат автоматически попадает к преподавателю.</p>
 <div class="panel" id="qz-start">
 <div class="qz-form">
 <label for="qz-fio">Фамилия, имя, отчество</label>
@@ -1324,11 +1329,17 @@ apply();
   function show(k) {
     st.i = Math.max(0, Math.min(st.questions.length - 1, k));
     var q = st.questions[st.i];
-    $('qz-q').innerHTML = '<div class="qz-meta">Вопрос ' + (st.i + 1) + ' из ' + st.questions.length + ' · ' + esc(q.topic) + '</div>' +
-      '<p class="qz-text">' + esc(q.text) + '</p><div class="qz-opts" role="radiogroup">' +
-      q.options.map(function (o) {
-        return '<label class="qz-opt"><input type="radio" name="qz-a" value="' + esc(o.id) + '"' + (st.answers[q.id] === o.id ? ' checked' : '') + '><span>' + esc(o.text) + '</span></label>';
-      }).join('') + '</div>';
+    var head = '<div class="qz-meta">Вопрос ' + (st.i + 1) + ' из ' + st.questions.length + ' · ' + esc(q.topic) + '</div>' +
+      '<p class="qz-text">' + esc(q.text) + '</p>';
+    if (q.type === 'open') {
+      $('qz-q').innerHTML = head + '<p class="qz-hint">Открытый вопрос: впишите ответ (слово, термин или число)</p>' +
+        '<input class="qz-in" id="qz-in" type="text" maxlength="200" autocomplete="off" spellcheck="false" aria-label="Ваш ответ" value="' + esc(st.answers[q.id] || '') + '">';
+    } else {
+      $('qz-q').innerHTML = head + '<p class="qz-hint">Выберите один ответ</p><div class="qz-opts" role="radiogroup">' +
+        q.options.map(function (o) {
+          return '<label class="qz-opt"><input type="radio" name="qz-a" value="' + esc(o.id) + '"' + (st.answers[q.id] === o.id ? ' checked' : '') + '><span>' + esc(o.text) + '</span></label>';
+        }).join('') + '</div>';
+    }
     $('qz-prev').disabled = st.i === 0;
     $('qz-next').textContent = st.i === st.questions.length - 1 ? 'К завершению' : 'Далее';
     $('qz-confirm').hidden = true;
@@ -1340,7 +1351,16 @@ apply();
     if (e.target.name !== 'qz-a') return;
     st.answers[st.questions[st.i].id] = e.target.value; save(); marks();
   });
-  ['copy', 'cut', 'contextmenu'].forEach(function (ev) { $('qz-q').addEventListener(ev, function (e) { e.preventDefault(); }); });
+  $('qz-q').addEventListener('input', function (e) {
+    if (e.target.id !== 'qz-in') return;
+    var id = st.questions[st.i].id, v = e.target.value.replace(/\s+/g, ' ').trim();
+    if (v) st.answers[id] = e.target.value.slice(0, 200); else delete st.answers[id];
+    save(); marks();
+  });
+  $('qz-q').addEventListener('keydown', function (e) {
+    if (e.target.id === 'qz-in' && e.key === 'Enter') { e.preventDefault(); $('qz-next').click(); }
+  });
+  ['copy', 'cut', 'paste', 'drop', 'contextmenu'].forEach(function (ev) { $('qz-q').addEventListener(ev, function (e) { e.preventDefault(); }); });
   $('qz-prev').addEventListener('click', function () { show(st.i - 1); });
   $('qz-next').addEventListener('click', function () { if (st.i === st.questions.length - 1) ask(); else show(st.i + 1); });
   $('qz-finish').addEventListener('click', ask);
@@ -1374,6 +1394,7 @@ apply();
     var rows = (res.byTopic || []).map(function (t) { return '<tr><td>' + esc(t.topic) + '</td><td>' + t.correct + ' из ' + t.total + '</td></tr>'; }).join('');
     d.innerHTML = '<h3>' + (auto ? 'Время вышло, ответы отправлены' : 'Ответы отправлены') + '</h3>' +
       '<p class="qz-score"><b>' + res.correct + '</b> из ' + res.total + ' · ' + res.percent + '%</p>' +
+      (res.byType ? '<p>Закрытые вопросы: ' + res.byType.choice.correct + ' из ' + res.byType.choice.total + ' · открытые: ' + res.byType.open.correct + ' из ' + res.byType.open.total + '</p>' : '') +
       (res.late ? '<p class="qz-msg bad">Ответы пришли после окончания времени, преподаватель увидит эту отметку.</p>' : '') +
       '<p>Попытка ' + res.attemptNo + '. ' + (res.attemptsLeft > 0 ? 'Осталось попыток: ' + res.attemptsLeft + '.' : 'Попытки исчерпаны.') + ' Результат уже у преподавателя.</p>' +
       (rows ? '<div class="tbl"><table class="cmp"><thead><tr><th>Раздел</th><th>Верно</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '');
