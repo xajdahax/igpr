@@ -2,427 +2,19 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; media-src 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'; trusted-types 'none'">
+<meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Материалы курса «История государства и права России» для студентов Института права УУНиТ: учебники, тексты памятников права, Русская Правда, глоссарий, планы семинаров и задачи.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="История государства и права России">
 <meta property="og:description" content="Материалы курса «История государства и права России» для студентов Института права УУНиТ: учебники, тексты памятников права, Русская Правда, глоссарий, планы семинаров и задачи.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ad2f1b'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='white' font-family='Georgia,serif'%3E%D0%98%3C/text%3E%3C/svg%3E">
-<script src="config.js"></script>
-<style>
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-sans-cyrillic-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-sans-cyrillic-400-normal.woff2) format('woff2');
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-sans-latin-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-sans-latin-400-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/pt-sans-cyrillic-ext-700-normal.woff2) format('woff2');
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/pt-sans-cyrillic-700-normal.woff2) format('woff2');
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/pt-sans-latin-ext-700-normal.woff2) format('woff2');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/pt-sans-latin-700-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-cyrillic-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-cyrillic-400-normal.woff2) format('woff2');
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-latin-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-latin-400-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/old-standard-tt-cyrillic-ext-700-normal.woff2) format('woff2');
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/old-standard-tt-cyrillic-700-normal.woff2) format('woff2');
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/old-standard-tt-latin-ext-700-normal.woff2) format('woff2');
-  unicode-range: U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(fonts/old-standard-tt-latin-700-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-cyrillic-ext-400-italic.woff2) format('woff2');
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-cyrillic-400-italic.woff2) format('woff2');
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-latin-ext-400-italic.woff2) format('woff2');
-  unicode-range: U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/old-standard-tt-latin-400-italic.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-@font-face {
-  font-family: 'PT Mono';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-mono-cyrillic-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
-}
-@font-face {
-  font-family: 'PT Mono';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-mono-cyrillic-400-normal.woff2) format('woff2');
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
-}
-@font-face {
-  font-family: 'PT Mono';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-mono-latin-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'PT Mono';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(fonts/pt-mono-latin-400-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-body{margin:0;font-size:14px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-img{max-width:100%}
-[hidden]{display:none!important}
-html{scroll-behavior:smooth}
-section{scroll-margin-top:4rem}
-</style>
 <title>История государства и права России</title>
-<style>
-/* Layout: одна колонка до 72rem; разделы оформлены как главы рукописи с киноварной буквицей; липкая полоса навигации с поиском по всему хабу */
-:root{
-  --paper:#eef1ef;
-  --surface:#ffffff;
-  --ink:#1a2125;
-  --muted:#58666a;
-  --line:#d2d9d7;
-  --cinnabar:#ad2f1b;
-  --cinnabar-soft:#f5e2dd;
-  --f-display:"Old Standard TT","Times New Roman",Georgia,serif;
-  --f-body:"PT Sans","Helvetica Neue",Arial,sans-serif;
-  --f-mono:"PT Mono",ui-monospace,Menlo,Consolas,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#111618; --surface:#182023; --ink:#e3e8e5; --muted:#97a3a2; --line:#2b3538;
-    --cinnabar:#ee7d67; --cinnabar-soft:#3b231f; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#111618; --surface:#182023; --ink:#e3e8e5; --muted:#97a3a2; --line:#2b3538;
-  --cinnabar:#ee7d67; --cinnabar-soft:#3b231f; color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
-.wrap{max-width:72rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-a{color:inherit;text-decoration-color:var(--cinnabar);text-underline-offset:3px}
-a:hover{color:var(--cinnabar)}
-:focus-visible{outline:2px solid var(--cinnabar);outline-offset:2px;border-radius:2px}
-
-/* шапка */
-.head{padding-block:2.4rem 1.4rem}
-.eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,5vw,3.1rem);line-height:1.08;margin:.4rem 0 .6rem;text-wrap:balance}
-h1::first-letter{color:var(--cinnabar)}
-.role{display:inline-flex;flex-wrap:wrap;gap:.3rem .8rem;align-items:baseline;margin:.2rem 0 0;padding:.35rem .7rem;border:1px solid var(--cinnabar);border-radius:4px;background:var(--cinnabar-soft);font-size:.9rem}
-.role a{color:var(--cinnabar);font-weight:700}
-.facts{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font-family:var(--f-mono);font-size:.85rem;color:var(--muted)}
-.facts b{color:var(--ink);font-weight:400}
-.lead{max-width:62ch;margin:.9rem 0 0;color:var(--muted)}
-
-/* навигация */
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-block:1px solid var(--line)}
-.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding-block:.55rem}
-.bar nav{display:flex;flex-wrap:wrap;gap:.2rem .9rem;font-size:.92rem}
-.bar nav a{text-decoration:none;color:var(--muted)}
-.bar nav a:hover{color:var(--cinnabar)}
-.search{margin-left:auto;display:flex;align-items:center;gap:.5rem;min-width:0;flex:1 1 15rem;max-width:22rem}
-.search input{width:100%;font:inherit;font-size:.95rem;padding:.42rem .7rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)}
-@media (max-width:620px){.bar nav{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none;max-width:100%}.bar nav::-webkit-scrollbar{display:none}.search{max-width:none}}
-.count{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
-
-/* разделы */
-section{padding-block:2.2rem .4rem}
-h2{font-family:var(--f-display);font-weight:700;font-size:1.85rem;line-height:1.15;margin:0 0 .35rem;text-wrap:balance}
-h2::first-letter{color:var(--cinnabar);font-size:1.25em}
-.intro{color:var(--muted);max-width:66ch;margin:0 0 1.2rem}
-h3{font-family:var(--f-display);font-weight:400;font-size:1.25rem;margin:0 0 .5rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem}
-h3 .num{font-family:var(--f-mono);font-size:.78rem;color:var(--cinnabar);letter-spacing:.04em;text-transform:uppercase}
-.group{margin-bottom:1.6rem}
-
-/* строки источников */
-.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.3rem 1.2rem;align-items:start;padding:.7rem 0;border-bottom:1px solid var(--line)}
-.row .t{font-weight:700}
-.row .n{color:var(--muted);font-size:.92rem;margin-top:.1rem}
-.row .a{display:flex;flex-wrap:wrap;gap:.35rem;justify-content:flex-end}
-.btn{display:inline-block;font-family:var(--f-mono);font-size:.76rem;letter-spacing:.03em;text-decoration:none;padding:.22rem .55rem;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink);white-space:nowrap}
-.btn:hover{border-color:var(--cinnabar);color:var(--cinnabar)}
-.btn.dl{border-color:var(--cinnabar);color:var(--cinnabar)}
-.tag{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;padding:.08rem .4rem;border-radius:3px;border:1px solid var(--line);color:var(--muted);margin-left:.4rem;vertical-align:2px;font-weight:400}
-.tag.main{border-color:var(--cinnabar);color:var(--cinnabar)}
-.note{font-size:.88rem;color:var(--muted);margin:.6rem 0 0}
-@media (max-width:620px){
-  .row{grid-template-columns:minmax(0,1fr)}
-  .row .a{justify-content:flex-start}
-}
-
-/* Русская Правда: шкала */
-.rp-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1.6rem;align-items:start}
-@media (max-width:860px){.rp-grid{grid-template-columns:minmax(0,1fr)}}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1rem 1.1rem}
-.panel h4{font-family:var(--f-display);font-size:1.08rem;margin:0 0 .5rem;font-weight:700}
-.scale{width:100%;border-collapse:collapse;font-size:.92rem}
-.scale td{padding:.38rem 0;border-bottom:1px solid var(--line);vertical-align:top}
-.scale td:first-child{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--cinnabar);white-space:nowrap;padding-right:.9rem;text-align:right;width:5.5rem}
-.scale tr:last-child td{border-bottom:0}
-.fines{margin-top:1.8rem}
-.fines .note{margin:0 0 .6rem}
-.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
-.cmp{width:100%;min-width:34rem;border-collapse:collapse;font-size:.92rem}
-.cmp th{text-align:left;font-family:var(--f-mono);font-weight:400;font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:.55rem .75rem;border-bottom:1px solid var(--line)}
-.cmp td{padding:.42rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
-.cmp td:nth-child(n+2){font-variant-numeric:tabular-nums;width:30%}
-.cmp tbody tr:last-child td{border-bottom:0}
-.cmp tr.grp td{font-family:var(--f-display);font-weight:700;font-size:1rem;color:var(--cinnabar);background:var(--cinnabar-soft)}
-.scale.parts td:first-child{text-align:left;width:auto;font-size:.8rem}
-.disputes{margin-top:1.8rem}
-.disputes .note{margin:0 0 .6rem}
-.scale.wide td:first-child{width:8rem}
-.money{font-family:var(--f-mono);font-size:.88rem;font-variant-numeric:tabular-nums;margin:.2rem 0 1rem;line-height:1.7}
-
-/* глоссарий */
-.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
-.chip{font:inherit;font-size:.86rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:0 1.6rem;margin:0}
-.term{padding:.65rem 0;border-top:1px solid var(--line);min-width:0}
-.term dt{font-family:var(--f-display);font-weight:700;font-size:1.08rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .5rem}
-.term dt span{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
-.term dd{margin:.15rem 0 0;font-size:.93rem}
-.empty{color:var(--muted);font-style:italic}
-
-/* семинары */
-details{border-bottom:1px solid var(--line);padding:.55rem 0}
-details:first-of-type{border-top:1px solid var(--line)}
-summary{cursor:pointer;font-family:var(--f-display);font-size:1.12rem;list-style:none;display:flex;gap:.8rem;align-items:baseline}
-summary::-webkit-details-marker{display:none}
-summary .num{font-family:var(--f-mono);font-size:.78rem;color:var(--cinnabar);min-width:4.2rem}
-details ol{margin:.5rem 0 .3rem;padding-left:6.2rem;font-size:.94rem}
-@media (max-width:620px){details ol{padding-left:1.4rem}}
-details li{margin:.15rem 0}
-
-footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
-/* тест */
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-#test .intro{max-width:70ch}
-.res-head{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:space-between;margin-bottom:.6rem}
-.res-head h3{margin:0}
-.res-tools{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
-.qz-form select{font:inherit;font-size:.95rem;padding:.42rem .6rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);min-width:0;max-width:100%}
-.qz-tinfo{margin:.1rem 0 0;font-size:.84rem;color:var(--muted)}
-.secs summary{cursor:pointer;font-variant-numeric:tabular-nums}
-.secs ul{margin:.3rem 0 0;padding-left:1.1rem;font-size:.82rem;color:var(--muted)}
-.secs b{color:var(--ink)}
-.qtype.ct{color:var(--muted);border-color:var(--line)}
-.res-tools select,.res-tools input,.qz-form input[type=text]{font:inherit;font-size:.92rem;padding:.38rem .6rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);min-width:0}
-.res-tools button.btn,.qz-wrap button.btn{cursor:pointer;font-family:var(--f-mono)}
-.res-state{color:var(--muted);margin:.4rem 0}
-.res-state.bad,.qz-msg.bad{color:var(--cinnabar)}
-.res-sum{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--f-mono);font-size:.85rem;color:var(--muted);margin:.2rem 0 .7rem}
-.res-sum b{color:var(--ink);font-weight:400}
-.res td small{display:block;color:var(--muted);font-size:.78rem}
-.res td.best{font-weight:700}
-.res .pct{font-variant-numeric:tabular-nums}
-.res .lo{color:var(--cinnabar)}
-.bank-h{margin-top:1.8rem}
-.bank-t{border-bottom:1px solid var(--line)}
-.bank-t>summary{font-family:var(--f-display);font-size:1.1rem}
-.bank-list{margin:.5rem 0 .8rem;padding-left:1.6rem}
-.bank-list>li{margin:.7rem 0}
-.bank-list .bq{margin:0 0 .25rem;font-weight:700}
-.bank-list ul{list-style:none;margin:0;padding:0}
-.bank-list ul li{padding:.1rem 0 .1rem 1.4rem;position:relative;color:var(--muted)}
-.bank-list ul li.ok{color:var(--ink);font-weight:700}
-.bank-list ul li.ok::before{content:"✓";position:absolute;left:0;color:var(--cinnabar)}
-.bank-list .basis{font-size:.84rem;color:var(--muted);margin:.2rem 0 0}
-.qz-wrap{max-width:52rem}
-.qz-form{display:grid;grid-template-columns:minmax(0,1fr);gap:.35rem;max-width:30rem}
-.qz-form label{font-size:.88rem;color:var(--muted);margin-top:.35rem}
-.qz-form .qz-check{display:flex;gap:.5rem;align-items:flex-start;color:var(--ink);margin-top:.6rem}
-.qz-main{justify-self:start;margin-top:.7rem;padding:.45rem 1rem;font-size:.86rem}
-.qz-msg{margin:.6rem 0 0;font-size:.92rem}
-.qz-bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--barh,3.2rem));z-index:4;display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center;background:var(--paper);padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
-.qz-timer{font-family:var(--f-mono);font-size:1.05rem;font-variant-numeric:tabular-nums;color:var(--ink)}
-.qz-timer.low{color:var(--cinnabar);font-weight:700}
-#qz-prog{color:var(--muted);font-family:var(--f-mono);font-size:.82rem}
-.qz-bar .btn{margin-left:auto}
-.qz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(2.3rem,1fr));gap:.3rem;margin:.8rem 0}
-.qz-n{font:inherit;font-family:var(--f-mono);font-size:.78rem;padding:.3rem 0;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--muted);cursor:pointer}
-.qz-n.done{background:var(--cinnabar-soft);color:var(--ink);border-color:var(--cinnabar)}
-.qz-n.cur{outline:2px solid var(--ink);outline-offset:1px}
-.qz-q{user-select:none;-webkit-user-select:none}
-.qz-meta{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cinnabar)}
-.qz-text{font-size:1.05rem;margin:.5rem 0 .8rem;max-width:68ch}
-.qz-opts{display:grid;gap:.45rem}
-.qz-hint{font-size:.85rem;color:var(--muted);margin:0 0 .5rem}
-.qz-in{width:100%;font:inherit;font-size:1rem;padding:.6rem .75rem;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}
-.qz-in:focus{border-color:var(--cinnabar);outline:none}
-.qtype{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--cinnabar);border:1px solid var(--cinnabar);border-radius:3px;padding:0 .3rem;margin-right:.3rem;vertical-align:2px}
-.bank-list .open-a{margin:.15rem 0 0;font-size:.92rem}
-.qz-opt{display:flex;gap:.6rem;align-items:flex-start;padding:.55rem .7rem;border:1px solid var(--line);border-radius:4px;background:var(--paper);cursor:pointer}
-.qz-opt:has(input:checked){border-color:var(--cinnabar);background:var(--cinnabar-soft)}
-.qz-opt input{margin-top:.2rem;flex:none}
-.qz-nav{display:flex;justify-content:space-between;gap:.6rem;margin:.8rem 0}
-.qz-confirm{margin:.6rem 0;display:grid;gap:.6rem;justify-items:start}
-.qz-confirm p{margin:0}
-.qz-score{font-family:var(--f-display);font-size:2rem;margin:.2rem 0}
-.qz-score b{color:var(--cinnabar)}
-
-
-/* набор к занятию */
-.kit{padding:0 0 .8rem 5rem;font-size:.95rem}
-@media (max-width:620px){.kit{padding-left:0}}
-.kit h4{font-family:var(--f-display);font-weight:700;font-size:1.2rem;margin:1.3rem 0 .3rem}
-.kit h5{font-size:1rem;margin:1rem 0 .25rem}
-.kit p{margin:.35rem 0;max-width:74ch}
-.kit .src{color:var(--muted);font-size:.86rem}
-.kit .key{font-size:.88rem;color:var(--cinnabar)}
-.kit .more{color:var(--muted)}
-.kit .more b{color:var(--ink);font-weight:700}
-.task{border-top:1px solid var(--line);padding:.8rem 0 .4rem}
-.task .lbl{font-family:var(--f-mono);font-size:.76rem;color:var(--cinnabar);text-transform:uppercase;letter-spacing:.04em}
-.task .ttl{font-weight:700}
-.task .ask{font-style:italic}
-.kit details{border:0;padding:.3rem 0 0}
-.kit summary{font-family:var(--f-body);font-size:.88rem;color:var(--cinnabar);display:inline-block;border:1px solid var(--cinnabar);border-radius:3px;padding:.15rem .55rem}
-.kit details[open] summary{margin-bottom:.3rem}
-.kit details p{padding-left:.8rem;border-left:1px solid var(--line)}
-@media (prefers-reduced-motion:no-preference){a,.btn,.chip{transition:color .15s,border-color .15s,background .15s}}
-</style>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+<script src="app.js"></script>
+<script src="config.js" defer></script>
+<script src="quiz.js" defer></script>
 </head>
 <body>
 <header class="wrap head">
@@ -442,7 +34,7 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <a href="#libs">Библиотеки</a>
 </nav>
 <label class="search" for="q">
-<input autocomplete="off" id="q" placeholder="Поиск: закуп, Судебник, 1649…" type="search"/>
+<input autocomplete="off" id="q" maxlength="100" placeholder="Поиск: закуп, Судебник, 1649…" type="search"/>
 <span aria-live="polite" class="count" id="count"></span>
 </label>
 </div>
@@ -455,43 +47,43 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <div class="group">
 <h3><span class="num">Открытый доступ</span>Открыть и скачать без входа</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">М.Ф. Владимирский-Буданов. Обзор истории русского права <span class="tag main">полный курс</span></div><div class="n">Киев, 1907. Классический дореволюционный учебник: от Древней Руси до XIX в., государственное, уголовное, гражданское право и процесс. В НЭБ читается онлайн и скачивается в PDF.</div></div><div class="a"><a class="btn dl" href="https://rusneb.ru/catalog/000199_000009_003655458/" rel="noopener" target="_blank">НЭБ · PDF</a><a class="btn" href="https://www.prlib.ru/item/717515" rel="noopener" target="_blank">Президентская</a></div></li>
-<li class="row s"><div><div class="t">М.Ф. Владимирский-Буданов. Хрестоматия по истории русского права. Вып. 1</div><div class="n">1899. Договоры с Византией, Русская Правда, уставы и грамоты с комментариями автора.</div></div><div class="a"><a class="btn dl" href="https://rusneb.ru/catalog/000199_000009_003601155/" rel="noopener" target="_blank">НЭБ · PDF</a></div></li>
-<li class="row s"><div><div class="t">А.Н. Филиппов. Учебник истории русского права. Ч. 1</div><div class="n">Пособие к лекциям Юрьевского университета. Скан в цифровом архиве Национальной библиотеки Эстонии.</div></div><div class="a"><a class="btn dl" href="https://digar.ee/arhiiv/en/books/85134" rel="noopener" target="_blank">DIGAR</a></div></li>
-<li class="row s"><div><div class="t">И.Д. Беляев. Лекции по истории русского законодательства</div><div class="n">М., 1879. Курс лекций Московского университета, удобен для тем 2-5.</div></div><div class="a"><a class="btn" href="https://www.prlib.ru/item/425846" rel="noopener" target="_blank">Президентская</a></div></li>
-<li class="row s"><div><div class="t">И.Б. Данилов, Е.А. Шаталов. История государства и права России до первой половины XIX века: практикум</div><div class="n">Новосибирск: СГУГиТ, 2026. 60 с. Планы практических занятий с вопросами для подготовки.</div></div><div class="a"><a class="btn dl" href="https://lib.sgugit.ru/irbisfulltext/2026/260608_%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%BE%D0%B2.pdf" rel="noopener" target="_blank">PDF</a></div></li>
-<li class="row s"><div><div class="t">И.Д. Борисова, А.А. Ошмарин. Государство и право России в период сословно-представительной монархии: хрестоматия</div><div class="n">Владимир: ВлГУ, 2024. 385 с. Источники и литература XVI-XVII вв. с вопросами, заданиями и глоссарием; к занятиям 3 и 4.</div></div><div class="a"><a class="btn dl" href="https://dspace.www1.vlsu.ru/bitstream/123456789/12265/1/02794.pdf" rel="noopener" target="_blank">PDF</a></div></li>
+<li class="row s"><div><div class="t">М.Ф. Владимирский-Буданов. Обзор истории русского права <span class="tag main">полный курс</span></div><div class="n">Киев, 1907. Классический дореволюционный учебник: от Древней Руси до XIX в., государственное, уголовное, гражданское право и процесс. В НЭБ читается онлайн и скачивается в PDF.</div></div><div class="a"><a class="btn dl" href="https://rusneb.ru/catalog/000199_000009_003655458/" rel="noopener noreferrer" target="_blank">НЭБ · PDF</a><a class="btn" href="https://www.prlib.ru/item/717515" rel="noopener noreferrer" target="_blank">Президентская</a></div></li>
+<li class="row s"><div><div class="t">М.Ф. Владимирский-Буданов. Хрестоматия по истории русского права. Вып. 1</div><div class="n">1899. Договоры с Византией, Русская Правда, уставы и грамоты с комментариями автора.</div></div><div class="a"><a class="btn dl" href="https://rusneb.ru/catalog/000199_000009_003601155/" rel="noopener noreferrer" target="_blank">НЭБ · PDF</a></div></li>
+<li class="row s"><div><div class="t">А.Н. Филиппов. Учебник истории русского права. Ч. 1</div><div class="n">Пособие к лекциям Юрьевского университета. Скан в цифровом архиве Национальной библиотеки Эстонии.</div></div><div class="a"><a class="btn dl" href="https://digar.ee/arhiiv/en/books/85134" rel="noopener noreferrer" target="_blank">DIGAR</a></div></li>
+<li class="row s"><div><div class="t">И.Д. Беляев. Лекции по истории русского законодательства</div><div class="n">М., 1879. Курс лекций Московского университета, удобен для тем 2-5.</div></div><div class="a"><a class="btn" href="https://www.prlib.ru/item/425846" rel="noopener noreferrer" target="_blank">Президентская</a></div></li>
+<li class="row s"><div><div class="t">И.Б. Данилов, Е.А. Шаталов. История государства и права России до первой половины XIX века: практикум</div><div class="n">Новосибирск: СГУГиТ, 2026. 60 с. Планы практических занятий с вопросами для подготовки.</div></div><div class="a"><a class="btn dl" href="https://lib.sgugit.ru/irbisfulltext/2026/260608_%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%BE%D0%B2.pdf" rel="noopener noreferrer" target="_blank">PDF</a></div></li>
+<li class="row s"><div><div class="t">И.Д. Борисова, А.А. Ошмарин. Государство и право России в период сословно-представительной монархии: хрестоматия</div><div class="n">Владимир: ВлГУ, 2024. 385 с. Источники и литература XVI-XVII вв. с вопросами, заданиями и глоссарием; к занятиям 3 и 4.</div></div><div class="a"><a class="btn dl" href="https://dspace.www1.vlsu.ru/bitstream/123456789/12265/1/02794.pdf" rel="noopener noreferrer" target="_blank">PDF</a></div></li>
 <li class="row s"><div><div class="t">По Русской Правде</div><div class="n">Монографии М.Н. Тихомирова и С.В. Юшкова и сборник Юшкова «Памятники русского права» в PDF собраны в разделе «Русская Правда».</div></div><div class="a"><a class="btn" href="#rp">К разделу</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">По подписке</span>Через вход УУНиТ</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Университетская библиотека онлайн <span class="tag main">подписка УУНиТ</span></div><div class="n">Указана в РПД. Учебники и пособия по истории государства и права разных вузов и издательств; вход через университет.</div></div><div class="a"><a class="btn" href="https://biblioclub.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">ЭБС УУНиТ <span class="tag main">подписка УУНиТ</span></div><div class="n">Пособия преподавателей Института права и издания университета.</div></div><div class="a"><a class="btn" href="https://elib.bashedu.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">ЭБС «Лань» <span class="tag main">подписка УУНиТ</span></div><div class="n">Указана в РПД. Юридический раздел скромнее, зато есть вузовские пособия и журналы.</div></div><div class="a"><a class="btn" href="https://e.lanbook.com" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">В.М. Сырых. История государства и права России</div><div class="n">М.: Норма; ИНФРА-М, 2014. 400 с. На Znanium; доступ есть, если библиотека подписана на эту ЭБС, стоит уточнить.</div></div><div class="a"><a class="btn" href="https://znanium.com/catalog/product/426403" rel="noopener" target="_blank">Znanium</a></div></li>
+<li class="row s"><div><div class="t">Университетская библиотека онлайн <span class="tag main">подписка УУНиТ</span></div><div class="n">Указана в РПД. Учебники и пособия по истории государства и права разных вузов и издательств; вход через университет.</div></div><div class="a"><a class="btn" href="https://biblioclub.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">ЭБС УУНиТ <span class="tag main">подписка УУНиТ</span></div><div class="n">Пособия преподавателей Института права и издания университета.</div></div><div class="a"><a class="btn" href="https://elib.bashedu.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">ЭБС «Лань» <span class="tag main">подписка УУНиТ</span></div><div class="n">Указана в РПД. Юридический раздел скромнее, зато есть вузовские пособия и журналы.</div></div><div class="a"><a class="btn" href="https://e.lanbook.com" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">В.М. Сырых. История государства и права России</div><div class="n">М.: Норма; ИНФРА-М, 2014. 400 с. На Znanium; доступ есть, если библиотека подписана на эту ЭБС, стоит уточнить.</div></div><div class="a"><a class="btn" href="https://znanium.com/catalog/product/426403" rel="noopener noreferrer" target="_blank">Znanium</a></div></li>
 <li class="row s"><div><div class="t">Печатные учебники вне РПД</div><div class="n">История отечественного государства и права: учебник / отв. ред. И.А. Исаев (МГЮА; М.: Проспект, 2012. 432 с.); И.А. Исаев «История государства и права России» (Проспект); «История государства и права России» под ред. Ю.П. Титова (Проспект); «Отечественная история государства и права» под ред. О.И. Чистякова (МГУ); «Древнерусское государство и право» под ред. Т.Е. Новицкой (1998).</div></div><div class="a"><span class="btn">библиотека</span></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Основная</span>По РПД, Юрайт</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">С.А. Егоров, А.Б. Иванов. История государства и права России. Ч. 1: IX - первая половина XIX века <span class="tag main">основной</span></div><div class="n">Под общ. ред. В.Н. Карташова. Учебник и практикум. М.: Юрайт, 2023. 345 с. Рабочий учебник для семинаров по темам 1-7.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-2-ch-chast-1-ix-pervaya-polovina-xix-veka-515540" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">А.Б. Иванов, С.А. Егоров. История государства и права России. Ч. 2: Вторая половина XIX - начало XXI века <span class="tag main">основной</span></div><div class="n">Под общ. ред. В.Н. Карташова. Учебник и практикум. М.: Юрайт, 2023. 309 с. Темы 8-14.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-2-ch-chast-2-vtoraya-polovina-xix-nachalo-xxi-veka-515915" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">История государства и права России: учебное пособие</div><div class="n">М.: Юрайт, 2023. 180 с. Подходит для быстрого повторения перед экзаменом.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-510399" rel="noopener" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">С.А. Егоров, А.Б. Иванов. История государства и права России. Ч. 1: IX - первая половина XIX века <span class="tag main">основной</span></div><div class="n">Под общ. ред. В.Н. Карташова. Учебник и практикум. М.: Юрайт, 2023. 345 с. Рабочий учебник для семинаров по темам 1-7.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-2-ch-chast-1-ix-pervaya-polovina-xix-veka-515540" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">А.Б. Иванов, С.А. Егоров. История государства и права России. Ч. 2: Вторая половина XIX - начало XXI века <span class="tag main">основной</span></div><div class="n">Под общ. ред. В.Н. Карташова. Учебник и практикум. М.: Юрайт, 2023. 309 с. Темы 8-14.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-2-ch-chast-2-vtoraya-polovina-xix-nachalo-xxi-veka-515915" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">История государства и права России: учебное пособие</div><div class="n">М.: Юрайт, 2023. 180 с. Подходит для быстрого повторения перед экзаменом.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-510399" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Дополнительная</span>По РПД, Юрайт</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Л.Е. Лаптева, В.В. Медведев, М.Ю. Пахалов. История отечественного государства и права</div><div class="n">Учебник и практикум. 4-е изд. М.: Юрайт, 2021. 561 с. Самый подробный из списка.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-otechestvennogo-gosudarstva-i-prava-476657" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">История государства и права России: в 3 ч. / под ред. В.Е. Рубаника</div><div class="n">М.: Юрайт, 2020. Ч. 1: 275 с., ч. 2: 300 с., ч. 3: 313 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-3-ch-chast-1-451709" rel="noopener" target="_blank">Ч. 1</a><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-3-ch-chast-2-451710" rel="noopener" target="_blank">Ч. 2</a><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-3-ch-chast-3-451716" rel="noopener" target="_blank">Ч. 3</a></div></li>
-<li class="row s"><div><div class="t">В.Ф. Калина, Г.Ю. Курскова. История государства и права России</div><div class="n">2-е изд. М.: Юрайт, 2021. 367 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-477528" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">История отечественного государства и права. Ч. 2: XX - начало XXI века / под ред. А.П. Альбова, С.В. Николюкина</div><div class="n">М.: Юрайт, 2021. 309 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-otechestvennogo-gosudarstva-i-prava-v-2-ch-chast-2-xx-nachalo-xxi-veka-471207" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">А.Л. Бредихин и др. Государство и право Русского централизованного государства (конец XV - начало XVI века)</div><div class="n">М.: Юрайт, 2021. 125 с. К теме 4 и Судебникам.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/gosudarstvo-i-pravo-russkogo-centralizovannogo-gosudarstva-konec-xv-nachalo-xvi-veka-477260" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">Н.Л. Дювернуа. Источники права и суд в древней России</div><div class="n">Серия «Антология мысли». М.: Юрайт, 2021. 283 с. Классика XIX века к теме 2.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istochniki-prava-i-sud-v-drevney-rossii-opyty-po-istorii-russkogo-grazhdanskogo-prava-472318" rel="noopener" target="_blank">Юрайт</a></div></li>
-<li class="row s"><div><div class="t">М.В. Антонов. История правовой мысли России</div><div class="n">2-е изд. М.: Юрайт, 2021. 183 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-pravovoy-mysli-rossii-470103" rel="noopener" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">Л.Е. Лаптева, В.В. Медведев, М.Ю. Пахалов. История отечественного государства и права</div><div class="n">Учебник и практикум. 4-е изд. М.: Юрайт, 2021. 561 с. Самый подробный из списка.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-otechestvennogo-gosudarstva-i-prava-476657" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">История государства и права России: в 3 ч. / под ред. В.Е. Рубаника</div><div class="n">М.: Юрайт, 2020. Ч. 1: 275 с., ч. 2: 300 с., ч. 3: 313 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-3-ch-chast-1-451709" rel="noopener noreferrer" target="_blank">Ч. 1</a><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-3-ch-chast-2-451710" rel="noopener noreferrer" target="_blank">Ч. 2</a><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-v-3-ch-chast-3-451716" rel="noopener noreferrer" target="_blank">Ч. 3</a></div></li>
+<li class="row s"><div><div class="t">В.Ф. Калина, Г.Ю. Курскова. История государства и права России</div><div class="n">2-е изд. М.: Юрайт, 2021. 367 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-gosudarstva-i-prava-rossii-477528" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">История отечественного государства и права. Ч. 2: XX - начало XXI века / под ред. А.П. Альбова, С.В. Николюкина</div><div class="n">М.: Юрайт, 2021. 309 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-otechestvennogo-gosudarstva-i-prava-v-2-ch-chast-2-xx-nachalo-xxi-veka-471207" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">А.Л. Бредихин и др. Государство и право Русского централизованного государства (конец XV - начало XVI века)</div><div class="n">М.: Юрайт, 2021. 125 с. К теме 4 и Судебникам.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/gosudarstvo-i-pravo-russkogo-centralizovannogo-gosudarstva-konec-xv-nachalo-xvi-veka-477260" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">Н.Л. Дювернуа. Источники права и суд в древней России</div><div class="n">Серия «Антология мысли». М.: Юрайт, 2021. 283 с. Классика XIX века к теме 2.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istochniki-prava-i-sud-v-drevney-rossii-opyty-po-istorii-russkogo-grazhdanskogo-prava-472318" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
+<li class="row s"><div><div class="t">М.В. Антонов. История правовой мысли России</div><div class="n">2-е изд. М.: Юрайт, 2021. 183 с.</div></div><div class="a"><a class="btn" href="https://urait.ru/book/istoriya-pravovoy-mysli-rossii-470103" rel="noopener noreferrer" target="_blank">Юрайт</a></div></li>
 </ul>
 </div>
 <div class="group">
@@ -501,7 +93,7 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <li class="row s"><div><div class="t">Хрестоматия по истории государства и права СССР. Дооктябрьский период / под ред. Ю.П. Титова, О.И. Чистякова</div><div class="n">М.: Юридическая литература, 1990.</div></div><div class="a"><span class="btn">библиотека</span></div></li>
 <li class="row s"><div><div class="t">Соборное уложение 1649 года. Текст. Комментарии / рук. авт. кол. А.Г. Маньков</div><div class="n">Л.: Наука, 1987. Постатейный комментарий, лучшее издание к занятию № 4.</div></div><div class="a"><span class="btn">библиотека</span></div></li>
 <li class="row s"><div><div class="t">Российское законодательство X-XX веков: в 9 т. / под общ. ред. О.И. Чистякова</div><div class="n">М.: Юридическая литература, 1984-1994. Т. 1 «Законодательство Древней Руси»: академические тексты с комментариями.</div></div><div class="a"><span class="btn">библиотека</span></div></li>
-<li class="row s"><div><div class="t">С.В. Юшков. Памятники русского права. Вып. 1: Памятники права Киевского государства X-XII вв.</div><div class="n">М., 1952. Договоры с Византией, церковные уставы, Русская Правда с комментариями.</div></div><div class="a"><a class="btn dl" href="https://azbyka.ru/otechnik/assets/uploads/pamjatniki-russkogo-prava/Pamyatniki_russkogo_prava-1_Yushkov_S_V.pdf" rel="noopener" target="_blank">PDF</a></div></li>
+<li class="row s"><div><div class="t">С.В. Юшков. Памятники русского права. Вып. 1: Памятники права Киевского государства X-XII вв.</div><div class="n">М., 1952. Договоры с Византией, церковные уставы, Русская Правда с комментариями.</div></div><div class="a"><a class="btn dl" href="https://azbyka.ru/otechnik/assets/uploads/pamjatniki-russkogo-prava/Pamyatniki_russkogo_prava-1_Yushkov_S_V.pdf" rel="noopener noreferrer" target="_blank">PDF</a></div></li>
 </ul>
 </div>
 </section>
@@ -512,15 +104,15 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <div class="rp-grid">
 <div>
 <ul class="list">
-<li class="row s"><div><div class="t">Краткая редакция, ИРЛИ РАН <span class="tag main">лучшее для студентов</span></div><div class="n">«Библиотека литературы Древней Руси», т. 4. Текст, перевод и комментарии М.Б. Свердлова; режимы «Оригинал», «Параллельно», «Перевод».</div></div><div class="a"><a class="btn" href="http://lib.pushkinskijdom.ru/default.aspx?tabid=4946" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Пространная редакция, ИРЛИ РАН <span class="tag main">лучшее для студентов</span></div><div class="n">Там же, т. 4. В комментариях указаны спорные места с разными вариантами перевода.</div></div><div class="a"><a class="btn" href="http://lib.pushkinskijdom.ru/Default.aspx?tabid=4947" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Все три редакции по М.Н. Тихомирову, истфак МГУ</div><div class="n">По «Пособию для изучения Русской Правды» (1953): Краткая, Пространная, Сокращенная, с комментариями, без перевода. Архивы ZIP скачиваются на странице.</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/RP/index.html" rel="noopener" target="_blank">Читать</a><a class="btn" href="http://www.hist.msu.ru/ER/Etext/RP/dsrp.htm" rel="noopener" target="_blank">Доп. статьи</a></div></li>
-<li class="row s"><div><div class="t">Краткая редакция с построчным переводом, ВШЭ</div><div class="n">Академический список, перевод Б.Б. Кафенгауза. Удобно читать параллельно с оригиналом.</div></div><div class="a"><a class="btn" href="https://nnov.hse.ru/ba/law/igpr/ruspravda" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">«Библиотека литературы Древней Руси», т. 4, на портале «Азбука веры»</div><div class="n">Тот же текст Свердлова с возможностью скачать главу в разных форматах.</div></div><div class="a"><a class="btn" href="https://azbyka.ru/otechnik/Istorija_Tserkvi/biblioteka-literatury-drevnej-rusi-tom-4/13" rel="noopener" target="_blank">Краткая</a><a class="btn" href="https://azbyka.ru/otechnik/Istorija_Tserkvi/biblioteka-literatury-drevnej-rusi-tom-4/14" rel="noopener" target="_blank">Пространная</a></div></li>
-<li class="row s"><div><div class="t">Пространная редакция по Троицкому списку, «Хронос»</div><div class="n">Вместе с текстом Краткой редакции на одной странице.</div></div><div class="a"><a class="btn" href="https://www.hrono.ru/dokum/1000dok/pravda72.php" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Рукопись: Толстовский список, РНБ</div><div class="n">Фотографии листов, транслитерация и перевод. Можно увидеть, как выглядит живой список.</div></div><div class="a"><a class="btn" href="https://expositions.nlr.ru/ruspravda/" rel="noopener" target="_blank">Выставка</a></div></li>
-<li class="row s"><div><div class="t">М.Н. Тихомиров. Исследование о Русской Правде. Происхождение текстов</div><div class="n">М.; Л.: Изд-во АН СССР, 1941.</div></div><div class="a"><a class="btn dl" href="https://www.booksite.ru/fulltext/1245746/text.pdf" rel="noopener" target="_blank">PDF</a></div></li>
-<li class="row s"><div><div class="t">С.В. Юшков. Русская Правда: происхождение, источники, её значение</div><div class="n">Переиздание МГУ, 2002. Монография классика советской историко-правовой науки.</div></div><div class="a"><a class="btn dl" href="https://pravo.hse.ru/data/2012/06/15/1255408838/%D0%AE%D1%88%D0%BA%D0%BE%D0%B2%20%D0%A1.%D0%92.-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F%20%D0%9F%D1%80%D0%B0%D0%B2%D0%B4%D0%B0.2002.pdf" rel="noopener" target="_blank">PDF</a></div></li>
+<li class="row s"><div><div class="t">Краткая редакция, ИРЛИ РАН <span class="tag main">лучшее для студентов</span></div><div class="n">«Библиотека литературы Древней Руси», т. 4. Текст, перевод и комментарии М.Б. Свердлова; режимы «Оригинал», «Параллельно», «Перевод».</div></div><div class="a"><a class="btn" href="http://lib.pushkinskijdom.ru/default.aspx?tabid=4946" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Пространная редакция, ИРЛИ РАН <span class="tag main">лучшее для студентов</span></div><div class="n">Там же, т. 4. В комментариях указаны спорные места с разными вариантами перевода.</div></div><div class="a"><a class="btn" href="http://lib.pushkinskijdom.ru/Default.aspx?tabid=4947" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Все три редакции по М.Н. Тихомирову, истфак МГУ</div><div class="n">По «Пособию для изучения Русской Правды» (1953): Краткая, Пространная, Сокращенная, с комментариями, без перевода. Архивы ZIP скачиваются на странице.</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/RP/index.html" rel="noopener noreferrer" target="_blank">Читать</a><a class="btn" href="http://www.hist.msu.ru/ER/Etext/RP/dsrp.htm" rel="noopener noreferrer" target="_blank">Доп. статьи</a></div></li>
+<li class="row s"><div><div class="t">Краткая редакция с построчным переводом, ВШЭ</div><div class="n">Академический список, перевод Б.Б. Кафенгауза. Удобно читать параллельно с оригиналом.</div></div><div class="a"><a class="btn" href="https://nnov.hse.ru/ba/law/igpr/ruspravda" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">«Библиотека литературы Древней Руси», т. 4, на портале «Азбука веры»</div><div class="n">Тот же текст Свердлова с возможностью скачать главу в разных форматах.</div></div><div class="a"><a class="btn" href="https://azbyka.ru/otechnik/Istorija_Tserkvi/biblioteka-literatury-drevnej-rusi-tom-4/13" rel="noopener noreferrer" target="_blank">Краткая</a><a class="btn" href="https://azbyka.ru/otechnik/Istorija_Tserkvi/biblioteka-literatury-drevnej-rusi-tom-4/14" rel="noopener noreferrer" target="_blank">Пространная</a></div></li>
+<li class="row s"><div><div class="t">Пространная редакция по Троицкому списку, «Хронос»</div><div class="n">Вместе с текстом Краткой редакции на одной странице.</div></div><div class="a"><a class="btn" href="https://www.hrono.ru/dokum/1000dok/pravda72.php" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Рукопись: Толстовский список, РНБ</div><div class="n">Фотографии листов, транслитерация и перевод. Можно увидеть, как выглядит живой список.</div></div><div class="a"><a class="btn" href="https://expositions.nlr.ru/ruspravda/" rel="noopener noreferrer" target="_blank">Выставка</a></div></li>
+<li class="row s"><div><div class="t">М.Н. Тихомиров. Исследование о Русской Правде. Происхождение текстов</div><div class="n">М.; Л.: Изд-во АН СССР, 1941.</div></div><div class="a"><a class="btn dl" href="https://www.booksite.ru/fulltext/1245746/text.pdf" rel="noopener noreferrer" target="_blank">PDF</a></div></li>
+<li class="row s"><div><div class="t">С.В. Юшков. Русская Правда: происхождение, источники, её значение</div><div class="n">Переиздание МГУ, 2002. Монография классика советской историко-правовой науки.</div></div><div class="a"><a class="btn dl" href="https://pravo.hse.ru/data/2012/06/15/1255408838/%D0%AE%D1%88%D0%BA%D0%BE%D0%B2%20%D0%A1.%D0%92.-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F%20%D0%9F%D1%80%D0%B0%D0%B2%D0%B4%D0%B0.2002.pdf" rel="noopener noreferrer" target="_blank">PDF</a></div></li>
 </ul>
 </div>
 <aside aria-label="Справка" class="panel s">
@@ -596,88 +188,88 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <div class="group">
 <h3><span class="num">Тема 2</span>Древнерусское государство и право</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Договоры Руси с Византией 911 и 944 гг., уставы князей Владимира и Ярослава</div><div class="n">В составе сборника С.В. Юшкова «Памятники русского права», вып. 1, с комментариями.</div></div><div class="a"><a class="btn dl" href="https://azbyka.ru/otechnik/assets/uploads/pamjatniki-russkogo-prava/Pamyatniki_russkogo_prava-1_Yushkov_S_V.pdf" rel="noopener" target="_blank">PDF</a></div></li>
-<li class="row s"><div><div class="t">Церковный устав святого Владимира</div><div class="n">Справочная статья ЭСБЕ о составе и списках устава.</div></div><div class="a"><a class="btn" href="https://booksite.ru/fulltext/1/001/007/111/111984.htm" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Договоры Руси с Византией 911 и 944 гг., уставы князей Владимира и Ярослава</div><div class="n">В составе сборника С.В. Юшкова «Памятники русского права», вып. 1, с комментариями.</div></div><div class="a"><a class="btn dl" href="https://azbyka.ru/otechnik/assets/uploads/pamjatniki-russkogo-prava/Pamyatniki_russkogo_prava-1_Yushkov_S_V.pdf" rel="noopener noreferrer" target="_blank">PDF</a></div></li>
+<li class="row s"><div><div class="t">Церковный устав святого Владимира</div><div class="n">Справочная статья ЭСБЕ о составе и списках устава.</div></div><div class="a"><a class="btn" href="https://booksite.ru/fulltext/1/001/007/111/111984.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 <li class="row s"><div><div class="t">Русская Правда</div><div class="n">Все редакции и издания собраны в разделе выше.</div></div><div class="a"><a class="btn" href="#rp">К разделу</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 3</span>Феодальная раздробленность (XII-XIV вв.)</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Псковская судная грамота</div><div class="n">Текст с нумерацией статей на сайте ВШЭ (по нему даны ссылки в семинарах), Викитека и издание 1896 г. с подлинным текстом в PDF.</div></div><div class="a"><a class="btn" href="https://nnov.hse.ru/ba/law/igpr/psg" rel="noopener" target="_blank">ВШЭ</a><a class="btn" href="https://ru.wikisource.org/wiki/%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%83%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%B0" rel="noopener" target="_blank">Викитека</a><a class="btn dl" href="https://upload.wikimedia.org/wikipedia/commons/6/65/%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%83%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%B0_(1896).pdf" rel="noopener" target="_blank">PDF 1896</a></div></li>
+<li class="row s"><div><div class="t">Псковская судная грамота</div><div class="n">Текст с нумерацией статей на сайте ВШЭ (по нему даны ссылки в семинарах), Викитека и издание 1896 г. с подлинным текстом в PDF.</div></div><div class="a"><a class="btn" href="https://nnov.hse.ru/ba/law/igpr/psg" rel="noopener noreferrer" target="_blank">ВШЭ</a><a class="btn" href="https://ru.wikisource.org/wiki/%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%83%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%B0" rel="noopener noreferrer" target="_blank">Викитека</a><a class="btn dl" href="https://upload.wikimedia.org/wikipedia/commons/6/65/%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%83%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%B0_(1896).pdf" rel="noopener noreferrer" target="_blank">PDF 1896</a></div></li>
 <li class="row s"><div><div class="t">Новгородская судная грамота</div><div class="n">Текст с комментарием: «Российское законодательство X-XX веков», т. 1.</div></div><div class="a"><span class="btn">библиотека</span></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 4</span>Русское централизованное государство (XIV-XVI вв.)</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Судебник 1497 года</div><div class="n">Викитека и сайт Я. Кротова (РПД).</div></div><div class="a"><a class="btn" href="https://ru.wikisource.org/wiki/%D0%A1%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_1497_%D0%B3%D0%BE%D0%B4%D0%B0" rel="noopener" target="_blank">Викитека</a><a class="btn" href="http://krotov.info/acts/16/2/pravo_01.htm" rel="noopener" target="_blank">Кротов</a></div></li>
-<li class="row s"><div><div class="t">Судебник 1550 года</div><div class="n">Сайт Я. Кротова (РПД).</div></div><div class="a"><a class="btn" href="http://krotov.info/acts/16/2/pravo_02.htm" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Судебник 1497 года</div><div class="n">Викитека и сайт Я. Кротова (РПД).</div></div><div class="a"><a class="btn" href="https://ru.wikisource.org/wiki/%D0%A1%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_1497_%D0%B3%D0%BE%D0%B4%D0%B0" rel="noopener noreferrer" target="_blank">Викитека</a><a class="btn" href="http://krotov.info/acts/16/2/pravo_01.htm" rel="noopener noreferrer" target="_blank">Кротов</a></div></li>
+<li class="row s"><div><div class="t">Судебник 1550 года</div><div class="n">Сайт Я. Кротова (РПД).</div></div><div class="a"><a class="btn" href="http://krotov.info/acts/16/2/pravo_02.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 5</span>Сословно-представительная монархия</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Соборное уложение 1649 года</div><div class="n">Полный текст, истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/1649.htm" rel="noopener" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/1649.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Г.К. Котошихин. О России в царствование Алексея Михайловича</div><div class="n">Описание приказов, думы и двора середины XVII в.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/kotoshih.zip">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Соборное уложение 1649 года</div><div class="n">Полный текст, истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/1649.htm" rel="noopener noreferrer" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/1649.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Г.К. Котошихин. О России в царствование Алексея Михайловича</div><div class="n">Описание приказов, думы и двора середины XVII в.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/kotoshih.zip" rel="noopener noreferrer">ZIP</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 6</span>Абсолютная монархия (конец XVII-XVIII вв.)</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Артикул воинский 1715 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/articul.htm" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Табель о рангах 1722 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/tabel.htm" rel="noopener" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/tabel.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Указ о наследии престола 1722 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/prestol1.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Манифест о даровании вольности российскому дворянству, 18 февраля 1762 г.</div><div class="n">«Хронос» (РПД).</div></div><div class="a"><a class="btn" href="http://www.hrono.info/dokum/1700dok/1762volnosti.php" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Жалованная грамота дворянству, 21 апреля 1785 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/dv_gram.htm" rel="noopener" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/dv_gram.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Жалованная грамота городам, 21 апреля 1785 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/gorgram.htm" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Артикул воинский 1715 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/articul.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Табель о рангах 1722 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/tabel.htm" rel="noopener noreferrer" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/tabel.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Указ о наследии престола 1722 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/prestol1.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Манифест о даровании вольности российскому дворянству, 18 февраля 1762 г.</div><div class="n">«Хронос» (РПД).</div></div><div class="a"><a class="btn" href="http://www.hrono.info/dokum/1700dok/1762volnosti.php" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Жалованная грамота дворянству, 21 апреля 1785 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/dv_gram.htm" rel="noopener noreferrer" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/dv_gram.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Жалованная грамота городам, 21 апреля 1785 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/gorgram.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 7</span>Империя в первой половине XIX века</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Акт о порядке престолонаследия 1797 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/prestol.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Указ о вольных хлебопашцах, 20 февраля 1803 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/1803.htm" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Манифест об образовании Государственного совета 1810 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/gossovet.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Общее учреждение министерств 1811 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/ministry.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">М.М. Сперанский. Введение к уложению государственных законов</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/speran.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Н.М. Карамзин. Записка о древней и новой России</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/karamzin.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Полное собрание законов Российской империи</div><div class="n">Сканы томов: коллекция НЭБ и Викитека. Любой указ с 1649 г. по дате и номеру.</div></div><div class="a"><a class="btn" href="https://rusneb.ru/collections/1195_pszri/" rel="noopener" target="_blank">НЭБ</a><a class="btn" href="https://ru.wikisource.org/wiki/%D0%9F%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5_%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D0%B8" rel="noopener" target="_blank">Викитека</a></div></li>
+<li class="row s"><div><div class="t">Акт о порядке престолонаследия 1797 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/prestol.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Указ о вольных хлебопашцах, 20 февраля 1803 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/1803.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Манифест об образовании Государственного совета 1810 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/gossovet.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Общее учреждение министерств 1811 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/ministry.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">М.М. Сперанский. Введение к уложению государственных законов</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/speran.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Н.М. Карамзин. Записка о древней и новой России</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/karamzin.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Полное собрание законов Российской империи</div><div class="n">Сканы томов: коллекция НЭБ и Викитека. Любой указ с 1649 г. по дате и номеру.</div></div><div class="a"><a class="btn" href="https://rusneb.ru/collections/1195_pszri/" rel="noopener noreferrer" target="_blank">НЭБ</a><a class="btn" href="https://ru.wikisource.org/wiki/%D0%9F%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5_%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D0%B8" rel="noopener noreferrer" target="_blank">Викитека</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 8</span>Реформы и контрреформы второй половины XIX века</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Манифест 19 февраля 1861 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/feb1861.htm" rel="noopener" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/feb1861.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Общее положение о крестьянах, вышедших из крепостной зависимости</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/krest.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Судебные уставы 20 ноября 1864 г.</div><div class="n">КонсультантПлюс (РПД).</div></div><div class="a"><a class="btn" href="http://civil.consultant.ru/sudeb_ustav/" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Манифест о незыблемости самодержавия 1881 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/1881.htm" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Манифест 19 февраля 1861 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/feb1861.htm" rel="noopener noreferrer" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/feb1861.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Общее положение о крестьянах, вышедших из крепостной зависимости</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/krest.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Судебные уставы 20 ноября 1864 г.</div><div class="n">КонсультантПлюс (РПД).</div></div><div class="a"><a class="btn" href="http://civil.consultant.ru/sudeb_ustav/" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Манифест о незыблемости самодержавия 1881 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/1881.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 9</span>Кризис абсолютизма (1900-1917)</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Манифест об усовершенствовании государственного порядка, 17 октября 1905 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/oct1905.htm" rel="noopener" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/oct1905.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Основные государственные законы, 23 апреля 1906 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/apr1906.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Отречение Николая II и образование Временного правительства, 2-3 марта 1917 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/03_17.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Реформы П.А. Столыпина</div><div class="n">Подборка документов об аграрной реформе (РПД).</div></div><div class="a"><a class="btn" href="http://stolyipin.narod.ru/Reformi.html#Agrarnaya_reforma" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Манифест об усовершенствовании государственного порядка, 17 октября 1905 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/oct1905.htm" rel="noopener noreferrer" target="_blank">Читать</a><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/oct1905.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Основные государственные законы, 23 апреля 1906 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/apr1906.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Отречение Николая II и образование Временного правительства, 2-3 марта 1917 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/03_17.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Реформы П.А. Столыпина</div><div class="n">Подборка документов об аграрной реформе (РПД).</div></div><div class="a"><a class="btn" href="http://stolyipin.narod.ru/Reformi.html#Agrarnaya_reforma" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Темы 10-13</span>Советское государство и право</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Конституция РСФСР 1918 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1918.htm" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Конституция СССР 1924 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1924.htm" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Устав ВКП(б) 1926 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/vkpb1926.zip">ZIP</a></div></li>
-<li class="row s"><div><div class="t">Конституция СССР 1936 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1936.htm" rel="noopener" target="_blank">Читать</a></div></li>
-<li class="row s"><div><div class="t">Конституция СССР 1977 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1977.htm" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Конституция РСФСР 1918 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1918.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Конституция СССР 1924 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1924.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Устав ВКП(б) 1926 г.</div><div class="n">Истфак МГУ.</div></div><div class="a"><a class="btn dl" href="https://www.hist.msu.ru/ER/Etext/ZIP/vkpb1926.zip" rel="noopener noreferrer">ZIP</a></div></li>
+<li class="row s"><div><div class="t">Конституция СССР 1936 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1936.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Конституция СССР 1977 г.</div><div class="n">Истфак МГУ (РПД).</div></div><div class="a"><a class="btn" href="http://www.hist.msu.ru/ER/Etext/cnst1977.htm" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 <li class="row s"><div><div class="t">ГК РСФСР 1922 г., УК РСФСР 1922 и 1926 гг., кодексы 1918 г.</div><div class="n">Сборник О.И. Чистякова «Отечественное законодательство XI-XX веков», ч. II.</div></div><div class="a"><span class="btn">библиотека</span></div></li>
 </ul>
 </div>
 <div class="group">
 <h3><span class="num">Тема 14</span>Новейший период</h3>
 <ul class="list">
-<li class="row s"><div><div class="t">Конституция Российской Федерации 1993 г.</div><div class="n">Официальный интернет-портал правовой информации.</div></div><div class="a"><a class="btn" href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=102027595" rel="noopener" target="_blank">Читать</a></div></li>
+<li class="row s"><div><div class="t">Конституция Российской Федерации 1993 г.</div><div class="n">Официальный интернет-портал правовой информации.</div></div><div class="a"><a class="btn" href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=102027595" rel="noopener noreferrer" target="_blank">Читать</a></div></li>
 </ul>
 </div>
 </section>
@@ -693,84 +285,193 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <button aria-pressed="false" class="chip" data-p="i" type="button">Империя</button>
 <button aria-pressed="false" class="chip" data-p="s" type="button">Советский и новейший</button>
 </div>
-<dl class="gloss" id="gloss"></dl>
+<dl class="gloss" id="gloss">
+<div class="term s" data-p="d"><dt>Вервь<span>Древняя Русь</span></dt><dd>Соседская (территориальная) община, отвечавшая за своих членов коллективно, в том числе выплатой дикой виры.</dd></div>
+<div class="term s" data-p="d"><dt>Вира<span>Древняя Русь</span></dt><dd>Денежный штраф в пользу князя за убийство свободного человека: 40 гривен, за огнищанина, княжьего тиуна и княжьего мужа двойная вира в 80 гривен.</dd></div>
+<div class="term s" data-p="d"><dt>Головничество<span>Древняя Русь</span></dt><dd>Возмещение родственникам убитого, которое убийца платил помимо виры.</dd></div>
+<div class="term s" data-p="d"><dt>Дикая вира<span>Древняя Русь</span></dt><dd>Вира, которую вервь выплачивала сообща и в рассрочку, если убийца не найден на её земле либо если её член убил открыто в ссоре или на пиру и сам участвовал в общих платежах.</dd></div>
+<div class="term s" data-p="d"><dt>Продажа<span>Древняя Русь</span></dt><dd>Денежный штраф в пользу князя за преступления, кроме убийства; по Пространной Правде 3 или 12 гривен.</dd></div>
+<div class="term s" data-p="d"><dt>Урок<span>Древняя Русь</span></dt><dd>Установленное законом возмещение потерпевшему: за убитого холопа, похищенное или испорченное имущество.</dd></div>
+<div class="term s" data-p="d"><dt>Поток и разграбление<span>Древняя Русь</span></dt><dd>Высшая мера наказания по Русской Правде: выдача виновного с семьёй князю (изгнание или обращение в рабство) и конфискация имущества; назначалась за разбой, поджог и конокрадство.</dd></div>
+<div class="term s" data-p="d"><dt>Кровная месть<span>Древняя Русь</span></dt><dd>Право родственников убитого отомстить убийце. Краткая Правда ограничивает круг мстителей, сыновья Ярослава заменили месть денежными взысканиями.</dd></div>
+<div class="term s" data-p="d"><dt>Обида<span>Древняя Русь</span></dt><dd>Обозначение правонарушения в Русской Правде: материальный, физический или моральный вред конкретному лицу.</dd></div>
+<div class="term s" data-p="d"><dt>Татьба, тать<span>Древняя Русь</span></dt><dd>Кража и вор. Вора, убитого ночью на месте кражи, разрешалось не оплачивать, если его не успели связать; связанного полагалось вести на княжий двор.</dd></div>
+<div class="term s" data-p="d"><dt>Разбой<span>Древняя Русь</span></dt><dd>Убийство без ссоры, с корыстной целью («в разбое без всякой свады»); каралось потоком и разграблением.</dd></div>
+<div class="term s" data-p="d"><dt>Свод<span>Древняя Русь</span></dt><dd>Розыск собственника вещи: держатель указывал, у кого её приобрёл, и цепочка продолжалась; в пределах города до конца, в чужой земле до третьего лица.</dd></div>
+<div class="term s" data-p="d"><dt>Гонение следа<span>Древняя Русь</span></dt><dd>Поиск преступника по следам; община, на земле которой след обрывался, отвечала за преступника.</dd></div>
+<div class="term s" data-p="d"><dt>Заклич<span>Древняя Русь</span></dt><dd>Публичное объявление на торгу о пропаже вещи или бегстве челядина; найденное по истечении трёх дней со дня заклича возвращалось владельцу, а держатель платил продажу.</dd></div>
+<div class="term s" data-p="d"><dt>Видоки<span>Древняя Русь</span></dt><dd>Очевидцы правонарушения, свидетельствовавшие в суде.</dd></div>
+<div class="term s" data-p="d"><dt>Послухи<span>Древняя Русь</span></dt><dd>Свидетели доброй славы стороны либо свидетели совершения сделки.</dd></div>
+<div class="term s" data-p="d"><dt>Ордалии<span>Древняя Русь</span></dt><dd>«Суд Божий»: испытание железом или водой при отсутствии свидетелей; вид испытания зависел от суммы иска.</dd></div>
+<div class="term s" data-p="d"><dt>Рота<span>Древняя Русь</span></dt><dd>Судебная присяга, клятва стороны.</dd></div>
+<div class="term s" data-p="d"><dt>Вирник<span>Древняя Русь</span></dt><dd>Княжеский чиновник, взимавший виру; содержался за счёт верви по нормам «покона вирного».</dd></div>
+<div class="term s" data-p="d"><dt>Мечник, детский<span>Древняя Русь</span></dt><dd>Княжеские служилые люди при суде: вызывали стороны, исполняли решения, получали пошлину из судебных сборов.</dd></div>
+<div class="term s" data-p="d"><dt>Отрок<span>Древняя Русь</span></dt><dd>Младший член княжеской дружины или слуга князя, исполнявший судебные и административные поручения.</dd></div>
+<div class="term s" data-p="d"><dt>Ссадная гривна<span>Древняя Русь</span></dt><dd>Сбор в пользу вирника при его въезде в общину, буквально «за сход с коня».</dd></div>
+<div class="term s" data-p="d"><dt>Перекладное<span>Древняя Русь</span></dt><dd>Пошлина судебному чиновнику; по М.Н. Тихомирову, за окончание дела. В части списков XIV в. читается «прикладное», то есть добавочное к основному сбору.</dd></div>
+<div class="term s" data-p="d"><dt>Помочное<span>Древняя Русь</span></dt><dd>Пошлина с виры, дважды упомянутая в Пространной Правде. В Троицком I списке стоит «помечное», отсюда старое толкование как сбора в пользу мечника.</dd></div>
+<div class="term s" data-p="d"><dt>Наклады<span>Древняя Русь</span></dt><dd>Пошлины сверх продажи: при 12-гривенной продаже отрок получал 2 гривны 20 кун, то есть пятую часть, как вирник от виры.</dd></div>
+<div class="term s" data-p="d"><dt>Отарица<span>Древняя Русь</span></dt><dd>Собственное имущество закупа, включая землю; господин, отнявший отарицу, возвращал её и платил за обиду.</dd></div>
+<div class="term s" data-p="d"><dt>Наймит<span>Древняя Русь</span></dt><dd>В статьях о закупах обозначение закупа как должника под проценты: «найм» в XI-XII вв. означал проценты. Также человек, работающий по найму.</dd></div>
+<div class="term s" data-p="d"><dt>Полгривны золота<span>Древняя Русь</span></dt><dd>Около 5 гривен серебра, или 20 гривен кун; при иске от этой суммы назначалось испытание железом.</dd></div>
+<div class="term s" data-p="d"><dt>Уборок, лукно<span>Древняя Русь</span></dt><dd>Меры сыпучих тел в нормах о кормах вирника и городника; точный объём не установлен.</dd></div>
+<div class="term s" data-p="d"><dt>Голважня<span>Древняя Русь</span></dt><dd>Мера соли, возможно в виде слитка-«головы».</dd></div>
+<div class="term s" data-p="d"><dt>Городня<span>Древняя Русь</span></dt><dd>Звено городской стены срубной конструкции; Русская Правда определяет оплату городника, который её ставил.</dd></div>
+<div class="term s" data-p="d"><dt>Мех<span>Древняя Русь</span></dt><dd>Мешок для собранных денежных сборов; толкование В.Л. Янина по находкам новгородских пломб-цилиндров.</dd></div>
+<div class="term s" data-p="d"><dt>Набойная ладья<span>Древняя Русь</span></dt><dd>Ладья с набоями, то есть досками, прибитыми для наращивания бортов; ценилась выше струга и челна.</dd></div>
+<div class="term s" data-p="d"><dt>Привязать ключ без ряда<span>Древняя Русь</span></dt><dd>Обряд поступления в ключники: без договора о сохранении свободы он превращал человека в обельного холопа.</dd></div>
+<div class="term s" data-p="d"><dt>Дача<span>Древняя Русь</span></dt><dd>То, что господин давал зависимому человеку на определённых условиях; взявший «в дачу» холопом не становился.</dd></div>
+<div class="term s" data-p="d"><dt>Гривна<span>Древняя Русь</span></dt><dd>Основная денежно-весовая единица; по Пространной Правде гривна кун равна 20 ногатам, 25 кунам или 50 резанам.</dd></div>
+<div class="term s" data-p="d"><dt>Огнищанин<span>Древняя Русь</span></dt><dd>Высокопоставленный княжеский слуга, управлявший хозяйством; жизнь защищалась двойной вирой в 80 гривен.</dd></div>
+<div class="term s" data-p="d"><dt>Тиун<span>Древняя Русь</span></dt><dd>Управитель княжеского или боярского хозяйства. За огнищного и конюшего тиуна князя платили 80 гривен, за сельского и ратайного 12 гривен.</dd></div>
+<div class="term s" data-p="d"><dt>Княжи мужи, гридь<span>Древняя Русь</span></dt><dd>Дружинники и служилые люди князя; гридью называли младшую дружину.</dd></div>
+<div class="term s" data-p="d"><dt>Смерд<span>Древняя Русь</span></dt><dd>Сельский житель, зависимый от князя: за убийство смерда платили 5 гривен, имущество смерда, умершего без сыновей, переходило князю. Правовое положение смердов в литературе спорно; чтение «смердий холоп» в ст. 16 Пространной Правды большинство исследователей считают опиской.</dd></div>
+<div class="term s" data-p="d"><dt>Закуп<span>Древняя Русь</span></dt><dd>Лично свободный сельский житель с собственным хозяйством, попавший в зависимость через купу и отрабатывавший её у господина; мог уйти, вернув долг, за бегство без расплаты становился обельным холопом. Ролейный закуп работал на пашне.</dd></div>
+<div class="term s" data-p="d"><dt>Купа<span>Древняя Русь</span></dt><dd>Ссуда (деньги, скот, инвентарь), полученная закупом от господина.</dd></div>
+<div class="term s" data-p="d"><dt>Рядович<span>Древняя Русь</span></dt><dd>Лицо, попавшее в зависимость по ряду (договору) с господином; за убийство рядовича платили 5 гривен.</dd></div>
+<div class="term s" data-p="d"><dt>Холоп<span>Древняя Русь</span></dt><dd>Несвободный человек, объект права собственности; за убийство чужого холопа платился урок господину. Обельное холопство возникало при самопродаже, женитьбе на рабе без ряда, поступлении в тиуны или ключники без ряда.</dd></div>
+<div class="term s" data-p="d"><dt>Челядь<span>Древняя Русь</span></dt><dd>Несвободные слуги в собирательном значении; термин древнее, чем «холопы».</dd></div>
+<div class="term s" data-p="d"><dt>Изгой<span>Древняя Русь</span></dt><dd>Человек, выпавший из своей социальной группы: выкупившийся холоп, неграмотный сын священника, разорившийся купец; защищался вирой в 40 гривен.</dd></div>
+<div class="term s" data-p="d"><dt>Задница<span>Древняя Русь</span></dt><dd>Наследство. Сыновья наследовали отцу, сестёр при братьях не наделяли, а выдавали замуж; отцовский двор доставался младшему сыну.</dd></div>
+<div class="term s" data-p="d"><dt>Выморочное имущество<span>Древняя Русь</span></dt><dd>Имущество, оставшееся без наследников; у смерда переходило князю, у бояр и дружинников могло доставаться дочерям.</dd></div>
+<div class="term s" data-p="d"><dt>Рез<span>Древняя Русь</span></dt><dd>Проценты по займу. Рез «в треть» по расчёту В.О. Ключевского равнялся 50%. Устав Владимира Мономаха ограничил его: кредитор, дважды получивший третный рез, мог взыскать только основной долг, а взявший трижды терял и его.</dd></div>
+<div class="term s" data-p="d"><dt>Ряд<span>Древняя Русь</span></dt><dd>Договор, соглашение сторон.</dd></div>
+<div class="term s" data-p="d"><dt>Правда Ярослава<span>Древняя Русь</span></dt><dd>Древнейшая часть Краткой редакции (ст. 1-18), связываемая с Ярославом Мудрым; сохраняет ограниченную кровную месть.</dd></div>
+<div class="term s" data-p="d"><dt>Правда Ярославичей<span>Древняя Русь</span></dt><dd>Вторая часть Краткой редакции (ст. 19-41), принятая сыновьями Ярослава; охраняет княжеское хозяйство и вводит двойную виру.</dd></div>
+<div class="term s" data-p="d"><dt>Покон вирный<span>Древняя Русь</span></dt><dd>Ст. 42 Краткой Правды: нормы содержания вирника и его людей за счёт общины на время сбора виры.</dd></div>
+<div class="term s" data-p="d"><dt>Урок мостникам<span>Древняя Русь</span></dt><dd>Ст. 43 Краткой Правды: оплата работников, мостивших мосты и улицы.</dd></div>
+<div class="term s" data-p="d"><dt>Пространная Правда<span>Древняя Русь</span></dt><dd>Редакция не ранее 1113 г.: 121 статья по Троицкому списку; Суд Ярослава (ст. 1-52) и Устав Владимира Мономаха (ст. 53-121).</dd></div>
+<div class="term s" data-p="d"><dt>Устав Владимира Мономаха<span>Древняя Русь</span></dt><dd>Часть Пространной Правды, принятая после киевского восстания 1113 г.; регулирует проценты по займам и положение закупов.</dd></div>
+<div class="term s" data-p="d"><dt>Церковные уставы<span>Древняя Русь</span></dt><dd>Уставы князей Владимира и Ярослава, определявшие юрисдикцию церкви: брак, семья, преступления против нравственности и веры.</dd></div>
+<div class="term s" data-p="d"><dt>Договоры Руси с Византией<span>Древняя Русь</span></dt><dd>Договоры 911 и 944 гг. в составе «Повести временных лет», древнейшие письменные памятники русского права; ссылаются на «закон русский».</dd></div>
+<div class="term s" data-p="d"><dt>Закон русский<span>Древняя Русь</span></dt><dd>Обычное право восточных славян, упоминаемое в договорах с Византией.</dd></div>
+<div class="term s" data-p="d"><dt>Полюдье<span>Древняя Русь</span></dt><dd>Объезд князем с дружиной подвластных земель для сбора дани.</dd></div>
+<div class="term s" data-p="d"><dt>Погосты<span>Древняя Русь</span></dt><dd>Места сбора дани, установленные княгиней Ольгой после восстания древлян.</dd></div>
+<div class="term s" data-p="d"><dt>Вече<span>Древняя Русь</span></dt><dd>Народное собрание, решавшее вопросы войны, мира, призвания и изгнания князя.</dd></div>
+<div class="term s" data-p="u"><dt>Псковская судная грамота<span>Раздробленность и Орда</span></dt><dd>Свод права Пскова XV в. (окончательная редакция 1467 г.); дошёл в Воронцовском списке из 120 статей.</dd></div>
+<div class="term s" data-p="u"><dt>Новгородская судная грамота<span>Раздробленность и Орда</span></dt><dd>Памятник права Новгорода 1471 г., сохранился фрагментом (42 статьи); посвящён в основном судоустройству и процессу.</dd></div>
+<div class="term s" data-p="u"><dt>Изорник<span>Раздробленность и Орда</span></dt><dd>Зависимый земледелец в Пскове, обрабатывавший землю господина за долю урожая и получавший покруту; уходить мог раз в год, в Филиппово заговенье (14 ноября).</dd></div>
+<div class="term s" data-p="u"><dt>Покрута<span>Раздробленность и Орда</span></dt><dd>Ссуда, полученная изорником от землевладельца; при уходе подлежала возврату.</dd></div>
+<div class="term s" data-p="u"><dt>Поле<span>Раздробленность и Орда</span></dt><dd>Судебный поединок. Псковская судная грамота разрешала женщинам, детям, старикам и монахам выставлять за себя наймита.</dd></div>
+<div class="term s" data-p="u"><dt>Запись и доска<span>Раздробленность и Орда</span></dt><dd>Формы письменной сделки в Пскове: запись как официальный акт, копия которого хранилась в ларе Троицкого собора, и доска как простая расписка.</dd></div>
+<div class="term s" data-p="u"><dt>Кромская татьба<span>Раздробленность и Орда</span></dt><dd>Кража из Псковского кремля (крома); наказывалась смертью, как конокрадство, перевет, поджог и третья кража на посаде.</dd></div>
+<div class="term s" data-p="u"><dt>Перевет<span>Раздробленность и Орда</span></dt><dd>Государственная измена, переход на сторону врага.</dd></div>
+<div class="term s" data-p="u"><dt>Посадник, тысяцкий<span>Раздробленность и Орда</span></dt><dd>Выборные должностные лица Новгорода и Пскова: посадник возглавлял управление и суд, тысяцкий ведал ополчением и торговым судом.</dd></div>
+<div class="term s" data-p="u"><dt>Ярлык<span>Раздробленность и Орда</span></dt><dd>Ханская грамота на княжение либо на привилегии (в том числе церкви).</dd></div>
+<div class="term s" data-p="u"><dt>Выход<span>Раздробленность и Орда</span></dt><dd>Дань, которую русские земли выплачивали Золотой Орде.</dd></div>
+<div class="term s" data-p="u"><dt>Баскак<span>Раздробленность и Орда</span></dt><dd>Представитель хана, контролировавший сбор дани и порядок на русских землях до начала XIV в.</dd></div>
+<div class="term s" data-p="u"><dt>Отчина и живот<span>Раздробленность и Орда</span></dt><dd>Деление имущества в Псковской судной грамоте: отчина означает недвижимость (земли, воды), живот движимое имущество.</dd></div>
+<div class="term s" data-p="u"><dt>Кормля<span>Раздробленность и Орда</span></dt><dd>Пожизненное пользование имуществом, полученное по завещанию, без права отчуждения; продавший кормлю обязан выкупить её и теряет право пользования (ПСГ ст. 72).</dd></div>
+<div class="term s" data-p="u"><dt>Гостинец<span>Раздробленность и Орда</span></dt><dd>Проценты по займу в Пскове; кредитор, потребовавший долг до срока, терял право на гостинец (ПСГ ст. 74).</dd></div>
+<div class="term s" data-p="u"><dt>Огородник, кочетник<span>Раздробленность и Орда</span></dt><dd>Зависимые работники Пскова, на которых распространялись правила об изорниках: огородник обрабатывал огород, кочетник занимался рыбным промыслом на чужих водах.</dd></div>
+<div class="term s" data-p="u"><dt>Пособник<span>Раздробленность и Орда</span></dt><dd>Судебный помощник стороны по ПСГ; допускался только для женщин, детей, монахов, глубоких стариков и глухих (ст. 58).</dd></div>
+<div class="term s" data-p="u"><dt>Позовник, позовница<span>Раздробленность и Орда</span></dt><dd>Позовник был судебным служителем, вызывавшим сторону в суд; позовница означала письменную повестку о вызове.</dd></div>
+<div class="term s" data-p="u"><dt>Сотский<span>Раздробленность и Орда</span></dt><dd>Выборный руководитель городской или сельской «сотни», обладавший административными и судебными полномочиями.</dd></div>
+<div class="term s" data-p="u"><dt>Иммунитет<span>Раздробленность и Орда</span></dt><dd>Освобождение землевладельца жалованной грамотой от княжеских налогов и суда наместников на его земле.</dd></div>
+<div class="term s" data-p="m"><dt>Судебник 1497 г.<span>Московское государство</span></dt><dd>Первый общерусский свод законов Ивана III о суде, процессе и переходе крестьян.</dd></div>
+<div class="term s" data-p="m"><dt>Судебник 1550 г.<span>Московское государство</span></dt><dd>Свод законов Ивана IV, развивший Судебник 1497 г.: усилил ответственность судей, ограничил власть наместников.</dd></div>
+<div class="term s" data-p="m"><dt>Юрьев день<span>Московское государство</span></dt><dd>Осенний Юрьев день (26 ноября): неделя до и неделя после него отводились Судебником 1497 г. для перехода крестьян с уплатой пожилого.</dd></div>
+<div class="term s" data-p="m"><dt>Пожилое<span>Московское государство</span></dt><dd>Плата крестьянина владельцу за пользование двором при уходе; размер зависел от срока проживания и местности.</dd></div>
+<div class="term s" data-p="m"><dt>Повоз<span>Московское государство</span></dt><dd>Плата крестьянина при уходе за вывоз двора; Судебник 1550 г. установил её в 2 алтына сверх пожилого (ст. 88).</dd></div>
+<div class="term s" data-p="m"><dt>Старожильцы, новопорядчики<span>Московское государство</span></dt><dd>Старожильцы давно жили на земле владельца и тянули тягло, новопорядчики только что «порядились» на участок и пользовались льготами.</dd></div>
+<div class="term s" data-p="m"><dt>Половники, серебреники<span>Московское государство</span></dt><dd>Половники обрабатывали чужую землю за половину урожая, серебреники были крестьянами-должниками, взявшими «серебро» в долг у владельца.</dd></div>
+<div class="term s" data-p="m"><dt>Черносошные крестьяне<span>Московское государство</span></dt><dd>Крестьяне, жившие общинами на государственных («чёрных») землях и платившие подати государству.</dd></div>
+<div class="term s" data-p="m"><dt>Окольничий<span>Московское государство</span></dt><dd>Второй после боярина думный чин; вместе с боярами вершил центральный суд по Судебникам.</dd></div>
+<div class="term s" data-p="m"><dt>Наместник, волостель<span>Московское государство</span></dt><dd>Представители великого князя в уездах и волостях, кормившиеся за счёт населения и вершившие местный суд.</dd></div>
+<div class="term s" data-p="m"><dt>Дворский, целовальник<span>Московское государство</span></dt><dd>Дворский управлял княжеским хозяйством на местах и участвовал в суде наместника; целовальник был выборным представителем населения, целовавшим крест на честное исполнение обязанностей.</dd></div>
+<div class="term s" data-p="m"><dt>Посул<span>Московское государство</span></dt><dd>Взятка судье или должностному лицу; Судебники запрещали посулы и карали за неправосудное решение «по посулу».</dd></div>
+<div class="term s" data-p="m"><dt>Ябедничество<span>Московское государство</span></dt><dd>Ложное обвинение, злонамеренный донос; по Судебникам наказывалось торговой казнью, а ведомого ябедника казнили.</dd></div>
+<div class="term s" data-p="m"><dt>Крамола<span>Московское государство</span></dt><dd>Государственная измена, мятеж, заговор против власти; одно из «лихих дел», каравшихся смертью.</dd></div>
+<div class="term s" data-p="m"><dt>Государский убойца<span>Московское государство</span></dt><dd>Убийца своего господина (государя); квалифицированное убийство, каравшееся смертью.</dd></div>
+<div class="term s" data-p="m"><dt>Головной тать<span>Московское государство</span></dt><dd>Похититель людей, прежде всего холопов, у их владельца.</dd></div>
+<div class="term s" data-p="m"><dt>Подымщик, зажигальник<span>Московское государство</span></dt><dd>Подымщик подстрекал к бунту, зажигальник совершал умышленный поджог; оба карались смертной казнью.</dd></div>
+<div class="term s" data-p="m"><dt>Торговая казнь<span>Московское государство</span></dt><dd>Публичное битьё кнутом на торговой площади; число ударов определял суд.</dd></div>
+<div class="term s" data-p="m"><dt>Облихование<span>Московское государство</span></dt><dd>Признание человека «ведомым лихим» по показаниям местных жителей при повальном обыске; влекло пытку.</dd></div>
+<div class="term s" data-p="m"><dt>Челобитная<span>Московское государство</span></dt><dd>Письменная жалоба или прошение к государю либо в суд, с которой начинался состязательный процесс.</dd></div>
+<div class="term s" data-p="m"><dt>Правая грамота<span>Московское государство</span></dt><dd>Судебное решение, выдававшееся выигравшей стороне по окончании дела.</dd></div>
+<div class="term s" data-p="m"><dt>Бесчестье<span>Московское государство</span></dt><dd>Денежное возмещение за оскорбление словом или действием; по Судебнику 1550 г. зависело от статуса потерпевшего, жене платили вдвое (ст. 26).</dd></div>
+<div class="term s" data-p="m"><dt>Иосифляне и нестяжатели<span>Московское государство</span></dt><dd>Церковные течения конца XV - начала XVI в.: иосифляне защищали монастырское землевладение, нестяжатели призывали монастыри отказаться от сёл.</dd></div>
+<div class="term s" data-p="m"><dt>Автокефалия<span>Московское государство</span></dt><dd>Самостоятельность поместной церкви; Русская церковь стала автокефальной в 1448 г., когда собор русских епископов сам поставил митрополита Иону.</dd></div>
+<div class="term s" data-p="m"><dt>Заповедные лета<span>Московское государство</span></dt><dd>Годы, в которые переход крестьян в Юрьев день запрещался (с 1581 г.).</dd></div>
+<div class="term s" data-p="m"><dt>Урочные лета<span>Московское государство</span></dt><dd>Срок сыска беглых крестьян: 5 лет по указу 1597 г., затем 9 и 15 лет; Соборное уложение 1649 г. установило бессрочный сыск.</dd></div>
+<div class="term s" data-p="m"><dt>Кабальное холопство<span>Московское государство</span></dt><dd>Зависимость по служилой кабале: должник отрабатывал проценты по займу; с 1597 г. кабала действовала до смерти господина.</dd></div>
+<div class="term s" data-p="m"><dt>Вотчина<span>Московское государство</span></dt><dd>Наследственное земельное владение, которое можно было продать, заложить, завещать.</dd></div>
+<div class="term s" data-p="m"><dt>Поместье<span>Московское государство</span></dt><dd>Земельное владение, предоставленное за службу, первоначально без права отчуждения и наследования.</dd></div>
+<div class="term s" data-p="m"><dt>Кормление<span>Московское государство</span></dt><dd>Содержание наместников и волостелей за счёт населения; отменено реформами 1555-1556 гг.</dd></div>
+<div class="term s" data-p="m"><dt>Местничество<span>Московское государство</span></dt><dd>Порядок назначения на должности по знатности рода и службе предков; отменено в 1682 г.</dd></div>
+<div class="term s" data-p="m"><dt>Боярская дума<span>Московское государство</span></dt><dd>Совет при великом князе, затем царе, из бояр и думных чинов.</dd></div>
+<div class="term s" data-p="m"><dt>Земский собор<span>Московское государство</span></dt><dd>Сословно-представительный орган XVI-XVII вв., созывавшийся царём для решения общегосударственных вопросов.</dd></div>
+<div class="term s" data-p="m"><dt>Приказы<span>Московское государство</span></dt><dd>Центральные органы управления XVI-XVII вв.: Посольский, Разрядный, Поместный и другие.</dd></div>
+<div class="term s" data-p="m"><dt>Губной староста<span>Московское государство</span></dt><dd>Выборное лицо из дворян, возглавлявшее губную избу и преследовавшее «лихих людей» (губная реформа с 1539 г.).</dd></div>
+<div class="term s" data-p="m"><dt>Ведомый лихой человек<span>Московское государство</span></dt><dd>Лицо, признанное повальным обыском заведомым преступником; по Судебникам подлежало смертной казни.</dd></div>
+<div class="term s" data-p="m"><dt>Повальный обыск<span>Московское государство</span></dt><dd>Опрос населения о репутации подозреваемого.</dd></div>
+<div class="term s" data-p="m"><dt>Розыск (сыск)<span>Московское государство</span></dt><dd>Следственный процесс по тяжким уголовным делам с применением пытки; противопоставлялся состязательному «суду».</dd></div>
+<div class="term s" data-p="m"><dt>Правёж<span>Московское государство</span></dt><dd>Принудительное взыскание долга битьём батогами должника, не исполнившего обязательство.</dd></div>
+<div class="term s" data-p="m"><dt>Опричнина<span>Московское государство</span></dt><dd>Политика и особый удел Ивана IV (1565-1572) с собственным войском и управлением.</dd></div>
+<div class="term s" data-p="m"><dt>Стоглав<span>Московское государство</span></dt><dd>Сборник решений церковного собора 1551 г. из ста глав.</dd></div>
+<div class="term s" data-p="m"><dt>Соборное уложение<span>Московское государство</span></dt><dd>Кодекс 1649 г. из 25 глав и 967 статей, принятый Земским собором; закрепил бессрочный сыск беглых крестьян.</dd></div>
+<div class="term s" data-p="m"><dt>Тягло<span>Московское государство</span></dt><dd>Совокупность государственных повинностей посадских людей и крестьян.</dd></div>
+<div class="term s" data-p="m"><dt>Белые слободы<span>Московское государство</span></dt><dd>Поселения в городах, освобождённые от тягла; Уложение 1649 г. включило их в посад.</dd></div>
+<div class="term s" data-p="m"><dt>«Слово и дело государево»<span>Московское государство</span></dt><dd>Формула доноса о государственном преступлении, влекущая немедленный розыск.</dd></div>
+<div class="term s" data-p="i"><dt>Сенат<span>Империя</span></dt><dd>Высший орган управления и суда, учреждённый Петром I в 1711 г.</dd></div>
+<div class="term s" data-p="i"><dt>Коллегии<span>Империя</span></dt><dd>Центральные органы управления (1717-1721), решавшие дела коллегиально; порядок работы установил Генеральный регламент 1720 г.</dd></div>
+<div class="term s" data-p="i"><dt>Синод<span>Империя</span></dt><dd>Высший орган управления церковью с 1721 г., заменивший патриаршество.</dd></div>
+<div class="term s" data-p="i"><dt>Фискалы, прокуратура<span>Империя</span></dt><dd>Фискалы (с 1711 г.) тайно надзирали за чиновниками; прокуратура во главе с генерал-прокурором (1722 г.) открыто надзирала за Сенатом и коллегиями.</dd></div>
+<div class="term s" data-p="i"><dt>Указ о единонаследии<span>Империя</span></dt><dd>Указ 1714 г.: недвижимость наследовал один сын, вотчина и поместье слились в «недвижимое имение»; отменён в 1731 г.</dd></div>
+<div class="term s" data-p="i"><dt>Подушная подать<span>Империя</span></dt><dd>Прямой налог с каждой мужской души податных сословий (с 1724 г.), рассчитанный по ревизиям.</dd></div>
+<div class="term s" data-p="i"><dt>Ревизия<span>Империя</span></dt><dd>Перепись податного населения для взимания подушной подати.</dd></div>
+<div class="term s" data-p="i"><dt>Табель о рангах<span>Империя</span></dt><dd>Закон 1722 г., разделивший военную, статскую и придворную службу на 14 классов; открывал путь в дворянство по выслуге.</dd></div>
+<div class="term s" data-p="i"><dt>Артикул воинский<span>Империя</span></dt><dd>Военно-уголовный закон 1715 г., применявшийся и в общих судах.</dd></div>
+<div class="term s" data-p="i"><dt>Краткое изображение процессов<span>Империя</span></dt><dd>Процессуальный закон 1715 г., закрепивший розыскной процесс и формальную оценку доказательств.</dd></div>
+<div class="term s" data-p="i"><dt>Манифест о вольности дворянства<span>Империя</span></dt><dd>Акт 1762 г., освободивший дворян от обязательной службы.</dd></div>
+<div class="term s" data-p="i"><dt>Учреждения для управления губерний<span>Империя</span></dt><dd>Губернская реформа 1775 г.: губернии и уезды, сословные суды, приказы общественного призрения.</dd></div>
+<div class="term s" data-p="i"><dt>Жалованные грамоты 1785 г.<span>Империя</span></dt><dd>Грамоты дворянству и городам, закрепившие сословные права и самоуправление.</dd></div>
+<div class="term s" data-p="i"><dt>Полное собрание законов<span>Империя</span></dt><dd>Хронологическое собрание актов с 1649 г., изданное в 1830 г. под руководством М.М. Сперанского.</dd></div>
+<div class="term s" data-p="i"><dt>Свод законов Российской империи<span>Империя</span></dt><dd>Систематизированное действующее законодательство в 15 томах (1832), применялось с 1835 г.</dd></div>
+<div class="term s" data-p="i"><dt>Уложение о наказаниях 1845 г.<span>Империя</span></dt><dd>Уголовный кодекс, действовавший с 1846 г.; различал преступления и проступки, установил разветвлённую систему наказаний.</dd></div>
+<div class="term s" data-p="i"><dt>Временнообязанные крестьяне<span>Империя</span></dt><dd>Бывшие помещичьи крестьяне, нёсшие повинности в пользу помещика до перехода на выкуп.</dd></div>
+<div class="term s" data-p="i"><dt>Уставные грамоты<span>Империя</span></dt><dd>Документы, фиксировавшие размер наделов и повинностей крестьян после 1861 г.</dd></div>
+<div class="term s" data-p="i"><dt>Выкупные платежи<span>Империя</span></dt><dd>Платежи крестьян государству за выкупленную землю, рассчитанные на 49 лет; прекращены с 1907 г.</dd></div>
+<div class="term s" data-p="i"><dt>Мировой посредник<span>Империя</span></dt><dd>Должностное лицо (с 1861 г.), разбиравшее споры крестьян и помещиков и утверждавшее уставные грамоты.</dd></div>
+<div class="term s" data-p="i"><dt>Земство<span>Империя</span></dt><dd>Всесословное местное самоуправление по Положению 1864 г.: уездные и губернские собрания и управы.</dd></div>
+<div class="term s" data-p="i"><dt>Судебные уставы 1864 г.<span>Империя</span></dt><dd>Основа судебной реформы: несменяемость судей, гласность, состязательность, суд присяжных, присяжная адвокатура.</dd></div>
+<div class="term s" data-p="i"><dt>Мировой суд<span>Империя</span></dt><dd>Местный суд по мелким делам; мировые судьи избирались земскими собраниями и городскими думами.</dd></div>
+<div class="term s" data-p="i"><dt>Суд присяжных<span>Империя</span></dt><dd>Решение вопроса о виновности присяжными заседателями в окружных судах.</dd></div>
+<div class="term s" data-p="i"><dt>Земские начальники<span>Империя</span></dt><dd>Должностные лица из местных дворян (с 1889 г.), осуществлявшие административную и судебную власть над крестьянами вместо мировых судей.</dd></div>
+<div class="term s" data-p="i"><dt>Основные государственные законы 1906 г.<span>Империя</span></dt><dd>Акт, закрепивший систему власти после Манифеста 17 октября: император, Государственная дума, Государственный совет.</dd></div>
+<div class="term s" data-p="i"><dt>Третьеиюньская монархия<span>Империя</span></dt><dd>Политический режим после роспуска II Думы и нового избирательного закона 3 июня 1907 г.</dd></div>
+<div class="term s" data-p="i"><dt>Уголовное уложение 1903 г.<span>Империя</span></dt><dd>Новый уголовный кодекс, введённый в действие лишь частично.</dd></div>
+<div class="term s" data-p="i"><dt>Отруб и хутор<span>Империя</span></dt><dd>Формы выхода крестьян из общины по Столыпинской реформе (указ 9 ноября 1906 г.).</dd></div>
+<div class="term s" data-p="s"><dt>Декрет о земле<span>Советский и новейший</span></dt><dd>Декрет II Всероссийского съезда Советов 26 октября 1917 г., отменивший частную собственность на землю.</dd></div>
+<div class="term s" data-p="s"><dt>СНК<span>Советский и новейший</span></dt><dd>Совет народных комиссаров, правительство РСФСР с 1917 г.</dd></div>
+<div class="term s" data-p="s"><dt>ВЦИК<span>Советский и новейший</span></dt><dd>Всероссийский центральный исполнительный комитет, высший орган власти между съездами Советов.</dd></div>
+<div class="term s" data-p="s"><dt>ВЧК<span>Советский и новейший</span></dt><dd>Всероссийская чрезвычайная комиссия (с декабря 1917 г.), орган борьбы с контрреволюцией и саботажем.</dd></div>
+<div class="term s" data-p="s"><dt>Ревтрибуналы<span>Советский и новейший</span></dt><dd>Революционные трибуналы, рассматривавшие дела о контрреволюционных и иных опасных преступлениях.</dd></div>
+<div class="term s" data-p="s"><dt>Лишенцы<span>Советский и новейший</span></dt><dd>Лица, лишённые избирательных прав по Конституции РСФСР 1918 г.: прибегавшие к наёмному труду, служители культа, бывшие полицейские и другие.</dd></div>
+<div class="term s" data-p="s"><dt>Руководящие начала по уголовному праву РСФСР<span>Советский и новейший</span></dt><dd>Акт 1919 г., первая систематизация советского уголовного права.</dd></div>
+<div class="term s" data-p="s"><dt>Продразвёрстка<span>Советский и новейший</span></dt><dd>Обязательная сдача государству «излишков» хлеба (с 1919 г.); в 1921 г. заменена продналогом.</dd></div>
+<div class="term s" data-p="s"><dt>НЭП<span>Советский и новейший</span></dt><dd>Новая экономическая политика (с 1921 г.): продналог, частная торговля, концессии.</dd></div>
+<div class="term s" data-p="s"><dt>ГК РСФСР 1922 г.<span>Советский и новейший</span></dt><dd>Первый советский гражданский кодекс, действовал с 1923 г.; допускал частную собственность в рамках НЭПа.</dd></div>
+<div class="term s" data-p="s"><dt>Конституция СССР 1924 г.<span>Советский и новейший</span></dt><dd>Первая конституция Союза, включившая Декларацию и Договор об образовании СССР 1922 г.</dd></div>
+<div class="term s" data-p="s"><dt>Социалистическая законность<span>Советский и новейший</span></dt><dd>Принцип строгого соблюдения советских законов, сменивший «революционную законность».</dd></div>
+<div class="term s" data-p="s"><dt>Особое совещание, «тройки»<span>Советский и новейший</span></dt><dd>Внесудебные органы НКВД (1934 и 1937 гг.), выносившие приговоры без судебного разбирательства.</dd></div>
+<div class="term s" data-p="s"><dt>ГКО<span>Советский и новейший</span></dt><dd>Государственный комитет обороны (1941-1945), чрезвычайный орган, сосредоточивший всю полноту власти.</dd></div>
+<div class="term s" data-p="s"><dt>Совнархозы<span>Советский и новейший</span></dt><dd>Территориальные органы управления промышленностью по реформе 1957 г.</dd></div>
+<div class="term s" data-p="s"><dt>Конституция СССР 1977 г.<span>Советский и новейший</span></dt><dd>«Конституция развитого социализма», закрепившая руководящую роль КПСС (ст. 6).</dd></div>
+<div class="term s" data-p="s"><dt>Декларация о государственном суверенитете РСФСР<span>Советский и новейший</span></dt><dd>Акт I Съезда народных депутатов РСФСР 12 июня 1990 г., провозгласивший верховенство законов РСФСР.</dd></div>
+<div class="term s" data-p="s"><dt>Беловежские соглашения<span>Советский и новейший</span></dt><dd>Соглашение 8 декабря 1991 г. о создании СНГ, констатировавшее прекращение существования СССР.</dd></div>
+</dl>
 <p class="empty" hidden="" id="gloss-empty">Ничего не найдено. Попробуйте другое слово или период «Все».</p>
 </section>
 <!-- СЕМИНАРЫ -->
 <section id="seminars">
 <h2>Семинары</h2>
 <p class="intro">Планы занятий, статьи памятников к каждому вопросу и задачи. Решения задач разбираем на семинаре.</p>
-<div id="sem"></div>
-</section>
-<!-- ТЕСТ -->
-<section id="test">
-<h2>Тесты</h2>
-
-<div class="s-only qz-wrap" id="quiz">
-<p class="intro">Тесты по каждому из 10 разделов курса и итоговый тест. В закрытых вопросах нужно выбрать один ответ, в открытых вписать слово, термин или число. Итоговый тест состоит из 25 вопросов всех разделов, у каждого студента свой набор. На каждый тест даётся две попытки; начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов, правильные ответы не показываются. Результаты автоматически попадают к преподавателю.</p>
-<div class="panel" id="qz-start">
-<div class="qz-form">
-<label for="qz-test">Тест</label>
-<select id="qz-test"><option value="">Загружаю список тестов…</option></select>
-<p class="qz-tinfo" id="qz-tinfo"></p>
-<label for="qz-fio">Фамилия, имя, отчество</label>
-<input autocomplete="name" id="qz-fio" placeholder="Иванов Иван Иванович" type="text"/>
-<label for="qz-group">Группа</label>
-<input autocomplete="off" id="qz-group" placeholder="Номер группы" type="text"/>
-<label class="qz-check" for="qz-agree"><input id="qz-agree" type="checkbox"/> Понимаю, что начатая попытка засчитывается</label>
-<button class="btn dl qz-main" id="qz-go" type="button">Начать попытку</button>
-</div>
-<p class="qz-msg" id="qz-msg" role="status"></p>
-</div>
-<p class="qz-msg" hidden="" id="qz-off"></p>
-<div hidden="" id="qz-run">
-<div class="qz-bar">
-<span id="qz-who"></span>
-<span aria-label="Осталось времени" class="qz-timer" id="qz-timer">75:00</span>
-<span id="qz-prog"></span>
-<button class="btn dl" id="qz-finish" type="button">Завершить</button>
-</div>
-<div aria-label="Номера вопросов" class="qz-grid" id="qz-grid"></div>
-<div class="panel qz-q" id="qz-q"></div>
-<div class="qz-nav">
-<button class="btn" id="qz-prev" type="button">Назад</button>
-<button class="btn" id="qz-next" type="button">Далее</button>
-</div>
-<div class="panel qz-confirm" hidden="" id="qz-confirm">
-<p id="qz-confirm-text"></p>
-<div class="qz-nav">
-<button class="btn dl" id="qz-send" type="button">Отправить ответы</button>
-<button class="btn" id="qz-cancel" type="button">Вернуться к вопросам</button>
-</div>
-</div>
-</div>
-<div class="panel" hidden="" id="qz-done"></div>
-</div>
-</section>
-<!-- БИБЛИОТЕКИ -->
-<section id="libs">
-<h2>Библиотеки и базы</h2>
-<ul class="list">
-<li class="row s"><div><div class="t">ЭБС УУНиТ</div><div class="n">Вход для студентов и преподавателей университета.</div></div><div class="a"><a class="btn" href="https://elib.bashedu.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">Образовательная платформа Юрайт</div><div class="n">Основная литература курса.</div></div><div class="a"><a class="btn" href="https://urait.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">ЭБС «Лань»</div><div class="n">Учебники и журналы по праву.</div></div><div class="a"><a class="btn" href="https://e.lanbook.com" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">Университетская библиотека онлайн</div><div class="n">Классика историко-правовой литературы.</div></div><div class="a"><a class="btn" href="https://biblioclub.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">НЭБ</div><div class="n">Дореволюционные учебники и Полное собрание законов в открытом доступе.</div></div><div class="a"><a class="btn" href="https://rusneb.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">Президентская библиотека</div><div class="n">Оцифрованные законодательные сборники и исследования.</div></div><div class="a"><a class="btn" href="https://www.prlib.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">КиберЛенинка</div><div class="n">Научные статьи в открытом доступе, удобно для докладов студентов.</div></div><div class="a"><a class="btn" href="https://cyberleninka.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">Научная электронная библиотека eLIBRARY</div><div class="n">Статьи для докладов и рефератов.</div></div><div class="a"><a class="btn" href="https://www.elibrary.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">Юридическая научная библиотека «Спарк»</div><div class="n">Из РПД.</div></div><div class="a"><a class="btn" href="http://lawlibrary.ru" rel="noopener" target="_blank">Открыть</a></div></li>
-<li class="row s"><div><div class="t">Электронная библиотека исторического факультета МГУ</div><div class="n">Полный каталог текстов источников, в том числе архивы ZIP.</div></div><div class="a"><a class="btn" href="https://www.hist.msu.ru/ER/Etext/ZIP/index.html" rel="noopener" target="_blank">Открыть</a></div></li>
-</ul>
-</section>
-</main>
-<footer class="wrap">Автор: А.А. Камалов, ассистент кафедры теории государства и права Института права УУНиТ</footer>
-<template id="z1">
-<div class="kit">
+<div id="sem">
+<details class="s"><summary><span class="num">Занятие 1</span><span>Древнерусское право по «Русской правде» (XI-XII вв.)<span class="tag main">задачи</span></span></summary><ol><li>Редакции «Русской правды», причины дополнения содержания, отражение социальной структуры, признаки углубления феодализации</li><li>Правовое положение населения</li><li>Гражданское право</li><li>Уголовное право</li><li>Процессуальное право</li></ol><div class="kit">
 <p class="src">Литература: История отечественного государства и права: учебник / отв. ред. И.А. Исаев. М.: Проспект, 2012. С. 20-37. Статьи Пространной Правды (ПП) указаны по Троицкому списку, Краткой (КП) по Академическому.</p>
 <h4>Статьи к вопросам плана</h4>
 <h5>1. Редакции, причины дополнения, социальная структура, признаки феодализации</h5>
-
 
 <p class="key">Краткая Правда: ст. 1, 19-43; Пространная Правда: ст. 1-2, 53, 56-64, 90-91, 110</p>
 
@@ -780,11 +481,9 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 
 <h5>3. Гражданское право</h5>
 
-
 <p class="key">Пространная Правда: ст. 37, 47-55, 90-106, 110-111, 118-119</p>
 
 <h5>4. Уголовное право</h5>
-
 
 <p class="key">Пространная Правда: ст. 1-7, 23-31, 35, 40-45, 67-68, 83, 88</p>
 
@@ -849,101 +548,122 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <p class="ask">Как решится дело в каждом варианте и в каком порядке удовлетворят кредиторов?</p>
 
 </div>
-</div>
-</template>
-<template id="z3">
-<div class="kit">
-<p class="src">Литература: История отечественного государства и права: учебник / отв. ред. И.А. Исаев. М.: Проспект, 2012. С. 42-49. Статьи Псковской судной грамоты (ПСГ) указаны по тексту на сайте ВШЭ из раздела «Источники по темам».</p>
+</div></details>
+<details class="s"><summary><span class="num">Тема 3</span><span>Государство и право Руси в период феодальной раздробленности (XII-XIV вв.)<span class="tag main">задачи</span></span></summary><ol><li>Причины феодальной раздробленности</li><li>Проблема государственного единства</li><li>Новгородская и Псковская феодальные республики</li><li>Галицко-Волынское княжество</li><li>Киевское княжество</li><li>Владимиро-Суздальское княжество</li><li>Новгородская и Псковская судные грамоты</li></ol><div class="kit">
+<p class="src">Литература: История отечественного государства и права: учебник / отв. ред. И.А. Исаев. М.: Проспект, 2012. С. 38-49. К каждому вопросу указаны летописи и статьи памятников; статьи Псковской судной грамоты (ПСГ) даны по тексту на сайте ВШЭ из раздела «Источники по темам».</p>
 <h4>Статьи к вопросам плана</h4>
-<h5>1. Источники права Новгорода и Пскова, общая характеристика судных грамот</h5>
+<h5>1. Причины феодальной раздробленности</h5>
 
-<p class="key">Псковская судная грамота: ст. 1-9; Новгородская судная грамота: сохранившийся фрагмент из 42 статей</p>
+<p class="key">Повесть временных лет: рассказ о Любечском съезде 1097 г.</p>
 
-<h5>2. Гражданское право по ПСГ</h5>
+<h5>2. Проблема государственного единства</h5>
 
+<p class="key">Повесть временных лет: съезды в Любече (1097) и Витичеве (1100); «Слово о полку Игореве»</p>
 
-<p class="key">Псковская судная грамота: ст. 9, 15-19, 30, 33, 39-44, 51, 53, 63, 72-74, 76, 84-89</p>
+<h5>3. Новгородская и Псковская феодальные республики</h5>
 
-<h5>3. Преступления и наказания по ПСГ</h5>
+<p class="key">Договорные грамоты Новгорода с князьями (с 1260-х гг.); Псковская судная грамота: ст. 1-9, 77</p>
 
+<h5>4. Галицко-Волынское княжество</h5>
 
-<p class="key">Псковская судная грамота: ст. 4, 7-8, 20, 96</p>
+<p class="key">Галицко-Волынская летопись (в составе Ипатьевской летописи)</p>
 
-<h5>4. Суд и процесс по ПСГ</h5>
+<h5>5. Киевское княжество</h5>
 
-<p class="key">Псковская судная грамота: ст. 3-5, 21, 36, 58, 77</p>
+<p class="key">Киевская летопись XII в. (в составе Ипатьевской летописи)</p>
+
+<h5>6. Владимиро-Суздальское княжество</h5>
+
+<p class="key">Лаврентьевская летопись: рассказ об убийстве Андрея Боголюбского (1174); «Моление Даниила Заточника»</p>
+
+<h5>7. Новгородская и Псковская судные грамоты</h5>
+
+<p class="key">Псковская судная грамота: ст. 3-5, 7-9, 15-21, 30, 33, 36, 39-44, 51, 53, 58, 63, 72-74, 76-77, 84-89, 96; Новгородская судная грамота: сохранившийся фрагмент из 42 статей</p>
 
 <h4>Задачи</h4>
 <div class="task">
-<div class="lbl">Задача 1 · изорник</div>
+<div class="lbl">Задача 1 · три модели</div>
+<p class="ttl">Узнайте землю</p>
+<p>В трёх ситуациях не названо, где происходят события. (а) Князь живёт за городом на Городище, не вправе купить в волости ни одного села и судит только вместе с выборным посадником. (б) Бояре изгнали князя и посадили на стол одного из своих, а соседние короли вмешиваются в споры о престоле. (в) Князь переносит столицу в новый город, раздаёт землю служилым людям и гибнет от заговора недовольных приближённых.</p>
+<p class="ask">Определите землю в каждом случае и тип политического устройства, который она представляет.</p>
+
+</div>
+<div class="task">
+<div class="lbl">Задача 2 · ряд с князем</div>
+<p class="ttl">Князь на Городище</p>
+<p>Приглашённый в Новгород князь купил село в Деревской пятине, отдал новгородскую волость своему дружиннику, отнял волость у новгородского боярина, не объявив за ним никакой вины, и сам рассудил спор двух новгородцев, не позвав посадника. Вече собирается обсудить его поведение.</p>
+<p class="ask">Какие условия ряда нарушены? Чем вече может ответить?</p>
+
+</div>
+<div class="task">
+<div class="lbl">Задача 3 · изорник</div>
 <p class="ttl">Уход в сентябре</p>
 <p>Изорник Тимофей решил уйти от землевладельца Луки в конце сентября. Лука требует вернуть покруту в 2 рубля; записи нет, и Тимофей утверждает, что покруты не брал. Соседи говорят, что Тимофей собирается бежать, не дожидаясь решения.</p>
 <p class="ask">Может ли Тимофей уйти в сентябре? Как Луке доказать долг? Что будет, если Тимофей сбежит или умрёт без наследников?</p>
 
 </div>
 <div class="task">
-<div class="lbl">Задача 2 · заём</div>
+<div class="lbl">Задача 4 · заём</div>
 <p class="ttl">Три рубля без записи</p>
 <p>Сидор занял у Карпа 3 рубля под гостинец до Покрова, не составив ни записи, ни доски и не дав заклада. За месяц до срока Карп потребовал вернуть долг с процентами, а когда Сидор отказал, обратился в суд, приведя поручителя.</p>
 <p class="ask">Защищён ли такой заём? Что значит досрочное требование для процентов? Поможет ли поручитель?</p>
 
 </div>
 <div class="task">
-<div class="lbl">Задача 3 · кормля и вдова</div>
+<div class="lbl">Задача 5 · кормля и вдова</div>
 <p class="ttl">Проданное село</p>
 <p>Псковитянин Ефрем по завещанию оставил жене Анне в кормлю село, а свою отчину в Пскове сыну. Анна продала село соседу и через год вышла замуж вторично.</p>
 <p class="ask">Законна ли продажа? Сохраняет ли Анна права на имущество мужа после нового брака?</p>
 
 </div>
 <div class="task">
-<div class="lbl">Задача 4 · наследование</div>
+<div class="lbl">Задача 6 · наследование</div>
 <p class="ttl">Сын, не кормивший отца</p>
 <p>Ивашко отказался содержать престарелого отца и ушёл жить отдельно. После смерти отца он потребовал свою долю у брата, который кормил отца до последнего дня.</p>
 <p class="ask">Получит ли Ивашко долю?</p>
 
 </div>
 <div class="task">
-<div class="lbl">Задача 5 · кражи</div>
+<div class="lbl">Задача 7 · кражи</div>
 <p class="ttl">Четверо обвиняемых</p>
 <p>В Пскове перед судом предстали четверо: Онисим, пойманный на посаде на третьей краже; Ефрем, укравший коня; Гаврила, похитивший имущество из Крома; Яков, поджёгший двор соседа.</p>
 <p class="ask">Какое наказание ждёт каждого? Чем решение отличалось бы по Русской Правде?</p>
 
 </div>
 <div class="task">
-<div class="lbl">Задача 6 · поле</div>
+<div class="lbl">Задача 8 · поле</div>
 <p class="ttl">Межевой спор вдовы</p>
 <p>Вдова Ульяна шестой год пашет участок у межи. Сосед Фома заявил, что земля его, и потребовал решить спор полем. Ульяна хочет выставить вместо себя наймита, Фома тоже.</p>
 <p class="ask">Нужен ли вообще поединок? Кто из сторон вправе нанять бойца?</p>
 
 </div>
-</div>
-</template>
-<template id="z2">
-<div class="kit">
+</div></details>
+<details class="s"><summary><span class="num">Тема 4</span><span>Образование Русского централизованного государства и его правовой системы (XIV-XVI вв.)<span class="tag main">задачи</span></span></summary><ol><li>Предпосылки укрепления самодержавия</li><li>Развитие законодательства. Судебные органы. Государство и церковь</li><li>Судебники 1497 и 1550 гг.</li><li>Правовое положение зависимого населения</li><li>Уголовное право</li><li>Процессуальное право</li></ol><div class="kit">
 <p class="src">Литература: История отечественного государства и права: учебник / отв. ред. И.А. Исаев. М.: Проспект, 2012. С. 59-94. Статьи Судебника 1497 г. указаны по делению на 68 статей, Судебника 1550 г. по тексту из 100 статей; оба текста есть в разделе «Источники по темам».</p>
 <h4>Статьи к вопросам плана</h4>
+<h5>1. Предпосылки укрепления самодержавия</h5>
 
+<p class="key">Судебник 1497 г.: вступление; Судебник 1550 г.: вступление</p>
 
+<h5>2. Развитие законодательства. Судебные органы. Государство и церковь</h5>
 
+<p class="key">Двинская уставная грамота 1397 г.; Белозерская уставная грамота 1488 г.; Белозерская губная грамота 1539 г.; Судебник 1497 г.: ст. 1, 38; Судебник 1550 г.: ст. 1, 62, 68, 98; Стоглав (1551)</p>
 
+<h5>3. Судебники 1497 и 1550 гг.</h5>
 
+<p class="key">Судебник 1497 г.: вступление; Судебник 1550 г.: вступление, ст. 2-5, 32, 62, 68, 97-98</p>
 
-<h5>3. Зависимое население по Судебникам</h5>
-
+<h5>4. Правовое положение зависимого населения</h5>
 
 <p class="key">Судебник 1497 г.: ст. 56, 57, 66; Судебник 1550 г.: ст. 76, 78, 80, 81, 88</p>
 
-<h5>4. Уголовное право по Судебникам</h5>
-
+<h5>5. Уголовное право</h5>
 
 <p class="key">Судебник 1497 г.: ст. 8-13, 55; Судебник 1550 г.: ст. 2-6, 26, 32, 52, 55-61</p>
 
-<h5>5. Процессуальное право по Судебникам</h5>
+<h5>6. Процессуальное право</h5>
 
 <p class="key">Судебник 1497 г.: ст. 1, 38, 63, 67-68; Судебник 1550 г.: ст. 1, 52, 57-58, 62, 68, 98</p>
-
-
-
 
 <h4>Задачи</h4>
 <div class="task">
@@ -995,457 +715,97 @@ footer{padding-block:2.4rem 3rem;color:var(--muted);font-size:.85rem}
 <p class="ask">Сколько бесчестья он заплатит каждому? Что показывает шкала?</p>
 
 </div>
+<div class="task">
+<div class="lbl">Задача 8 · действие закона во времени</div>
+<p class="ttl">Пересудить по новому Судебнику</p>
+<p>В 1549 г. наместник решил спор о холопе не в пользу Ивашки. В 1551 г. Ивашко просит пересудить дело по Судебнику 1550 г., который, как он считает, для него выгоднее. Тогда же в суд поступило дело, о котором в новом Судебнике ничего не сказано.</p>
+<p class="ask">Пересудят ли дело Ивашки? Как решить дело, не предусмотренное Судебником?</p>
+
 </div>
-</template>
-<script>
-const G = [
- ["Вервь","d","Соседская (территориальная) община, отвечавшая за своих членов коллективно, в том числе выплатой дикой виры."],
- ["Вира","d","Денежный штраф в пользу князя за убийство свободного человека: 40 гривен, за огнищанина, княжьего тиуна и княжьего мужа двойная вира в 80 гривен."],
- ["Головничество","d","Возмещение родственникам убитого, которое убийца платил помимо виры."],
- ["Дикая вира","d","Вира, которую вервь выплачивала сообща и в рассрочку, если убийца не найден на её земле либо если её член убил открыто в ссоре или на пиру и сам участвовал в общих платежах."],
- ["Продажа","d","Денежный штраф в пользу князя за преступления, кроме убийства; по Пространной Правде 3 или 12 гривен."],
- ["Урок","d","Установленное законом возмещение потерпевшему: за убитого холопа, похищенное или испорченное имущество."],
- ["Поток и разграбление","d","Высшая мера наказания по Русской Правде: выдача виновного с семьёй князю (изгнание или обращение в рабство) и конфискация имущества; назначалась за разбой, поджог и конокрадство."],
- ["Кровная месть","d","Право родственников убитого отомстить убийце. Краткая Правда ограничивает круг мстителей, сыновья Ярослава заменили месть денежными взысканиями."],
- ["Обида","d","Обозначение правонарушения в Русской Правде: материальный, физический или моральный вред конкретному лицу."],
- ["Татьба, тать","d","Кража и вор. Вора, убитого ночью на месте кражи, разрешалось не оплачивать, если его не успели связать; связанного полагалось вести на княжий двор."],
- ["Разбой","d","Убийство без ссоры, с корыстной целью («в разбое без всякой свады»); каралось потоком и разграблением."],
- ["Свод","d","Розыск собственника вещи: держатель указывал, у кого её приобрёл, и цепочка продолжалась; в пределах города до конца, в чужой земле до третьего лица."],
- ["Гонение следа","d","Поиск преступника по следам; община, на земле которой след обрывался, отвечала за преступника."],
- ["Заклич","d","Публичное объявление на торгу о пропаже вещи или бегстве челядина; найденное по истечении трёх дней со дня заклича возвращалось владельцу, а держатель платил продажу."],
- ["Видоки","d","Очевидцы правонарушения, свидетельствовавшие в суде."],
- ["Послухи","d","Свидетели доброй славы стороны либо свидетели совершения сделки."],
- ["Ордалии","d","«Суд Божий»: испытание железом или водой при отсутствии свидетелей; вид испытания зависел от суммы иска."],
- ["Рота","d","Судебная присяга, клятва стороны."],
- ["Вирник","d","Княжеский чиновник, взимавший виру; содержался за счёт верви по нормам «покона вирного»."],
- ["Мечник, детский","d","Княжеские служилые люди при суде: вызывали стороны, исполняли решения, получали пошлину из судебных сборов."],
- ["Отрок","d","Младший член княжеской дружины или слуга князя, исполнявший судебные и административные поручения."],
- ["Ссадная гривна","d","Сбор в пользу вирника при его въезде в общину, буквально «за сход с коня»."],
- ["Перекладное","d","Пошлина судебному чиновнику; по М.Н. Тихомирову, за окончание дела. В части списков XIV в. читается «прикладное», то есть добавочное к основному сбору."],
- ["Помочное","d","Пошлина с виры, дважды упомянутая в Пространной Правде. В Троицком I списке стоит «помечное», отсюда старое толкование как сбора в пользу мечника."],
- ["Наклады","d","Пошлины сверх продажи: при 12-гривенной продаже отрок получал 2 гривны 20 кун, то есть пятую часть, как вирник от виры."],
- ["Отарица","d","Собственное имущество закупа, включая землю; господин, отнявший отарицу, возвращал её и платил за обиду."],
- ["Наймит","d","В статьях о закупах обозначение закупа как должника под проценты: «найм» в XI-XII вв. означал проценты. Также человек, работающий по найму."],
- ["Полгривны золота","d","Около 5 гривен серебра, или 20 гривен кун; при иске от этой суммы назначалось испытание железом."],
- ["Уборок, лукно","d","Меры сыпучих тел в нормах о кормах вирника и городника; точный объём не установлен."],
- ["Голважня","d","Мера соли, возможно в виде слитка-«головы»."],
- ["Городня","d","Звено городской стены срубной конструкции; Русская Правда определяет оплату городника, который её ставил."],
- ["Мех","d","Мешок для собранных денежных сборов; толкование В.Л. Янина по находкам новгородских пломб-цилиндров."],
- ["Набойная ладья","d","Ладья с набоями, то есть досками, прибитыми для наращивания бортов; ценилась выше струга и челна."],
- ["Привязать ключ без ряда","d","Обряд поступления в ключники: без договора о сохранении свободы он превращал человека в обельного холопа."],
- ["Дача","d","То, что господин давал зависимому человеку на определённых условиях; взявший «в дачу» холопом не становился."],
- ["Гривна","d","Основная денежно-весовая единица; по Пространной Правде гривна кун равна 20 ногатам, 25 кунам или 50 резанам."],
- ["Огнищанин","d","Высокопоставленный княжеский слуга, управлявший хозяйством; жизнь защищалась двойной вирой в 80 гривен."],
- ["Тиун","d","Управитель княжеского или боярского хозяйства. За огнищного и конюшего тиуна князя платили 80 гривен, за сельского и ратайного 12 гривен."],
- ["Княжи мужи, гридь","d","Дружинники и служилые люди князя; гридью называли младшую дружину."],
- ["Смерд","d","Сельский житель, зависимый от князя: за убийство смерда платили 5 гривен, имущество смерда, умершего без сыновей, переходило князю. Правовое положение смердов в литературе спорно; чтение «смердий холоп» в ст. 16 Пространной Правды большинство исследователей считают опиской."],
- ["Закуп","d","Лично свободный сельский житель с собственным хозяйством, попавший в зависимость через купу и отрабатывавший её у господина; мог уйти, вернув долг, за бегство без расплаты становился обельным холопом. Ролейный закуп работал на пашне."],
- ["Купа","d","Ссуда (деньги, скот, инвентарь), полученная закупом от господина."],
- ["Рядович","d","Лицо, попавшее в зависимость по ряду (договору) с господином; за убийство рядовича платили 5 гривен."],
- ["Холоп","d","Несвободный человек, объект права собственности; за убийство чужого холопа платился урок господину. Обельное холопство возникало при самопродаже, женитьбе на рабе без ряда, поступлении в тиуны или ключники без ряда."],
- ["Челядь","d","Несвободные слуги в собирательном значении; термин древнее, чем «холопы»."],
- ["Изгой","d","Человек, выпавший из своей социальной группы: выкупившийся холоп, неграмотный сын священника, разорившийся купец; защищался вирой в 40 гривен."],
- ["Задница","d","Наследство. Сыновья наследовали отцу, сестёр при братьях не наделяли, а выдавали замуж; отцовский двор доставался младшему сыну."],
- ["Выморочное имущество","d","Имущество, оставшееся без наследников; у смерда переходило князю, у бояр и дружинников могло доставаться дочерям."],
- ["Рез","d","Проценты по займу. Рез «в треть» по расчёту В.О. Ключевского равнялся 50%. Устав Владимира Мономаха ограничил его: кредитор, дважды получивший третный рез, мог взыскать только основной долг, а взявший трижды терял и его."],
- ["Ряд","d","Договор, соглашение сторон."],
- ["Правда Ярослава","d","Древнейшая часть Краткой редакции (ст. 1-18), связываемая с Ярославом Мудрым; сохраняет ограниченную кровную месть."],
- ["Правда Ярославичей","d","Вторая часть Краткой редакции (ст. 19-41), принятая сыновьями Ярослава; охраняет княжеское хозяйство и вводит двойную виру."],
- ["Покон вирный","d","Ст. 42 Краткой Правды: нормы содержания вирника и его людей за счёт общины на время сбора виры."],
- ["Урок мостникам","d","Ст. 43 Краткой Правды: оплата работников, мостивших мосты и улицы."],
- ["Пространная Правда","d","Редакция не ранее 1113 г.: 121 статья по Троицкому списку; Суд Ярослава (ст. 1-52) и Устав Владимира Мономаха (ст. 53-121)."],
- ["Устав Владимира Мономаха","d","Часть Пространной Правды, принятая после киевского восстания 1113 г.; регулирует проценты по займам и положение закупов."],
- ["Церковные уставы","d","Уставы князей Владимира и Ярослава, определявшие юрисдикцию церкви: брак, семья, преступления против нравственности и веры."],
- ["Договоры Руси с Византией","d","Договоры 911 и 944 гг. в составе «Повести временных лет», древнейшие письменные памятники русского права; ссылаются на «закон русский»."],
- ["Закон русский","d","Обычное право восточных славян, упоминаемое в договорах с Византией."],
- ["Полюдье","d","Объезд князем с дружиной подвластных земель для сбора дани."],
- ["Погосты","d","Места сбора дани, установленные княгиней Ольгой после восстания древлян."],
- ["Вече","d","Народное собрание, решавшее вопросы войны, мира, призвания и изгнания князя."],
+<div class="task">
+<div class="lbl">Задача 9 · подсудность</div>
+<p class="ttl">Разбойник и межа</p>
+<p>В 1557 г. в уезде, где уже действуют выборные губные и земские власти, поймали человека, которого соседи называют лихим, а два крестьянина спорят о меже. В соседнем уезде кормление ещё сохраняется, и наместник собирается рассудить такой же межевой спор один, без старосты и целовальников.</p>
+<p class="ask">Кто рассматривает каждое дело? Законно ли намерение наместника?</p>
 
- ["Псковская судная грамота","u","Свод права Пскова XV в. (окончательная редакция 1467 г.); дошёл в Воронцовском списке из 120 статей."],
- ["Новгородская судная грамота","u","Памятник права Новгорода 1471 г., сохранился фрагментом (42 статьи); посвящён в основном судоустройству и процессу."],
- ["Изорник","u","Зависимый земледелец в Пскове, обрабатывавший землю господина за долю урожая и получавший покруту; уходить мог раз в год, в Филиппово заговенье (14 ноября)."],
- ["Покрута","u","Ссуда, полученная изорником от землевладельца; при уходе подлежала возврату."],
- ["Поле","u","Судебный поединок. Псковская судная грамота разрешала женщинам, детям, старикам и монахам выставлять за себя наймита."],
- ["Запись и доска","u","Формы письменной сделки в Пскове: запись как официальный акт, копия которого хранилась в ларе Троицкого собора, и доска как простая расписка."],
- ["Кромская татьба","u","Кража из Псковского кремля (крома); наказывалась смертью, как конокрадство, перевет, поджог и третья кража на посаде."],
- ["Перевет","u","Государственная измена, переход на сторону врага."],
- ["Посадник, тысяцкий","u","Выборные должностные лица Новгорода и Пскова: посадник возглавлял управление и суд, тысяцкий ведал ополчением и торговым судом."],
- ["Ярлык","u","Ханская грамота на княжение либо на привилегии (в том числе церкви)."],
- ["Выход","u","Дань, которую русские земли выплачивали Золотой Орде."],
- ["Баскак","u","Представитель хана, контролировавший сбор дани и порядок на русских землях до начала XIV в."],
- ["Отчина и живот","u","Деление имущества в Псковской судной грамоте: отчина означает недвижимость (земли, воды), живот движимое имущество."],
- ["Кормля","u","Пожизненное пользование имуществом, полученное по завещанию, без права отчуждения; продавший кормлю обязан выкупить её и теряет право пользования (ПСГ ст. 72)."],
- ["Гостинец","u","Проценты по займу в Пскове; кредитор, потребовавший долг до срока, терял право на гостинец (ПСГ ст. 74)."],
- ["Огородник, кочетник","u","Зависимые работники Пскова, на которых распространялись правила об изорниках: огородник обрабатывал огород, кочетник занимался рыбным промыслом на чужих водах."],
- ["Пособник","u","Судебный помощник стороны по ПСГ; допускался только для женщин, детей, монахов, глубоких стариков и глухих (ст. 58)."],
- ["Позовник, позовница","u","Позовник был судебным служителем, вызывавшим сторону в суд; позовница означала письменную повестку о вызове."],
- ["Сотский","u","Выборный руководитель городской или сельской «сотни», обладавший административными и судебными полномочиями."],
- ["Иммунитет","u","Освобождение землевладельца жалованной грамотой от княжеских налогов и суда наместников на его земле."],
+</div>
+</div></details>
+<details class="s"><summary><span class="num">Занятие 3</span><span>Сословно-представительная монархия (середина XVI-XVII в.)</span></summary><ol><li>Понятие сословного представительства и его роль в странах Западной Европы</li><li>Органы сословного представительства в середине и второй половине XVI в.</li><li>Значение земских соборов в первой половине XVII в.</li><li>Упадок земских соборов во второй половине XVII в.: причины и последствия</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 4</span><span>Соборное уложение 1649 г.</span></summary><ol><li>Статус царя-самодержца по Уложению</li><li>Сословно-правовой статус крестьян, посадских людей и холопов до и после Уложения</li><li>Гражданское и наследственное право</li><li>Уголовное право</li><li>Суд и судебный процесс</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 5</span><span>Институты абсолютизма (вторая половина XVII-XVIII в.)</span></summary><ol><li>Социально-политические предпосылки абсолютной монархии</li><li>Государство и церковь во второй половине XVII - первой четверти XVIII в.</li><li>Закрепощение сословий и бунты XVII в.</li><li>Формирование постоянной армии</li><li>Налоговая система, первые ревизии</li><li>Профессиональная бюрократия, отмена местничества, система чинов</li><li>Статус дворянства в XVIII в.</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 6</span><span>Кризис институтов абсолютизма (первая половина XIX в.)</span></summary><ol><li>Разорение дворянства</li><li>Крестьянский вопрос; проекты Александра I, идеи М.М. Сперанского</li><li>Изменения в сословном строе, указ 1803 г. о вольных хлебопашцах</li><li>Реформа государственного аппарата: Государственный совет, министерства, Комитет министров, Сенат</li><li>Карательные органы</li><li>Кодификация: ПСЗ и Свод законов</li><li>Гражданское, вещное, наследственное, обязательственное право</li><li>Уложение о наказаниях 1845 г.</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 7</span><span>Пореформенный период</span></summary><ol><li>Отмена крепостного права: временнообязанные, уставные грамоты, выкуп</li><li>Земская и городская реформы</li><li>Судебная реформа 1864 г.</li><li>Контрреформы 1880-1890-х гг.</li><li>Реформы полиции и политического сыска</li><li>Фабричное и коммерческое законодательство, Уложение о наказаниях в редакции 1885 г.</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 8</span><span>Государство и право в 1900-1917 гг.</span></summary><ol><li>Системный кризис самодержавия</li><li>Революция 1905-1907 гг., Советы рабочих депутатов</li><li>Манифест 17 октября, Государственная дума, избирательные законы</li><li>Совет министров, Основные законы 1906 г., переворот 3 июня 1907 г.</li><li>Столыпинская аграрная реформа</li><li>Право в годы Первой мировой войны</li><li>Февральская революция, Временное правительство и Петроградский Совет</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 9</span><span>Гражданская война (1917-1920)</span></summary><ol><li>Первые декреты, III Всероссийский съезд Советов</li><li>Конституция РСФСР 1918 г.</li><li>Основы советского права, «революционная законность»</li><li>Трудовое право</li><li>Гражданское и наследственное право</li><li>«Военный коммунизм»</li><li>Чрезвычайные органы, Красная Армия, ВЧК, ревтрибуналы</li><li>Национально-государственное строительство</li><li>Руководящие начала по уголовному праву 1919 г.</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 10</span><span>Форсированная модернизация (1921-1941)</span></summary><ol><li>НЭП</li><li>Предпосылки образования СССР</li><li>Декларация и Договор, Конституция СССР 1924 г.</li><li>Законодательство 1921-1929 гг., кодификация</li><li>Индустриализация, коллективизация, паспортная система</li><li>Плановая экономика</li><li>«Большой террор»</li><li>Конституция СССР 1936 г.</li><li>Подготовка к войне</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 11</span><span>Великая Отечественная война и 1945-1953 гг.</span></summary><ol><li>Чрезвычайные органы управления</li><li>Законодательство военного времени</li><li>«Социалистическая законность» в годы войны</li><li>Государственный аппарат и законодательство 1945-1953 гг.</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 12</span><span>«Оттепель» и «застой»</span></summary><ol><li>Политика «оттепели», реабилитация, XX и XXII съезды</li><li>Реформы Н.С. Хрущёва</li><li>Хозяйственная реформа 1965 г.</li><li>Основы 1958 и 1961 гг., УК РСФСР 1960 г., ГК РСФСР 1964 г., Конституция 1977 г.</li><li>Нарастание застойных явлений</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 13</span><span>«Перестройка» (1985-1991)</span></summary><ol><li>Кризис «государственного социализма»</li><li>«Новое политическое мышление»</li><li>Регулирование гласности, аренды, кооперации, индивидуальной трудовой деятельности</li><li>Перестройка политической системы, «парад суверенитетов», Беловежские соглашения</li><li>Обновление законодательства РСФСР, Декларация о суверенитете</li></ol></details>
+<details class="s"><summary><span class="num">Занятие 14</span><span>Новейший период</span></summary><ol><li>Реформа государственного устройства и угроза распада в 1990-е</li><li>Переход к рынку, «шоковая терапия», приватизация</li><li>Декларация прав и свобод, Конституция 1993 г.</li><li>Уголовное законодательство 1991-2018 гг.</li><li>Гражданское законодательство</li><li>Трудовое законодательство</li><li>Семейное законодательство</li><li>«Вертикаль власти» 2000-2018 гг.</li></ol></details>
+</div>
+</section>
+<!-- ТЕСТ -->
+<section id="test">
+<h2>Тесты</h2>
 
- ["Судебник 1497 г.","m","Первый общерусский свод законов Ивана III о суде, процессе и переходе крестьян."],
- ["Судебник 1550 г.","m","Свод законов Ивана IV, развивший Судебник 1497 г.: усилил ответственность судей, ограничил власть наместников."],
- ["Юрьев день","m","Осенний Юрьев день (26 ноября): неделя до и неделя после него отводились Судебником 1497 г. для перехода крестьян с уплатой пожилого."],
- ["Пожилое","m","Плата крестьянина владельцу за пользование двором при уходе; размер зависел от срока проживания и местности."],
- ["Повоз","m","Плата крестьянина при уходе за вывоз двора; Судебник 1550 г. установил её в 2 алтына сверх пожилого (ст. 88)."],
- ["Старожильцы, новопорядчики","m","Старожильцы давно жили на земле владельца и тянули тягло, новопорядчики только что «порядились» на участок и пользовались льготами."],
- ["Половники, серебреники","m","Половники обрабатывали чужую землю за половину урожая, серебреники были крестьянами-должниками, взявшими «серебро» в долг у владельца."],
- ["Черносошные крестьяне","m","Крестьяне, жившие общинами на государственных («чёрных») землях и платившие подати государству."],
- ["Окольничий","m","Второй после боярина думный чин; вместе с боярами вершил центральный суд по Судебникам."],
- ["Наместник, волостель","m","Представители великого князя в уездах и волостях, кормившиеся за счёт населения и вершившие местный суд."],
- ["Дворский, целовальник","m","Дворский управлял княжеским хозяйством на местах и участвовал в суде наместника; целовальник был выборным представителем населения, целовавшим крест на честное исполнение обязанностей."],
- ["Посул","m","Взятка судье или должностному лицу; Судебники запрещали посулы и карали за неправосудное решение «по посулу»."],
- ["Ябедничество","m","Ложное обвинение, злонамеренный донос; по Судебникам наказывалось торговой казнью, а ведомого ябедника казнили."],
- ["Крамола","m","Государственная измена, мятеж, заговор против власти; одно из «лихих дел», каравшихся смертью."],
- ["Государский убойца","m","Убийца своего господина (государя); квалифицированное убийство, каравшееся смертью."],
- ["Головной тать","m","Похититель людей, прежде всего холопов, у их владельца."],
- ["Подымщик, зажигальник","m","Подымщик подстрекал к бунту, зажигальник совершал умышленный поджог; оба карались смертной казнью."],
- ["Торговая казнь","m","Публичное битьё кнутом на торговой площади; число ударов определял суд."],
- ["Облихование","m","Признание человека «ведомым лихим» по показаниям местных жителей при повальном обыске; влекло пытку."],
- ["Челобитная","m","Письменная жалоба или прошение к государю либо в суд, с которой начинался состязательный процесс."],
- ["Правая грамота","m","Судебное решение, выдававшееся выигравшей стороне по окончании дела."],
- ["Бесчестье","m","Денежное возмещение за оскорбление словом или действием; по Судебнику 1550 г. зависело от статуса потерпевшего, жене платили вдвое (ст. 26)."],
- ["Иосифляне и нестяжатели","m","Церковные течения конца XV - начала XVI в.: иосифляне защищали монастырское землевладение, нестяжатели призывали монастыри отказаться от сёл."],
- ["Автокефалия","m","Самостоятельность поместной церкви; Русская церковь стала автокефальной в 1448 г., когда собор русских епископов сам поставил митрополита Иону."],
- ["Заповедные лета","m","Годы, в которые переход крестьян в Юрьев день запрещался (с 1581 г.)."],
- ["Урочные лета","m","Срок сыска беглых крестьян: 5 лет по указу 1597 г., затем 9 и 15 лет; Соборное уложение 1649 г. установило бессрочный сыск."],
- ["Кабальное холопство","m","Зависимость по служилой кабале: должник отрабатывал проценты по займу; с 1597 г. кабала действовала до смерти господина."],
- ["Вотчина","m","Наследственное земельное владение, которое можно было продать, заложить, завещать."],
- ["Поместье","m","Земельное владение, предоставленное за службу, первоначально без права отчуждения и наследования."],
- ["Кормление","m","Содержание наместников и волостелей за счёт населения; отменено реформами 1555-1556 гг."],
- ["Местничество","m","Порядок назначения на должности по знатности рода и службе предков; отменено в 1682 г."],
- ["Боярская дума","m","Совет при великом князе, затем царе, из бояр и думных чинов."],
- ["Земский собор","m","Сословно-представительный орган XVI-XVII вв., созывавшийся царём для решения общегосударственных вопросов."],
- ["Приказы","m","Центральные органы управления XVI-XVII вв.: Посольский, Разрядный, Поместный и другие."],
- ["Губной староста","m","Выборное лицо из дворян, возглавлявшее губную избу и преследовавшее «лихих людей» (губная реформа с 1539 г.)."],
- ["Ведомый лихой человек","m","Лицо, признанное повальным обыском заведомым преступником; по Судебникам подлежало смертной казни."],
- ["Повальный обыск","m","Опрос населения о репутации подозреваемого."],
- ["Розыск (сыск)","m","Следственный процесс по тяжким уголовным делам с применением пытки; противопоставлялся состязательному «суду»."],
- ["Правёж","m","Принудительное взыскание долга битьём батогами должника, не исполнившего обязательство."],
- ["Опричнина","m","Политика и особый удел Ивана IV (1565-1572) с собственным войском и управлением."],
- ["Стоглав","m","Сборник решений церковного собора 1551 г. из ста глав."],
- ["Соборное уложение","m","Кодекс 1649 г. из 25 глав и 967 статей, принятый Земским собором; закрепил бессрочный сыск беглых крестьян."],
- ["Тягло","m","Совокупность государственных повинностей посадских людей и крестьян."],
- ["Белые слободы","m","Поселения в городах, освобождённые от тягла; Уложение 1649 г. включило их в посад."],
- ["«Слово и дело государево»","m","Формула доноса о государственном преступлении, влекущая немедленный розыск."],
-
- ["Сенат","i","Высший орган управления и суда, учреждённый Петром I в 1711 г."],
- ["Коллегии","i","Центральные органы управления (1717-1721), решавшие дела коллегиально; порядок работы установил Генеральный регламент 1720 г."],
- ["Синод","i","Высший орган управления церковью с 1721 г., заменивший патриаршество."],
- ["Фискалы, прокуратура","i","Фискалы (с 1711 г.) тайно надзирали за чиновниками; прокуратура во главе с генерал-прокурором (1722 г.) открыто надзирала за Сенатом и коллегиями."],
- ["Указ о единонаследии","i","Указ 1714 г.: недвижимость наследовал один сын, вотчина и поместье слились в «недвижимое имение»; отменён в 1731 г."],
- ["Подушная подать","i","Прямой налог с каждой мужской души податных сословий (с 1724 г.), рассчитанный по ревизиям."],
- ["Ревизия","i","Перепись податного населения для взимания подушной подати."],
- ["Табель о рангах","i","Закон 1722 г., разделивший военную, статскую и придворную службу на 14 классов; открывал путь в дворянство по выслуге."],
- ["Артикул воинский","i","Военно-уголовный закон 1715 г., применявшийся и в общих судах."],
- ["Краткое изображение процессов","i","Процессуальный закон 1715 г., закрепивший розыскной процесс и формальную оценку доказательств."],
- ["Манифест о вольности дворянства","i","Акт 1762 г., освободивший дворян от обязательной службы."],
- ["Учреждения для управления губерний","i","Губернская реформа 1775 г.: губернии и уезды, сословные суды, приказы общественного призрения."],
- ["Жалованные грамоты 1785 г.","i","Грамоты дворянству и городам, закрепившие сословные права и самоуправление."],
- ["Полное собрание законов","i","Хронологическое собрание актов с 1649 г., изданное в 1830 г. под руководством М.М. Сперанского."],
- ["Свод законов Российской империи","i","Систематизированное действующее законодательство в 15 томах (1832), применялось с 1835 г."],
- ["Уложение о наказаниях 1845 г.","i","Уголовный кодекс, действовавший с 1846 г.; различал преступления и проступки, установил разветвлённую систему наказаний."],
- ["Временнообязанные крестьяне","i","Бывшие помещичьи крестьяне, нёсшие повинности в пользу помещика до перехода на выкуп."],
- ["Уставные грамоты","i","Документы, фиксировавшие размер наделов и повинностей крестьян после 1861 г."],
- ["Выкупные платежи","i","Платежи крестьян государству за выкупленную землю, рассчитанные на 49 лет; прекращены с 1907 г."],
- ["Мировой посредник","i","Должностное лицо (с 1861 г.), разбиравшее споры крестьян и помещиков и утверждавшее уставные грамоты."],
- ["Земство","i","Всесословное местное самоуправление по Положению 1864 г.: уездные и губернские собрания и управы."],
- ["Судебные уставы 1864 г.","i","Основа судебной реформы: несменяемость судей, гласность, состязательность, суд присяжных, присяжная адвокатура."],
- ["Мировой суд","i","Местный суд по мелким делам; мировые судьи избирались земскими собраниями и городскими думами."],
- ["Суд присяжных","i","Решение вопроса о виновности присяжными заседателями в окружных судах."],
- ["Земские начальники","i","Должностные лица из местных дворян (с 1889 г.), осуществлявшие административную и судебную власть над крестьянами вместо мировых судей."],
- ["Основные государственные законы 1906 г.","i","Акт, закрепивший систему власти после Манифеста 17 октября: император, Государственная дума, Государственный совет."],
- ["Третьеиюньская монархия","i","Политический режим после роспуска II Думы и нового избирательного закона 3 июня 1907 г."],
- ["Уголовное уложение 1903 г.","i","Новый уголовный кодекс, введённый в действие лишь частично."],
- ["Отруб и хутор","i","Формы выхода крестьян из общины по Столыпинской реформе (указ 9 ноября 1906 г.)."],
-
- ["Декрет о земле","s","Декрет II Всероссийского съезда Советов 26 октября 1917 г., отменивший частную собственность на землю."],
- ["СНК","s","Совет народных комиссаров, правительство РСФСР с 1917 г."],
- ["ВЦИК","s","Всероссийский центральный исполнительный комитет, высший орган власти между съездами Советов."],
- ["ВЧК","s","Всероссийская чрезвычайная комиссия (с декабря 1917 г.), орган борьбы с контрреволюцией и саботажем."],
- ["Ревтрибуналы","s","Революционные трибуналы, рассматривавшие дела о контрреволюционных и иных опасных преступлениях."],
- ["Лишенцы","s","Лица, лишённые избирательных прав по Конституции РСФСР 1918 г.: прибегавшие к наёмному труду, служители культа, бывшие полицейские и другие."],
- ["Руководящие начала по уголовному праву РСФСР","s","Акт 1919 г., первая систематизация советского уголовного права."],
- ["Продразвёрстка","s","Обязательная сдача государству «излишков» хлеба (с 1919 г.); в 1921 г. заменена продналогом."],
- ["НЭП","s","Новая экономическая политика (с 1921 г.): продналог, частная торговля, концессии."],
- ["ГК РСФСР 1922 г.","s","Первый советский гражданский кодекс, действовал с 1923 г.; допускал частную собственность в рамках НЭПа."],
- ["Конституция СССР 1924 г.","s","Первая конституция Союза, включившая Декларацию и Договор об образовании СССР 1922 г."],
- ["Социалистическая законность","s","Принцип строгого соблюдения советских законов, сменивший «революционную законность»."],
- ["Особое совещание, «тройки»","s","Внесудебные органы НКВД (1934 и 1937 гг.), выносившие приговоры без судебного разбирательства."],
- ["ГКО","s","Государственный комитет обороны (1941-1945), чрезвычайный орган, сосредоточивший всю полноту власти."],
- ["Совнархозы","s","Территориальные органы управления промышленностью по реформе 1957 г."],
- ["Конституция СССР 1977 г.","s","«Конституция развитого социализма», закрепившая руководящую роль КПСС (ст. 6)."],
- ["Декларация о государственном суверенитете РСФСР","s","Акт I Съезда народных депутатов РСФСР 12 июня 1990 г., провозгласивший верховенство законов РСФСР."],
- ["Беловежские соглашения","s","Соглашение 8 декабря 1991 г. о создании СНГ, констатировавшее прекращение существования СССР."]
-];
-const PER = {d:"Древняя Русь",u:"Раздробленность и Орда",m:"Московское государство",i:"Империя",s:"Советский и новейший"};
-
-const S = [
- ["Занятие 1","Древнерусское право по «Русской правде» (XI-XII вв.)",["Редакции «Русской правды», причины дополнения содержания, отражение социальной структуры, признаки углубления феодализации","Правовое положение населения","Гражданское право","Уголовное право","Процессуальное право"],"z1"],
- ["Тема 3","Новгородская и Псковская судные грамоты (дополнительная пара)",["Источники права Новгорода и Пскова, общая характеристика судных грамот","Гражданское право по ПСГ: вещное, обязательственное, наследственное","Преступления и наказания по ПСГ","Суд и процесс по ПСГ, судебные органы"],"z3"],
- ["Занятие 2","Московское централизованное государство и законодательство (XIV-XVI вв.)",["Предпосылки образования Московского централизованного государства","Государство и церковь в XIV-XVI вв.","Категории и правовое положение зависимого населения по Судебникам 1497 и 1550 гг.","Уголовное право по Судебникам","Процессуальное право по Судебникам","Государство и право в конце XVI в., Смута"],"z2"],
- ["Занятие 3","Сословно-представительная монархия (середина XVI-XVII в.)",["Понятие сословного представительства и его роль в странах Западной Европы","Органы сословного представительства в середине и второй половине XVI в.","Значение земских соборов в первой половине XVII в.","Упадок земских соборов во второй половине XVII в.: причины и последствия"]],
- ["Занятие 4","Соборное уложение 1649 г.",["Статус царя-самодержца по Уложению","Сословно-правовой статус крестьян, посадских людей и холопов до и после Уложения","Гражданское и наследственное право","Уголовное право","Суд и судебный процесс"]],
- ["Занятие 5","Институты абсолютизма (вторая половина XVII-XVIII в.)",["Социально-политические предпосылки абсолютной монархии","Государство и церковь во второй половине XVII - первой четверти XVIII в.","Закрепощение сословий и бунты XVII в.","Формирование постоянной армии","Налоговая система, первые ревизии","Профессиональная бюрократия, отмена местничества, система чинов","Статус дворянства в XVIII в."]],
- ["Занятие 6","Кризис институтов абсолютизма (первая половина XIX в.)",["Разорение дворянства","Крестьянский вопрос; проекты Александра I, идеи М.М. Сперанского","Изменения в сословном строе, указ 1803 г. о вольных хлебопашцах","Реформа государственного аппарата: Государственный совет, министерства, Комитет министров, Сенат","Карательные органы","Кодификация: ПСЗ и Свод законов","Гражданское, вещное, наследственное, обязательственное право","Уложение о наказаниях 1845 г."]],
- ["Занятие 7","Пореформенный период",["Отмена крепостного права: временнообязанные, уставные грамоты, выкуп","Земская и городская реформы","Судебная реформа 1864 г.","Контрреформы 1880-1890-х гг.","Реформы полиции и политического сыска","Фабричное и коммерческое законодательство, Уложение о наказаниях в редакции 1885 г."]],
- ["Занятие 8","Государство и право в 1900-1917 гг.",["Системный кризис самодержавия","Революция 1905-1907 гг., Советы рабочих депутатов","Манифест 17 октября, Государственная дума, избирательные законы","Совет министров, Основные законы 1906 г., переворот 3 июня 1907 г.","Столыпинская аграрная реформа","Право в годы Первой мировой войны","Февральская революция, Временное правительство и Петроградский Совет"]],
- ["Занятие 9","Гражданская война (1917-1920)",["Первые декреты, III Всероссийский съезд Советов","Конституция РСФСР 1918 г.","Основы советского права, «революционная законность»","Трудовое право","Гражданское и наследственное право","«Военный коммунизм»","Чрезвычайные органы, Красная Армия, ВЧК, ревтрибуналы","Национально-государственное строительство","Руководящие начала по уголовному праву 1919 г."]],
- ["Занятие 10","Форсированная модернизация (1921-1941)",["НЭП","Предпосылки образования СССР","Декларация и Договор, Конституция СССР 1924 г.","Законодательство 1921-1929 гг., кодификация","Индустриализация, коллективизация, паспортная система","Плановая экономика","«Большой террор»","Конституция СССР 1936 г.","Подготовка к войне"]],
- ["Занятие 11","Великая Отечественная война и 1945-1953 гг.",["Чрезвычайные органы управления","Законодательство военного времени","«Социалистическая законность» в годы войны","Государственный аппарат и законодательство 1945-1953 гг."]],
- ["Занятие 12","«Оттепель» и «застой»",["Политика «оттепели», реабилитация, XX и XXII съезды","Реформы Н.С. Хрущёва","Хозяйственная реформа 1965 г.","Основы 1958 и 1961 гг., УК РСФСР 1960 г., ГК РСФСР 1964 г., Конституция 1977 г.","Нарастание застойных явлений"]],
- ["Занятие 13","«Перестройка» (1985-1991)",["Кризис «государственного социализма»","«Новое политическое мышление»","Регулирование гласности, аренды, кооперации, индивидуальной трудовой деятельности","Перестройка политической системы, «парад суверенитетов», Беловежские соглашения","Обновление законодательства РСФСР, Декларация о суверенитете"]],
- ["Занятие 14","Новейший период",["Реформа государственного устройства и угроза распада в 1990-е","Переход к рынку, «шоковая терапия», приватизация","Декларация прав и свобод, Конституция 1993 г.","Уголовное законодательство 1991-2018 гг.","Гражданское законодательство","Трудовое законодательство","Семейное законодательство","«Вертикаль власти» 2000-2018 гг."]]
-];
-
-const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const gl = document.getElementById("gloss");
-gl.innerHTML = G.map(([t,p,d]) => `<div class="term s" data-p="${p}"><dt>${esc(t)}<span>${PER[p]}</span></dt><dd>${esc(d)}</dd></div>`).join("");
-document.getElementById("sem").innerHTML = S.map(([n,t,qs,tpl]) => {
-  const extra = tpl && document.getElementById(tpl) ? document.getElementById(tpl).innerHTML : "";
-  const ready = tpl ? `<span class="tag main">задачи</span>` : "";
-  return `<details class="s"><summary><span class="num">${n}</span><span>${esc(t)}${ready}</span></summary><ol>${qs.map(q=>`<li>${esc(q)}</li>`).join("")}</ol>${extra}</details>`;
-}).join("");
-
-let period = "all";
-const q = document.getElementById("q");
-const count = document.getElementById("count");
-function norm(s){return s.toLowerCase().replace(/ё/g,"е")}
-function apply(){
-  const v = norm(q.value.trim());
-  let shown = 0;
-  document.querySelectorAll(".s").forEach(el => {
-    const okText = !v || norm(el.textContent).includes(v);
-    const okPer = !el.classList.contains("term") || period === "all" || el.dataset.p === period;
-    el.hidden = !(okText && okPer);
-    if (!el.hidden) shown++;
-    if (v && okText && el.tagName === "DETAILS") el.open = true;
-  });
-  document.querySelectorAll(".group").forEach(g => { g.hidden = !g.querySelector(".s:not([hidden])"); });
-  document.getElementById("gloss-empty").hidden = !!gl.querySelector(".term:not([hidden])");
-  count.textContent = v ? `найдено: ${shown}` : `${G.length} терминов`;
-}
-q.addEventListener("input", apply);
-document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
-  period = b.dataset.p;
-  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
-  apply();
-}));
-apply();
-</script>
-<!--QUIZ-JS-->
-<script>
-(function () {
-  var root = document.getElementById('quiz');
-  if (!root) return;
-  var URL_ = String(window.IGPR_TEST_URL || '').trim();
-  var SITE = 'https://xajdahax.github.io/igpr/';
-  var LS = 'igpr-test-v2';
-  var $ = function (id) { return document.getElementById(id); };
-  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var st = { tests: [], test: null, attemptId: null, questions: [], answers: {}, i: 0, deadline: 0, skew: 0, timer: null, sending: false, fio: '', group: '', no: 1, max: 2 };
-
-  var bar = document.querySelector('.bar');
-  var setBar = function () { if (bar) document.documentElement.style.setProperty('--barh', bar.offsetHeight + 'px'); };
-  setBar(); window.addEventListener('resize', setBar);
-
-  function load() { try { return JSON.parse(localStorage.getItem(LS) || 'null') || {}; } catch (e) { return {}; } }
-  function save() { try { localStorage.setItem(LS, JSON.stringify({ fio: st.fio, group: st.group, test: st.test && st.test.id, attemptId: st.attemptId, answers: st.answers })); } catch (e) {} }
-  function forget() { try { var o = load(); localStorage.setItem(LS, JSON.stringify({ fio: o.fio, group: o.group, test: o.test })); } catch (e) {} }
-  function msg(t, bad) { var m = $('qz-msg'); m.textContent = t; m.classList.toggle('bad', !!bad); }
-  function plural(n, a, b, c) { var m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c); }
-
-  if (!URL_) {
-    $('qz-start').hidden = true;
-    var off = $('qz-off'); off.hidden = false;
-    off.innerHTML = 'Тесты проходятся на сайте курса: <a href="' + SITE + '#test" target="_blank" rel="noopener">' + SITE + '</a>. Если вы уже там и видите это сообщение, тесты ещё не открыты.';
-    return;
-  }
-
-  function call(payload) {
-    var opt = payload ? { method: 'POST', body: JSON.stringify(payload) } : { method: 'GET' };
-    return fetch(URL_, opt).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); });
-  }
-  var ERR = {
-    need_name: 'Укажите фамилию, имя и группу.',
-    bad_test: 'Выберите тест из списка.',
-    busy: 'Сервер тестов занят, попробуйте через минуту.',
-    not_found: 'Попытка не найдена. Обновите страницу.',
-    server_error: 'Ошибка на сервере тестов. Сообщите преподавателю.'
-  };
-
-  var saved = load();
-  $('qz-fio').value = saved.fio || '';
-  $('qz-group').value = saved.group || '';
-
-  function describe(t) {
-    if (!t) return '';
-    return t.questions + ' ' + plural(t.questions, 'вопрос', 'вопроса', 'вопросов') + ': ' + t.closed + ' закр., ' + t.open + ' откр. · ' +
-      t.minutes + ' мин · попыток: ' + t.attempts + (t.id === 'final' ? ' · вопросы из всех разделов, у каждого свой набор' : '');
-  }
-  function pick() {
-    var id = $('qz-test').value;
-    st.test = st.tests.filter(function (t) { return t.id === id; })[0] || null;
-    $('qz-tinfo').textContent = describe(st.test);
-    var cur = load();
-    var resume = cur.attemptId && cur.test === id;
-    $('qz-go').textContent = resume ? 'Продолжить попытку' : 'Начать попытку';
-    if (resume) $('qz-agree').checked = true;
-  }
-
-  function loadTests() {
-    $('qz-go').disabled = true;
-    return call(null).then(function (res) {
-      st.tests = res.tests || [];
-      $('qz-test').innerHTML = st.tests.map(function (t) { return '<option value="' + esc(t.id) + '">' + esc(t.name) + '</option>'; }).join('');
-      var want = load().test;
-      if (want && st.tests.some(function (t) { return t.id === want; })) $('qz-test').value = want;
-      pick(); msg('');
-    }).catch(function () {
-      $('qz-test').innerHTML = '<option value="">Список тестов не загрузился</option>';
-      msg('Нет связи с сервером тестов. Проверьте интернет и обновите страницу.', true);
-    }).then(function () { $('qz-go').disabled = false; });
-  }
-  $('qz-test').addEventListener('change', pick);
-  loadTests();
-
-  $('qz-go').addEventListener('click', function () {
-    if (!st.tests.length) { loadTests(); return; }
-    var fio = $('qz-fio').value.replace(/\s+/g, ' ').trim();
-    var group = $('qz-group').value.replace(/\s+/g, ' ').trim();
-    if (!st.test) return msg('Выберите тест.', true);
-    if (fio.split(' ').length < 2) return msg('Введите фамилию и имя полностью, лучше с отчеством.', true);
-    if (!group) return msg('Укажите группу.', true);
-    if (!$('qz-agree').checked) return msg('Отметьте, что понимаете правила попыток.', true);
-    $('qz-go').disabled = true; msg('Загружаю вопросы…');
-    call({ action: 'start', test: st.test.id, fio: fio, group: group }).then(function (res) {
-      if (!res.ok) {
-        if (res.error === 'no_attempts') {
-          var list = (res.results || []).map(function (r) {
-            return 'попытка ' + r.attemptNo + ': ' + (r.correct === '' ? r.status : r.correct + ' из ' + r.total + ' (' + r.percent + '%)');
-          }).join('; ');
-          msg('По тесту «' + st.test.name + '» обе попытки уже использованы' + (list ? '. Ваши результаты: ' + list + '.' : '.'), true);
-        } else msg(ERR[res.error] || 'Не удалось начать попытку.', true);
-        return;
-      }
-      st.fio = fio; st.group = group; st.attemptId = res.attemptId; st.questions = res.questions || [];
-      st.deadline = res.deadline; st.skew = res.now - Date.now(); st.no = res.attemptNo; st.max = res.maxAttempts;
-      if (res.test) st.test = res.test;
-      var prev = load();
-      st.answers = (prev.attemptId === res.attemptId && prev.answers) ? prev.answers : {};
-      save(); msg(''); run(res.resumed);
-    }).catch(function () {
-      msg('Нет связи с сервером тестов. Проверьте интернет и попробуйте ещё раз.', true);
-    }).then(function () { $('qz-go').disabled = false; });
-  });
-
-  function run(resumed) {
-    $('qz-start').hidden = true; $('qz-done').hidden = true; $('qz-run').hidden = false;
-    $('qz-who').textContent = st.fio + ', ' + st.group + ' · ' + st.test.name + ' · попытка ' + st.no + ' из ' + st.max + (resumed ? ' (продолжение)' : '');
-    $('qz-grid').innerHTML = st.questions.map(function (q, k) { return '<button type="button" class="qz-n" data-k="' + k + '">' + (k + 1) + '</button>'; }).join('');
-    show(0); tick(); clearInterval(st.timer); st.timer = setInterval(tick, 1000);
-    setBar(); root.scrollIntoView({ block: 'start' });
-  }
-
-  function remaining() { return st.deadline - (Date.now() + st.skew); }
-  function tick() {
-    var ms = remaining();
-    if (ms <= 0) { $('qz-timer').textContent = '00:00'; clearInterval(st.timer); send(true); return; }
-    var s = Math.ceil(ms / 1000);
-    $('qz-timer').textContent = String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
-    $('qz-timer').classList.toggle('low', s < 300);
-  }
-
-  function marks() {
-    var n = Object.keys(st.answers).length;
-    $('qz-prog').textContent = 'отвечено ' + n + ' из ' + st.questions.length;
-    var bs = $('qz-grid').children;
-    for (var k = 0; k < bs.length; k++) {
-      bs[k].classList.toggle('done', !!st.answers[st.questions[k].id]);
-      bs[k].classList.toggle('cur', k === st.i);
-    }
-  }
-
-  function show(k) {
-    st.i = Math.max(0, Math.min(st.questions.length - 1, k));
-    var q = st.questions[st.i];
-    var head = '<div class="qz-meta">Вопрос ' + (st.i + 1) + ' из ' + st.questions.length + ' · ' + esc(q.topic) + '</div>' +
-      '<p class="qz-text">' + esc(q.text) + '</p>';
-    if (q.type === 'open') {
-      $('qz-q').innerHTML = head + '<p class="qz-hint">Открытый вопрос: впишите ответ (слово, термин или число)</p>' +
-        '<input class="qz-in" id="qz-in" type="text" maxlength="200" autocomplete="off" spellcheck="false" aria-label="Ваш ответ" value="' + esc(st.answers[q.id] || '') + '">';
-    } else {
-      $('qz-q').innerHTML = head + '<p class="qz-hint">Закрытый вопрос: выберите один ответ</p><div class="qz-opts" role="radiogroup">' +
-        q.options.map(function (o) {
-          return '<label class="qz-opt"><input type="radio" name="qz-a" value="' + esc(o.id) + '"' + (st.answers[q.id] === o.id ? ' checked' : '') + '><span>' + esc(o.text) + '</span></label>';
-        }).join('') + '</div>';
-    }
-    $('qz-prev').disabled = st.i === 0;
-    $('qz-next').textContent = st.i === st.questions.length - 1 ? 'К завершению' : 'Далее';
-    $('qz-confirm').hidden = true;
-    marks();
-  }
-
-  $('qz-grid').addEventListener('click', function (e) { var b = e.target.closest('.qz-n'); if (b) show(+b.dataset.k); });
-  $('qz-q').addEventListener('change', function (e) {
-    if (e.target.name !== 'qz-a') return;
-    st.answers[st.questions[st.i].id] = e.target.value; save(); marks();
-  });
-  $('qz-q').addEventListener('input', function (e) {
-    if (e.target.id !== 'qz-in') return;
-    var id = st.questions[st.i].id, v = e.target.value.replace(/\s+/g, ' ').trim();
-    if (v) st.answers[id] = e.target.value.slice(0, 200); else delete st.answers[id];
-    save(); marks();
-  });
-  $('qz-q').addEventListener('keydown', function (e) {
-    if (e.target.id === 'qz-in' && e.key === 'Enter') { e.preventDefault(); $('qz-next').click(); }
-  });
-  ['copy', 'cut', 'paste', 'drop', 'contextmenu'].forEach(function (ev) { $('qz-q').addEventListener(ev, function (e) { e.preventDefault(); }); });
-  $('qz-prev').addEventListener('click', function () { show(st.i - 1); });
-  $('qz-next').addEventListener('click', function () { if (st.i === st.questions.length - 1) ask(); else show(st.i + 1); });
-  $('qz-finish').addEventListener('click', ask);
-  $('qz-cancel').addEventListener('click', function () { $('qz-confirm').hidden = true; });
-  $('qz-send').addEventListener('click', function () { send(false); });
-
-  function ask() {
-    var miss = st.questions.length - Object.keys(st.answers).length;
-    $('qz-confirm-text').textContent = miss
-      ? 'Без ответа осталось вопросов: ' + miss + '. Они будут засчитаны как неверные. Отправить ответы?'
-      : 'Все вопросы отвечены. Отправить ответы? Изменить их после отправки будет нельзя.';
-    $('qz-confirm').hidden = false;
-    $('qz-confirm').scrollIntoView({ block: 'nearest' });
-  }
-
-  function send(auto) {
-    if (st.sending) return;
-    st.sending = true; $('qz-send').disabled = true;
-    call({ action: 'submit', attemptId: st.attemptId, answers: st.answers }).then(function (res) {
-      if (!res.ok) throw new Error(res.error || 'fail');
-      clearInterval(st.timer); st.attemptId = null; forget(); done(res, auto);
-    }).catch(function () {
-      $('qz-confirm-text').textContent = 'Не удалось отправить ответы: нет связи с сервером. Ответы сохранены в этом браузере, нажмите «Отправить ответы» ещё раз.';
-      $('qz-confirm').hidden = false;
-    }).then(function () { st.sending = false; $('qz-send').disabled = false; });
-  }
-
-  function done(res, auto) {
-    $('qz-run').hidden = true;
-    var d = $('qz-done'); d.hidden = false;
-    var topics = res.byTopic || [];
-    var rows = topics.length > 1 ? topics.map(function (t) { return '<tr><td>' + esc(t.topic) + '</td><td>' + t.correct + ' из ' + t.total + '</td></tr>'; }).join('') : '';
-    d.innerHTML = '<h3>' + esc(st.test.name) + ': ' + (auto ? 'время вышло, ответы отправлены' : 'ответы отправлены') + '</h3>' +
-      '<p class="qz-score"><b>' + res.correct + '</b> из ' + res.total + ' · ' + res.percent + '%</p>' +
-      (res.byType ? '<p>Закрытые вопросы: ' + res.byType.choice.correct + ' из ' + res.byType.choice.total + ' · открытые: ' + res.byType.open.correct + ' из ' + res.byType.open.total + '</p>' : '') +
-      (res.late ? '<p class="qz-msg bad">Ответы пришли после окончания времени, преподаватель увидит эту отметку.</p>' : '') +
-      '<p>Попытка ' + res.attemptNo + '. ' + (res.attemptsLeft > 0 ? 'По этому тесту осталось попыток: ' + res.attemptsLeft + '.' : 'Попытки по этому тесту исчерпаны.') + ' Результат уже у преподавателя.</p>' +
-      (rows ? '<div class="tbl"><table class="cmp"><thead><tr><th>Раздел</th><th>Верно</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '') +
-      '<p><button type="button" class="btn" id="qz-back">К выбору теста</button></p>';
-    $('qz-back').addEventListener('click', function () { d.hidden = true; $('qz-start').hidden = false; $('qz-agree').checked = false; pick(); root.scrollIntoView({ block: 'start' }); });
-    d.scrollIntoView({ block: 'start' });
-  }
-})();
-</script>
-
-<!--/QUIZ-JS-->
+<div class="s-only qz-wrap" id="quiz">
+<p class="intro">Тесты по каждому из 10 разделов курса и итоговый тест. В закрытых вопросах нужно выбрать один ответ, в открытых вписать слово, термин или число. Итоговый тест состоит из 25 вопросов всех разделов, у каждого студента свой набор. На каждый тест даётся две попытки; начатая попытка засчитывается, даже если её не завершить. После отправки вы увидите число верных ответов, правильные ответы не показываются. Результаты автоматически попадают к преподавателю.</p>
+<div class="panel" id="qz-start">
+<div class="qz-form">
+<label for="qz-test">Тест</label>
+<select id="qz-test"><option value="">Загружаю список тестов…</option></select>
+<p class="qz-tinfo" id="qz-tinfo"></p>
+<label for="qz-fio">Фамилия, имя, отчество</label>
+<input autocomplete="name" id="qz-fio" maxlength="120" placeholder="Иванов Иван Иванович" type="text"/>
+<label for="qz-group">Группа</label>
+<input autocomplete="off" id="qz-group" maxlength="40" placeholder="Номер группы" type="text"/>
+<label class="qz-check" for="qz-agree"><input id="qz-agree" type="checkbox"/> Понимаю, что начатая попытка засчитывается</label>
+<button class="btn dl qz-main" id="qz-go" type="button">Начать попытку</button>
+</div>
+<p class="qz-msg" id="qz-msg" role="status"></p>
+</div>
+<p class="qz-msg" hidden="" id="qz-off"></p>
+<div hidden="" id="qz-run">
+<div class="qz-bar">
+<span id="qz-who"></span>
+<span aria-label="Осталось времени" class="qz-timer" id="qz-timer">75:00</span>
+<span id="qz-prog"></span>
+<button class="btn dl" id="qz-finish" type="button">Завершить</button>
+</div>
+<div aria-label="Номера вопросов" class="qz-grid" id="qz-grid"></div>
+<div class="panel qz-q" id="qz-q"></div>
+<div class="qz-nav">
+<button class="btn" id="qz-prev" type="button">Назад</button>
+<button class="btn" id="qz-next" type="button">Далее</button>
+</div>
+<div class="panel qz-confirm" hidden="" id="qz-confirm">
+<p id="qz-confirm-text"></p>
+<div class="qz-nav">
+<button class="btn dl" id="qz-send" type="button">Отправить ответы</button>
+<button class="btn" id="qz-cancel" type="button">Вернуться к вопросам</button>
+</div>
+</div>
+</div>
+<div class="panel" hidden="" id="qz-done"></div>
+</div>
+</section>
+<!-- БИБЛИОТЕКИ -->
+<section id="libs">
+<h2>Библиотеки и базы</h2>
+<ul class="list">
+<li class="row s"><div><div class="t">ЭБС УУНиТ</div><div class="n">Вход для студентов и преподавателей университета.</div></div><div class="a"><a class="btn" href="https://elib.bashedu.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">Образовательная платформа Юрайт</div><div class="n">Основная литература курса.</div></div><div class="a"><a class="btn" href="https://urait.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">ЭБС «Лань»</div><div class="n">Учебники и журналы по праву.</div></div><div class="a"><a class="btn" href="https://e.lanbook.com" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">Университетская библиотека онлайн</div><div class="n">Классика историко-правовой литературы.</div></div><div class="a"><a class="btn" href="https://biblioclub.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">НЭБ</div><div class="n">Дореволюционные учебники и Полное собрание законов в открытом доступе.</div></div><div class="a"><a class="btn" href="https://rusneb.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">Президентская библиотека</div><div class="n">Оцифрованные законодательные сборники и исследования.</div></div><div class="a"><a class="btn" href="https://www.prlib.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">КиберЛенинка</div><div class="n">Научные статьи в открытом доступе, удобно для докладов студентов.</div></div><div class="a"><a class="btn" href="https://cyberleninka.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">Научная электронная библиотека eLIBRARY</div><div class="n">Статьи для докладов и рефератов.</div></div><div class="a"><a class="btn" href="https://www.elibrary.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">Юридическая научная библиотека «Спарк»</div><div class="n">Из РПД.</div></div><div class="a"><a class="btn" href="http://lawlibrary.ru" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+<li class="row s"><div><div class="t">Электронная библиотека исторического факультета МГУ</div><div class="n">Полный каталог текстов источников, в том числе архивы ZIP.</div></div><div class="a"><a class="btn" href="https://www.hist.msu.ru/ER/Etext/ZIP/index.html" rel="noopener noreferrer" target="_blank">Открыть</a></div></li>
+</ul>
+</section>
+</main>
+<footer class="wrap">Автор: А.А. Камалов, ассистент кафедры теории государства и права Института права УУНиТ</footer>
 </body>
 </html>
